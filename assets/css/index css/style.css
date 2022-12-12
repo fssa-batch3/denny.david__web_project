@@ -1,0 +1,254 @@
+body {
+    margin: 0px;
+}
+.navbar1 {
+    display: flex;
+    width: 250px;  
+    height: 100px;
+}
+.navbar1 a {
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+    padding-left: 25px;
+    font-weight: bold;
+}
+.styling {
+    /* position:relative; */
+    display:flex;
+}
+.pink1{
+    padding:125px;
+    height:500px;
+    background-color: #f1306b;
+}
+.blue1{
+    background-color: #09006d;
+    padding:125px;
+    height:500px;
+}
+.green1 {
+    background-color: #48d38c;  
+    padding:125px;
+    height:500px;
+}
+.sky1{
+    padding:125px;
+    height:500px;
+    background-color:#10a8db ;
+}
+.light1{
+    padding:125px;
+    height:700px;
+    background-color:#fef559;
+}
+.violet1{
+    
+    height:670px;
+    width:250px;
+    background-color: #9445fd;
+}
+.pinkcolor {
+    background-color:#f1306b;
+}
+.bluecolor {
+    background-color:white;
+    /* margin-top: 100px; */
+}
+.green {
+    background-color: #48d38c;
+}
+.sky {
+    background-color: #10a8db;
+    width: 250px;
+}
+.light {
+    background-color: #fef559;
+   
+    /* height: 980px; */
+    width: 250px;
+}
+.light a{
+    color:#09006d; 
+}
+.violet {
+    background-color: #9445fd;
+    text-align: center;
+    /* height:600px; */
+}
+.violet1 img{  
+    margin-top: 190px;
+    height:auto;  
+}
+.secondpart {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 35px;
+}
+/* .benefits {
+    border: 1px solid;
+    transition: 0.9s;
+    height: 448px;
+    margin-top: 60px;
+    width: 650px;
+    box-shadow: 2px 2px 20px;
+} */
+
+/* .benefits:hover {
+    transform:scale(1.1);
+} */
+.bene img {
+    width: 420px;
+    height: 450px;
+    margin-top: 60px;
+    box-shadow: 2px 2px 20px;
+    /* transition:0.7s; */
+}
+/* .bene img:hover {
+   transform:scale(1.1);
+} */
+.lesson {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    /* width: 500px; */
+    margin-left: 50px;
+}
+.lesson1 button {
+    padding: 30px;
+    border:0px solid;
+    color:green;
+}
+.content {
+    display: flex;
+    /* width: 1480px; */
+    /* box-sizing: border-box; */
+    position:fixed;
+    z-index:1;
+}
+.content1 {
+    top: 23%;
+    font-size: 85px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    margin-left: 70px;
+}
+.content1 button {
+    border-radius:10px;
+    padding-left:30px;
+    padding-right:30px;
+    display:flex;
+    justify-content: flex-start;
+    background-color:#9445fd ;
+    border:0px solid;
+    color:white;
+    box-shadow:2px 2px 20px black;
+}
+#in1  {
+    /* padding:10px; */
+    /* margin-right:50px;
+   */
+    position:absolute;
+    top:415px;
+    /* height: 400px;  
+    margin-left: 127px; */
+    width:500px;
+    /* margin-top: 247px; */
+}
+.insert{
+    position: relative;
+    display:flex;
+}
+#in {
+    width:242px;
+    height:230px;   
+}
+.imag img {
+     margin-top: 366.35px;
+    opacity: 0.85;
+}
+.imag1 {
+    position:absolute ;
+    z-index: 1;
+    size: 90px;
+}
+.imag2 {
+    display:flex ;
+    position: relative;
+}
+.mid {
+    display:flex;
+}
+.content2 p {
+    /* position:absolute;
+    top:700px; */
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+    margin-left: 100px;
+}
+.content2 h1 {
+    text-align: center;
+    font-size: 70px;
+}
+.mid img{
+    width:400px;
+    height:300px;
+    border-radius:10px;
+}
+.one {
+    display:flex;
+    justify-content: flex-end;
+}
+.second {
+    display:flex;
+    justify-content: flex-start;
+}
+.third{ 
+    display:flex;
+    justify-content: flex-end;
+    margin-top:400px;
+}
+.content3{
+    display: flex;
+    justify-content: center;
+    margin-top:100px;
+    width: 1200px;
+    margin-left: 150px;
+}
+.ours1 img{
+    width:310px;
+    height:auto;
+    box-shadow: 2px 2px 20px; 
+}
+.ours2 p {
+    padding: 30px;
+}
+.ours2 h1 {
+    text-align: center;
+    font-weight: bold;
+}
+.ours2 {
+    font-size: 25px;
+    box-shadow: 2px 2px 20px; 
+}
+.content4{
+    /* margin-top: 300px; */
+    margin-left:80px;
+    border-radius:20px;
+    padding:70px;
+    font-size: 30px;
+    width: 1200px;
+    margin-top:200px;
+    background-color:black;
+    color:white;
+    box-shadow: 2px 2px 20px;
+    padding-bottom:100px;
+}
+.nav {
+    display: flex;
+    width: 1500px;
+}

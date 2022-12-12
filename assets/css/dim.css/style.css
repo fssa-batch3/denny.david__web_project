@@ -1,0 +1,51 @@
+body {
+    margin:0px;
+}
+.nav {
+    display: flex;
+    width: 1500px;
+    height:100px;
+}
+.pinkcolor {
+    background-color: rgb(240, 9, 132);
+    width: 250px;
+}
+.bluecolor {
+    background-color:#cdcdcd;
+    width: 250px;
+    /* margin-top: 100px; */
+}
+.green {
+    background-color: rgb(152, 211, 65);
+    width: 250px;
+}
+.sky {
+    background-color: rgb(84, 183, 222);
+    width: 250px;
+}
+.light {
+    background-color: rgb(220, 220, 30);
+    /* height: 980px; */
+    width: 250px;
+}
+.violet {
+    background-color: blueviolet;
+    text-align: center;
+    width: 250px;
+}
+.navbar1 a {
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+    padding-left: 25px;
+    font-weight: bold;
+}
+.diminished {
+    display:flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.diminished video {
+    width:550px;
+    height:auto;
+}
