@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../assets/css/exercise.css/style.css">
+    <link rel="stylesheet" href="../assets/css/exercise/exercise.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <!-- This is my header section -->
     <header>
         <div class="nav">
             <div class="navbar1 pinkcolor">
-                <div><a href="#">Hardenz </a></div>
+                <div><a href="index.html">Hardenz </a></div>
             </div>
             <div class="navbar1 bluecolor">
                 <div><a href="#"></a></div>
@@ -20,10 +21,10 @@
                 <div><a href="#"></a></div>
             </div>
             <div class="navbar1 sky">
-                <div><a href="#">About us</a></div>
+                <div><a id="callin" href="#">About us</a></div>
             </div>
             <div class="navbar1 light">
-                <div><a href="#">Contact us</a></div>
+                <div><a id="callin" href="#">Contact us</a></div>
             </div>
             <div class="navbar1 violet ">
                 <div><a href="#">Login</a></div>
@@ -31,26 +32,85 @@
         </div>
     </header>
     <main>
+        <!-- This is full of giving audio for user to identify the notes  -->
+        <h2> Ear training</h2>
         <div class="earlesson">
-            <h1> Ear training</h1>
+          <div class="earlesson1">  
             <h3>1.Reference note: C</h3>
+            <audio controls>
+                <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+            </audio>
+            <h3>Question note</h2>
+            <audio controls>
+                <source src="../assets/audio/Y2Mate.is - Piano Middle D-dwtfCQ25qTU-480p-1654247328252.mp4">
+            </audio>
+         </div>
+            <div class="quest">
+               <h3> What is this note?<h3>
+              <p>(a)<button id="special">D</button>
+              (b)<button id="special1" >C#</button>
+              (c)<button id="special1">A</button>
+              (d)<button id="special1">Bflat</button></p>
+            </div>
+        </div><hr>
+        <div class="earlesson">
+        <div class="earlesson1">
+             <h3>2.Reference note: C</h3>
             <audio controls>
                 <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
             </audio>
             <h3>Question note</h3>
             <audio controls>
-                <source src="../assets/audio/Y2Mate.is - Piano Middle D-dwtfCQ25qTU-480p-1654247328252.mp4">
+                <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid G Sharp or A Flat-2o1T6oV9YIQ-128k-1654544383428 (1).mp3">
             </audio>
-            <h4>
-                What is this note is?<br>
-               <input type="radio"> (a)D
-               <input type="radio"> (b)C#
-              <input type="radio"> (b)A
-                 <input type="radio">(d)B
-            </h4>
-
-
         </div>
+        <div class="quest">
+            <h3> What is this note?<h3>
+           <p>(a)<button id="special1">F</button>
+           (b)<button id="special" >G#</button>
+           (c)<button id="special1">G</button>
+           (d)<button id="special1">B</button></p>
+         </div>
+        </div><hr>
+        <div class="earlesson">
+         <div class="earlesson1">
+            <h3>3.Reference note: C</h3>
+           <audio controls>
+               <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+           </audio>
+           <h3>Question note</h3>
+           <audio controls>
+               <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid C Sharp or D Flat-Fjie6s5OU9g-128k-1656822827405.mp3">
+           </audio>
+       </div>
+       <div class="quest">
+           <h3> What is this note?<h3>
+          <p>(a)<button id="special1">Eflat</button>
+          (b)<button id="special1" >E</button>
+          (c)<button id="special1">D</button>
+          (d)<button id="special">C#</button></p>
+        </div>
+        </div><hr>
+        <div class="earlesson">
+            <div class="earlesson1">
+            <h3>4.Reference note: C</h3>
+           <audio controls>
+               <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+           </audio>
+           <h3>Question note</h3>
+           <audio controls>
+               <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+           </audio>
+       </div>
+       <div class="quest">
+           <h3> What is this note?<h3>
+          <p>(a)<button id="special1">E</button>
+          (b)<button id="special">F</button>
+          (c)<button id="special1">F#</button>
+          (d)<button id="special1">D</button></p>
+        </div>
+        </div>
+        
     </main>
     
 </body>
