@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Rubik&display=swap');
+
+body {
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+}
+.nav {
+    display: flex;
+    width: 1485px;
+    height:100px;
+}
+#for_padd {
+    padding-top: 20px;
+    padding-left:20px;
+} 
+.navbar1 img {
+    width: 50px;
+    height: 50px;
+    z-index:2;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left:-15px;
+}
+.content {
+    display:flex;
+}
+.pinkcolor {
+    background-color: #f1306b;
+    width: 250px;
+}
+.bluecolor {
+    background-color:#09006d;
+    width: 250px;
+    /* margin-top: 100px; */
+   
+}
+.green {
+    background-color:#48d38c ;
+    width: 250px;
+}
+.sky {
+    background-color: #10a8db ;
+    width: 250px;
+}
+
+.light {
+    background-color: #fef559;
+    /* height: 980px; */
+    width: 250px;
+}
+#callin {
+    color: #09006d;
+}
+
+.violet {
+    background-color:#9445fd ;
+    text-align: center;
+    width: 250px;
+    /* height:600px; */
+}
+.navbar1 a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    padding-left: 25px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.navbar1 {
+    height: 100px;
+}
+.beginners {
+    width : 1320px;
+    margin : 100px 0px 80px 80px;
+}
+img {
+   width: 700px;
+   height: auto;           
+}

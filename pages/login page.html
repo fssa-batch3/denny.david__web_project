@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/loginpage.css">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class ="login">
+        <img src="../assets/image/login icon.png" alt="error">
+    <div class="login-detail">
+    <h2> Login Here</h2>
+    <p>Enter your credentials to access your account</p>
+    <div class="inputs">
+    <input type="email" placeholder="Enter your email" id="email"></input><br><br>
+    <input type="password" placeholder="Enter your password" id="password"></input><br><br>
+    </div>
+    <button onclick="loggedin()"> Log in </button>
+</div>
+</div>
+ <script>
+        function loggedin() {
+        let user=document.getElementById("email").value
+        let pass=document.getElementById("password").value
+        let details=JSON.parse(localStorage.getItem("store_data"))
+        let data={
+            "username":user,
+            "password":pass
+        }    
+        let res;           
+        details.find(e=>{
+            if(e["mail_id"]==user && e["password"]==pass){
+                return res=1;
+            }
+            else{
+                return res=0;
+            }
+        })  
+        if(res==1){
+            // alert("logged in")
+            localStorage.setItem("profile_details",JSON.stringify(data))
+            window.location.href="profile.html"
+        }
+        else{
+            alert("error")
+        }   
+    }    
+ </script>
+</body>
+</html>

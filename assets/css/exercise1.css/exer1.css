@@ -1,0 +1,125 @@
+body {
+    margin:0px;
+    background-color:#eae9e9;
+}
+.nav {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    width: 1487px;
+    height:100px;
+}
+#for_padd {
+    padding-top: 20px;
+    padding-left:20px;
+} 
+.navbar1 img {
+    width: 50px;
+    height: 50px;
+    z-index:2;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left:-15px;
+}
+.pinkcolor {
+    background-color:#f1306b;
+    width: 250px;
+   
+}
+.bluecolor {
+    background-color:#09006d;
+    width: 250px;
+    /* margin-top: 100px; */
+}
+.green {
+    background-color:#48d38c ;
+    width: 250px;
+}
+.sky {
+    background-color:#10a8db ;
+    width: 250px;
+}
+.light {
+    background-color:#fef559 ;
+    /* height: 980px; */
+    width: 250px;
+}
+#callin {
+    color: #09006d;
+}
+.violet {
+    background-color:#9445fd;
+    text-align: center;
+    width: 250px;
+}
+.navbar1 a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.dim {
+    display:flex;
+    box-shadow: 1px solid black;
+ }
+ .dim1 h2 {
+     font-size:45px;
+     margin-top:50px;
+     font-family:Arial, Helvetica, sans-serif;
+ }
+ .dimnat{
+     display: flex;
+     
+ }
+ .dim-img {
+     position:relative;
+ }
+ h3 {
+    display:flex;
+    justify-content:center;
+     align-items:center;
+     font-family:Arial, Helvetica, sans-serif;
+     position:fixed;
+     top: 30px;
+     right:200px;
+     left:775px;
+     border:2px solid white;
+     width:710px;
+     height:800px;
+     color:white;
+     font-size:70px;
+     background: -webkit-linear-gradient(0deg,rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+     background-clip: text;
+     -webkit-background-clip: text;
+     /* -webkit-text-fill-color: transparent; */
+     backdrop-filter: blur(10px);
+ }
+ .dim-img img {
+     position:fixed;
+     width:740px;
+     height:900px;
+     
+     
+ }
+ .di {
+     margin-top:100px;
+ }
+ .dim2 {
+    margin-top:28px;
+    margin-left:20px;
+}
+.dim2 button {
+    font-size:25px;
+    margin-left:50px;
+}
+
+#special1:focus {
+    background-color: red;
+}
+
+#special:focus {
+    background-color: green;
+}

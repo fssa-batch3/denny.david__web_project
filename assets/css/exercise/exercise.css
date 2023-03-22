@@ -1,0 +1,296 @@
+/* This is the first exercise to practise scales in website and this is also the header section  */
+body {
+    margin: 0px;
+    background-color: #eae9e9;
+}
+
+.nav {
+    display: flex;
+    width: 1487px;
+    height: 100px;
+}
+#for_padd {
+    padding-top: 20px;
+    padding-left:20px;
+} 
+.navbar1 img {
+    width: 50px;
+    height: 50px;
+    z-index:2;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left:-15px;
+}
+.pinkcolor {
+    background-color: #f1306b;
+    width: 250px;
+
+}
+
+.bluecolor {
+    background-color: #09006d;
+    width: 250px;
+    /* margin-top: 100px; */
+}
+
+.green {
+    background-color: #48d38c;
+    width: 250px;
+}
+
+.sky {
+    background-color: #10a8db;
+    width: 250px;
+}
+
+.light {
+    background-color: #fef559;
+    /* height: 980px; */
+    width: 250px;
+}
+
+#callin {
+    color: #09006d;
+}
+
+.violet {
+    background-color: #9445fd;
+    text-align: center;
+    width: 250px;
+}
+
+.navbar1 a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    padding-left: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.quest {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+main h2 {
+    font-size: 40px;
+    /* margin-left: 550px; */
+}
+.earlesson {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:550px;
+    font-size: 25px;
+}
+.quest p {
+    font-size: 25px;    
+}
+.quest button {
+    font-size: 22px;
+}
+
+#special1:focus {
+    background-color: red;
+}
+
+#special:focus {
+    background-color: green;
+}
+
+.listening {
+    margin-left: 450px;
+}
+.listening h1 {
+    margin-left:-90px;
+   
+}
+
+.relative-seventh {
+    margin-top: 60px;
+    margin-left: 520px;
+}
+
+.relative-seventh button {
+    font-size: 20px;
+}
+
+.metronome2 button {
+    font-size: 25px;
+}
+
+.metronome2 h2 {
+    font-size: 35px;
+    /* margin-right:350px; */
+    width:350px;
+    /* border: 1px solid black; */
+}
+
+.threenotes {
+    margin-left: 600px;
+    margin-top: 30px;
+}
+
+.threenotes1 button {
+    font-size: 18px;
+}
+
+.metronome1 audio {
+     
+    position: absolute;
+    top: 168px;
+    left: 180px;
+}
+
+#watch {
+    width: 140px;
+
+    background-color: #f1f3f4;
+}
+
+.metronome1 img {
+    width: 350px;
+
+}
+
+.metronome2 {
+    margin-top: 100px;
+}
+
+.metronome {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    background-color: white;
+    position: relative;
+    margin-left: 250px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px#eae9e9;
+    width: 1000px;
+    position: relative;
+    margin-left: 250px;
+    border-radius: 15px;
+    color: blueviolet;
+}
+
+.metronom {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    background-color: white;
+    position: relative;
+    margin-left: 250px;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.metrono {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    background-color: white;
+    position: relative;
+    margin-left: 250px;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.metron {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    background-color: white;
+    position: relative;
+    margin-left: 250px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.earlesson h2 {
+    font-size: 45px;
+}
+@media only screen and (max-width:900px){
+    header {
+        width:400px;
+    }
+    main{
+        width:400px;
+    }
+    .nav {
+        width:400px;
+        height:100px;
+      }
+      .navbar1 div {
+          height: 100px;
+          padding-top: 25px;
+      }
+      .none {
+          display: none;
+      }
+      .pinkcolor {
+          display: flex;
+          flex-direction: column;
+          width:400px;
+          height: 100px; 
+      }
+      .pinkcolor a{
+         margin-left: 100px;
+      }
+      .metronome1 img {
+         width:180px;
+        border-radius:10px;
+      }
+    .metronome {
+        margin-left:140px;
+        width:260px;
+    }
+    .metronom{
+        margin-left:140px;
+        width:260px;
+    }
+   .metrono{
+       margin-left:140px;
+       width:260px;
+   }
+   .metron {
+    margin-left:140px;
+    width:260px;
+   }
+   .metronome2 h2 {
+     font-size: 20px;
+     width:200px;
+     margin-right:45px;
+     margin-top:0px;
+
+   }
+   .metronome2 button {
+    font-size: 15px;
+}
+h1 {
+    text-align: center;
+    margin-left: 0px;
+    width:400px;
+}
+.metronome2 {
+    width:240px;
+    margin-right:165px;
+    margin-bottom:20px;
+   
+}
+#watch {
+    width:90px;
+    
+}
+.metronome1 audio {
+    top:75px;
+   left:-100px;
+}
+}

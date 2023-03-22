@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../assets/css/login.css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- This is the header section  -->
+
+    <main>
+        <!-- Here i am giving the login page -->
+        <form>
+        <div class="form">
+            <div class="form1">
+                <h1>Sign Up</h1>
+                <p id="blur">How will i started?</p>
+                <p>First name :</p> <input type="text" placeholder="enter your first name"  id="first" required/><br>
+                <p> Last name:</p> <input type="text"  id="last" required/><br>
+                <p>Email:</p> <input type="email"  id="email" required/><br>
+                <p>New Password:</p><input type="password" id="npsw" required/><br>
+                <p>Confirm Password:</p><input type="password" id="psw" required/><br>
+                <p>Phone.no:</p><input type="tel"  id="contact" placeholder="contact no" required/><br>
+                <div class="a">
+                    <button id="sub">Submit</button>
+                </div>
+            </div>
+        </form>
+            <div class="login-img">
+                <img src="../assets/image/austin-pacheco-HQvMTkiNhpk-unsplash.jpg">
+                <p id="imgin" >Start your passion here with us and work together</p>
+            </div>
+ 
+        </div>
+
+    </main>
+    <script>
+
+let forms=document.querySelector("form");
+forms.addEventListener("submit",e=>{
+    e.preventDefault();
+    signup();
+})
+    function signup() {
+    const first=document.getElementById("first").value.trim();
+    const last = document.getElementById("last").value.trim();
+    const email= document.getElementById("email").value.trim();
+    const npassw = document.getElementById("npsw").value.trim();
+    const passw = document.getElementById("psw").value.trim();
+    const contact = document.getElementById("contact").value.trim();
+
+    if (first.includes(' ')){
+    alert("spaces is not required");
+}
+if(npassw==passw){
+        let user_data = {    
+        "user_name": first,
+        "last_name":last,
+        "mail_id":email,
+        "password" : passw,
+        "phone_no":contact     
+    }
+
+    let store_data =JSON.parse(localStorage.getItem("store_data"))?JSON.parse(localStorage.getItem("store_data")):
+    [];
+
+    store_data.push(user_data)
+
+    localStorage.setItem("store_data",JSON.stringify(store_data))
+    
+    window.location.href="./login page.html"
+    }
+    else{
+        alert("Password is not equal")
+    }
+
+}
+
+
+//   window.onload = function(){
+//     const google_mail= document.getElementById("email")
+//     google_mail.addEventListener("key up",function(evt){
+//         if (google_mail.value.includes(" "))
+//     {
+//         alert("no spaces are allowed in your email")
+//     }
+//     })
+
+
+
+ 
+    // localStorage.setItem("email-email",mailid)
+    // localStorage.setItem("pass",first)
+</script>
+</body>
+</html>

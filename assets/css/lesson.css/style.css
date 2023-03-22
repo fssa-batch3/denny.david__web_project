@@ -1,70 +1,204 @@
+/* This css is for lessons page */
 body {
+    background-color: white;
     margin:0px;
 }
 .nav {
     display: flex;
-    width: 1500px;
+  
+    width: 1485px;
     height:100px;
 }
+#for_padd {
+    padding-top: 20px;
+    padding-left:20px;
+} 
+.navbar1 img {
+    width: 50px;
+    height: 50px;
+    z-index:2;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left:-15px;
+}
 .pinkcolor {
-    background-color: rgb(240, 9, 132);
+    background-color: #f1306b;
     width: 250px;
 }
 .bluecolor {
-    background-color:#cdcdcd;
+    background-color: #09006d;
     width: 250px;
     /* margin-top: 100px; */
 }
 .green {
-    background-color: rgb(152, 211, 65);
+    background-color: #48d38c;
     width: 250px;
 }
 .sky {
-    background-color: rgb(84, 183, 222);
+    background-color:#10a8db ;
     width: 250px;
 }
 .light {
-    background-color: rgb(220, 220, 30);
+    background-color: #fef559;
     /* height: 980px; */
     width: 250px;
 }
+#callin {
+    color: #09006d;
+}
 .violet {
-    background-color: blueviolet;
+    background-color:#9445fd;
     text-align: center;
     width: 250px;
 }
 .navbar1 a {
+    letter-spacing: 1px;
+    margin-left: 25px;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     padding-left: 25px;
     font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+   padding-top: 60px;
 }
-.lesson{
-    display: flex;
-    flex-direction: column;
-    padding: 60px;
-    margin-left: 400px;
-    width: 700px;
-    height:600px;
-    border:0px solid black ; 
+
+.lesson2 img{
+    display:flex;
+    width:250px;
+    height:auto;
     border-radius:10px;
-    margin-top: 30px;
-    box-shadow: 2px 2px 20px;
-} 
-.lesson h1 {
-   margin-left:220px;
+    box-shadow: 2px 2px 50px#d0d1d2 ;
+}
+.lesson2 button {
+    position:absolute;
+    top:150px;
+    border-radius:10px;
+    text-decoration:none;
+    background-color:white;
+    padding:10px;
+    padding-left:30px;
+    padding-right:30px;
+    color:black;
+    font-size:30px;
+    border:0px solid black;
+    /* margin-left:50px; */
+    box-shadow: 2px 2px 20px#d0d1d2;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .lesson1 {
-    display: flex;
-    padding:40px;
+    display:flex;
+    justify-content:space-between;
+    width: 1000px;
+    height:300px;
+    flex-wrap:wrap;
+    margin-left:250px;
 }
-.lesson1 a{
-    flex-grow:1;
+.lesson1 {
+    position:relative;
 }
-.lesson1 button{
+.lesson h1 {
+    text-align:center;
+    color:blueviolet;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#extend {
+    position: absolute;
+    top: 150px;
     border-radius: 10px;
-    font-weight:bold;
-    font-size:20px;
-    padding:30px;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px;
+    color: black;
+    font-size: 30px;
+    border: 0px solid black;
+    box-shadow: 2px 2px 20px#d0d1d2;
+    margin-left:5px;
+    padding-left:69px;
+    padding-right:79px;
 }
+#expand1 {
+    margin-left:10px;
+    padding-left:65px;
+    padding-right:75px;
+}
+#extend1 {
+    margin-left:15px;
+    padding-left:40px;
+    padding-right:40px;
+}
+#increase {
+    height:185px;
+} 
+#expand2 {
+    text-align:center;
+    margin-left:10px;
+    width:230px;
+    padding-left:20px;
+    padding-right:10px;  
+}
+#expand{
+    text-align:center;
+    margin-left:10px;
+    width:230px;
+    padding-left:20px;
+    padding-right:10px;   
+} 
+#expand3 {
+    text-align:center;
+    width:230px;
+    margin-left:12px;
+}
+@media screen and (max-width:900px){
+.nav {
+  width:400px;
+  height:100px;
+}
+.navbar1 div {
+    height: 100px;
+    padding-top: 25px;
+}
+.none {
+    display: none;
+}
+.pinkcolor {
+    display: flex;
+    flex-direction: column;
+    width:400px;
+    height: 100px; 
+}
+.pinkcolor a{
+   margin-left: 100px;
+}
+.lesson1 {
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap:wrap; */
+    margin:0px;  
+    width:300px;
+    height: 800px;
+    margin-left: 90px;
+}
+/* .lesson2 {
+    width: 300px;
+    border:1px solid blue;
+} */
+#expand2 {
+    top: 400px;
+}
+#expand {
+    top: 660px;
+}
+.extend a{
+    top:670px;
+}
+#expand1 {
+   top: 410px;
+}
+#expand3 {
+    top: 410px;
+}
+.seven a {
+    top:665px;
+}
+} 

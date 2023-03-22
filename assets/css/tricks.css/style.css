@@ -1,3 +1,5 @@
+
+/* This is the css for trick page */
 body {
     margin:0px;
 }
@@ -6,39 +8,55 @@ body {
     width: 1485px;
     height:100px;
 }
+#for_padd {
+    padding-top: 20px;
+    padding-left:20px;
+} 
+.navbar1 img {
+    width: 50px;
+    height: 50px;
+    z-index:2;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left:-15px;
+}
 .pinkcolor {
-    background-color: rgb(240, 9, 132);
+    background-color: #f1306b;
     width: 250px;
 }
 .bluecolor {
-    background-color:#cdcdcd;
+    background-color:#09006d;
     width: 250px;
     /* margin-top: 100px; */
 }
 .green {
-    background-color: rgb(152, 211, 65);
+    background-color: #48d38c;
     width: 250px;
 }
 .sky {
-    background-color: rgb(84, 183, 222);
+    background-color:#10a8db ;
     width: 250px;
 }
 .light {
-    background-color: rgb(220, 220, 30);
+    background-color:#fef559 ;
     /* height: 980px; */
     width: 250px;
 }
+#callin {
+    color: #09006d;
+}
 .violet {
-    background-color: blueviolet;
+    background-color:#9445fd ;
     text-align: center;
     width: 250px;
 }
 .navbar1 a {
     text-decoration: none;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     padding-left: 25px;
     font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .lifehacks {
    margin-left: 350px;
@@ -47,4 +65,44 @@ body {
     padding: 30px;
     width:700px;
     height:auto;
+}
+@media only screen and (max-width:900px) {
+    header{
+        width:400px;
+    }
+    main{
+        width:400px;
+    }
+    .nav {
+        width:400px;
+        height:100px;
+      }
+      .navbar1 div {
+          height: 100px;
+          padding-top: 25px;
+    }
+      .none {
+          display: none;
+    }
+      .pinkcolor {
+          display: flex;
+          flex-direction: column;
+          width:400px;
+          height: 100px; 
+    }
+      .pinkcolor a{
+        margin-left: 100px;
+    }
+    .lifehacks {
+        margin-left:0px;
+    }
+    .lifehacks h1 {
+        text-align:center;
+    }
+    .lifehacks h2 {
+        text-align:center;
+    }
+    .lifehacks video {
+        width:340px;
+    }
 }

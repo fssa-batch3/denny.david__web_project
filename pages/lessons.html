@@ -13,23 +13,23 @@
     <header>
         <!-- This is header section -->
         <div class="nav">
-            <div class="navbar1 pinkcolor">
+            <div id="for_padd" class="navbar1 pinkcolor">
                 <div><a href="index.html">Hardenz </a></div>
             </div>
-            <div class="navbar1 bluecolor">
+            <div class="navbar1 bluecolor none">
                 <div><a href="#"></a></div>
             </div>
-            <div class="navbar1 green">
+            <div class="navbar1 green none">
                 <div><a href="#"></a></div>
             </div>
-            <div class="navbar1 sky">
+            <div id="for_padd" class="navbar1 sky none">
                 <div><a href="#">About us</a></div>
             </div>
-            <div class="navbar1 light">
+            <div id="for_padd" class="navbar1 light none">
                 <div><a id="callin" href="#">Contact us</a></div>
             </div>
-            <div class="navbar1 violet ">
-                <div><a href="#">Login</a></div>
+            <div class="navbar1 violet none ">
+                <div><a href="#"><img src="../assets/image/main_img.jpg"></a></div>
             </div>
         </div>
     </header>
@@ -37,53 +37,83 @@
         <!-- This is whole lesson for the user -->
         <div class="lesson">
             <h1>Lessons</h1>
-            <div class="lesso">
-            <div class="lesson2">
-                <img src="../assets/image/soundtrap-V7z8MGbfF5Q-unsplash.jpg" alt="error"><br>
-                <a id="ext" href="scales.html">Scale </a>
+            <div class="lesson1">
+                <div class="lesson2">
+                    <img src="../assets/image/soundtrap-V7z8MGbfF5Q-unsplash.jpg" alt="error"><br>
+                    <button id="extend" onclick="scale()">Scales </button>
+                </div>
+                <div class="lesson2">
+                    <img src="../assets/image/malvestida-FfbVFLAVscw-unsplash.jpg" alt="error"><br>
+                    <button id="expand1" onclick="timing()">Timing </button>
+                </div>
+                <div class="lesson2">
+                    <img src="../assets/image/alexander-shatov-qt7S2QuAhJI-unsplash.jpg" alt="error"><br>
+                    <button id="expand" onclick="dimnish()" href="diminished.html">Diminshed chords</button>
+                </div>
             </div>
-            <div class="lesson2">
-                <img src="../assets/image/malvestida-FfbVFLAVscw-unsplash.jpg" alt="error"><br>
-                <a id="exti" href="timing .html">Timing </a>
-            </div>
-            <div class="lesson2">
-                <img src="../assets/image/alexander-shatov-qt7S2QuAhJI-unsplash.jpg" alt="error"><br>
-                <a id="in1"  href="diminished.html">Diminshed chords</a>
-            </div>
-            </div>
-            <div class="lesso">
-            <div class="lesson2">
-                <img src="../assets/image/gabriel-gurrola-tdo2GLH18Ls-unsplash.jpg" alt="error"><br>
-                <a id="ext" href="tricks.html">Tricks </a>
-            </div>
-           
-            <div class="lesson2">
-                <img src="../assets/image/riley-bartel-i6VNX0-o7ro-unsplash.jpg" alt="error"><br>
-                <a id="in1" href="suspended.html">Suspended<br>chords</a>
-            </div>
-            
-            <div class="lesson2">
-                <img id="increase" src="../assets/image/johannes-plenio-RWytwNueNng-unsplash.jpg" alt="error"><br>
-                <a id="extin" href="7thchord.html"> 7th chords</a><br>
-            </div></div>
-           <div class="lesso">
-            <div class="lesson2">
-                <img src="../assets/image/kelly-sikkema-4qnhBQv4qcg-unsplash.jpg" alt="error"><br>
-                <a id="in2" href="finding.html">Findings chord </a>
-            </div>
-            
-            <div class="lesson2">
-                <img src="../assets/image/nicolas-falgetelli-vAOrHy7y0iQ-unsplash.jpg" alt="error"><br>
-                <a id="extin" href="inversions.html"> Inversions</a>
-            </div>
-            <div class="lesson2">
-                <img src="../assets/image/i-aboud-BboEUG7Ncjs-unsplash.jpg" alt="error"><br>
-                <a id="extin" href="9thchords.html">9th chords</a>
-            </div></div>
+            <div class="lesson1">
+                <div class="lesson2">
+                    <img src="../assets/image/gabriel-gurrola-tdo2GLH18Ls-unsplash.jpg" alt="error"><br>
+                    <button id="extend" onclick="trick()">Tricks </button>
+                </div>
 
+                <div class="lesson2">
+                    <img src="../assets/image/riley-bartel-i6VNX0-o7ro-unsplash.jpg" alt="error"><br>
+                    <button id="expand2" onclick="suspen()">Suspended<br>chords</button>
+                </div>
 
+                <div class="lesson2 seven">
+                    <img id="increase" src="../assets/image/johannes-plenio-RWytwNueNng-unsplash.jpg" alt="error"><br>
+                    <button id="extend1" onclick="seventhchord()" href="7thchord.html"> 7th chords</button><br>
+                </div>
+            </div>
+            <div class="lesson1">
+                <div class="lesson2">
+                    <img src="../assets/image/kelly-sikkema-4qnhBQv4qcg-unsplash.jpg" alt="error"><br>
+                    <button id="expand3" onclick="find()">Findings chord </button>
+                </div>
+
+                <div class="lesson2">
+                    <img src="../assets/image/nicolas-falgetelli-vAOrHy7y0iQ-unsplash.jpg" alt="error"><br>
+                    <button id="extend1" onclick="inversion()" href="inversions.html"> Inversions</button>
+                </div>
+                <div class="lesson2 extend">
+                    <img src="../assets/image/i-aboud-BboEUG7Ncjs-unsplash.jpg" alt="error"><br>
+                    <button id="extend1" onclick="nineth()" href="9thchords.html">9th chords</button>
+                </div>
+            </div>
         </div>
     </main>
+    <script>
+        function scale() {
+            window.location.href = "scales.html"
+        }
+        function timing() {
+            window.location.href = "timing.html"
+        }
+        function diminsh() {
+            window.location.href = "diminished.html"
+        }
+        function trick() {
+            window.location.href = "tricks.html"
+        }
+        function suspen() {
+            window.location.href = "suspended.html"
+        }
+        function seventhchord() {
+            window.location.href = "7thchord.html"
+        }
+        function find() {
+            window.location.href = "finding.html"
+        }
+        function inversion() {
+            window.location.href = "inversions.html"
+        }
+        function nineth() {
+            window.location.href = "9thchords.html"
+        }
+
+    </script>
 
 </body>
 

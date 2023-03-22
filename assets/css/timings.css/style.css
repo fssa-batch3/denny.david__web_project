@@ -1,0 +1,154 @@
+/* This is the css for timing page */
+body {
+    margin: 0px;
+}
+
+.nav {
+    display: flex;
+    width: 1485px;
+    height: 100px;
+}
+#for_padd {
+    padding-top: 20px;
+    padding-left:20px;
+} 
+.navbar1 img {
+    width: 50px;
+    height: 50px;
+    z-index:2;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left:-15px;
+}
+.pinkcolor {
+    background-color: #f1306b;
+    width: 250px;
+}
+
+.bluecolor {
+    background-color: #09006d;
+    width: 250px;
+    /* margin-top: 100px; */
+
+}
+
+.green {
+    background-color: #48d38c;
+    width: 250px;
+}
+
+.sky {
+    background-color: #10a8db;
+    width: 250px;
+}
+
+.light {
+    background-color: #fef559;
+    /* height: 980px; */
+    width: 250px;
+}
+
+#callin {
+    color: #09006d;
+}
+
+.violet {
+    background-color: #9445fd;
+    text-align: center;
+    width: 250px;
+    /* height:600px; */
+}
+
+.navbar1 a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    padding-left: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    margin-left: 4.5em;
+    font-size: 2rem;
+}
+
+.practice-timings {
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 110px;
+    justify-content: space-around;
+}
+
+.practice-timing2 video {
+    margin-top: 30px;
+    width: 550px;
+    height: auto;
+}
+
+button {
+    background-color: green;
+    margin-left: 650px;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.practice-timings video {
+    margin-top: 30px;
+}
+
+@media only screen and (max-width:900px) {
+    header{
+        width:400px;
+    }
+    main{
+        width:400px;
+        padding-bottom:50px;
+    }
+    .nav {
+        width: 400px;
+        height: 100px;
+    }
+
+    .navbar1 div {
+        height: 100px;
+        padding-top: 25px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .pinkcolor {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 100px;
+    }
+    .pinkcolor a {
+        margin-left: 100px;
+    }
+    .practice-timings {
+        display: block;
+    } 
+    .practice-timing2 video {
+        width:380px;
+        height:auto;
+        margin-left:10px;
+    }
+    button{
+        margin-left:150px;
+        
+    }
+    .practice-timing1 h2{
+        margin-left:10px;
+        margin-top:0px;
+        padding-bottom:20px;
+    }
+    h2 {
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+}

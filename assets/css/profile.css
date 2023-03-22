@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Rubik&display=swap');
+
+body {
+    background-color: #f8f8f8;
+    margin:0px;
+    padding:0px;
+    font-family: 'Rubik', sans-serif;
+}
+form {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+fieldset {
+    border:none;
+   
+}
+.hide-it {
+    display:none;
+}
+
+
+.users_page {
+    margin-top: -100px;
+    /* margin-left: 200px; */
+    background-color: white;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+    width :950px;
+    height:650px;
+    border:2px solid white ;
+    /* margin-top: 70px; */
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 10px;
+    /* margin-bottom: 100px ; */
+} 
+.profile_photo img {
+    width:250px;
+    height:auto;
+    border-radius:50%;
+}
+.profile1 input{
+    padding: 5px;
+    padding-left:10px;
+    background-color: white;
+    
+}
+.profile1 h1 {
+    color:#932557;
+    font-size: 45px;
+    /* padding-bottom: 50px; */
+}
+.profile1 {
+  padding-bottom:100px;
+}
+.profile input {
+    border:none;
+    width:250px;
+    height:30px;
+    padding-left:20px;
+}
+.profile1 h4 {
+    font-size:15px;
+    color:#932557;
+}
+#changing_photo {
+    width:50px;
+    height:auto;
+    position:absolute;
+    top: 235px;
+    right:640px;
+}
+.profile_photo {
+    border : 1px solid black; 
+    margin-left:25px;
+}
+/* .profile {
+    /* margin-top:0px; 
+} */
+#erase  {
+    margin-top:25px;
+    color :white;
+    margin-left:70px;
+    padding-bottom :0px; 
+    font-size:20px;
+    background-image:linear-gradient(to right,#eb1874,#ef525e);
+    border:0px solid ;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.popup_images{
+    display: flex;
+    width: 180px;
+    margin-top:30px;
+    flex-wrap: wrap;
+    height: 255px;
+    margin-left:25px;
+}
+.popup_form input {
+    border: solid black;
+    border-width: 0px 0px 1px 0px;
+}
+.popup_form h3 {
+    color: #932557;
+}
+/* /* .popup{
+    display: flex;
+    
+    /* box-shadow: rpopupgba(149, 157, 165, 0.2) 0px 8px 24px; */
+
+#save-btn,#save-btn2 {
+    
+    color:white;
+    border-radius: 5px;
+    font-size:18px;
+   margin-left: 120px;
+   margin-top:25px;
+   background-image:linear-gradient(to right,#eb1874,#ef525e)
+}
+.popup_images img {
+     width:70px;
+     height:59px;
+}
+ #longer_image {
+    width:53px;
+    height:50px;
+    margin-left:8px;
+    margin-top:3px;
+    border-radius:50%;
+} 
+ #longer_image2{
+    width:53px;
+    height:50px;
+    margin-left:20px;
+    margin-top:3px;
+    border-radius:50%;
+}
+#longer_image3{
+    width:53px;
+    height:50px;
+    margin-left:10px;
+    margin-top:3px;
+    border-radius:50%;
+} 
+
+#beard_image {
+    height:58px;
+    margin-left:2px;
+    margin-top:px;
+}
+#beard_and_spec {
+    height:56px; 
+    margin-top:3px;
+} 
+#spec_image {
+    margin-bottom:3px;
+    margin-left:3.5px;
+} 
+#without_beard {
+    height:62px;
+    margin-left:8.5px;
+}
+ /* .popup img { 
+    display:none; 
+     display: flex; 
+    width:40px; 
+    
+} */
+.popup {
+    display:none;
+    /* border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display:flex;
+    width: 500px;
+    position:relative;
+    bottom:150px;
+    right:150px;
+    background-color:white;
+    justify-content: space-around;
+    font-size: 12px;
+    border:1px solid black;  */
+}
+.popup button {
+    background-color: white;
+    border:none;
+}
+
+.popup_images img:hover {
+    border-radius:50%;
+    border:2px solid rgb(18, 80, 105);
+}
+.popup_images img:focus {
+    border-radius:50%;
+    border:2px solid rgb(18, 80, 105);
+}
+.none {
+    display:none;
+    backdrop-filter: blur(5px); 
+}
+.change {
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display:flex;
+    width: 500px;
+    height:31px;
+    /* margin-left:8px;
+    margin-top:3px; */
+    height:auto;
+    position:absolute;
+    bottom:150px;
+    right:150px;
+    background-color:white;
+    justify-content: space-around;
+    font-size: 12px;
+    border:1px solid black;
+}
+#back-image {
+    background-color: #f6a740 ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-radius: 50%;
+    height: 100px; 
+    width: 100px;
+    position: relative;
+    left: -50px; 
+}
+#back-image2 {
+    background-color: #f6a740 ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-radius: 100px 0 0 0;
+    height: 100px; 
+    width: 100px;
+    position: relative;
+    top:690px;
+    left: 1403.5px; 
+}
+.grey-img{
+    background-color: #f9f9f9;
+    border-radius: 0 0 0 100px;
+    -moz-border-radius: 0 0 0 100px;
+    -webkit-border-radius: 0 0 0 100px;
+    width:120px;
+    height: 120px;
+    position:relative;
+    top: 92px;
+    right:-690px;
+   
+}
+.grey1-img {
+    background-color: #f9f9f9;
+    width:120px;
+    height: 120px;
+    position:relative;
+    top: 7px;
+    left:-132px;
+    border-radius: 0 100px 0 0;
+    -moz-border-radius: 0 100px 0 0;
+    -webkit-border-radius: 0 100px 0 0;
+}
+.inside-img {
+    background-color: #f6a740 ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-radius: 50%;
+    position:relative;
+    top:-25px; 
+    left:-70px;
+    height: 10px; 
+    width: 10px;
+}
+.inside1-img {
+    background-color: rgb(229, 55, 142) ;
+    border:1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-radius: 50%;
+    position:relative;
+    height: 10px; 
+    width: 10px;
+}
+.profile1 input{
+    border: solid black;
+    border-width: 0px 0px 1px 0px;
+    width: 250px;
+}
+#profile2_gif {
+    position:relative;
+    width:50px;
+    top:-70px;
+    left:-150px;
+    height: 50px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#profile_gif {
+    position:relative;
+    width: 80px;
+    height: 70px;
+    top:250px;
+    left: -100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#anime_image {
+    position:relative;
+    top:15px;
+    width: 80px;
+    height: 75px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}

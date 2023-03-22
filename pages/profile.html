@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For demo purpose -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <title>Document</title>
+</head>
+
+<body id="hidebtn">
+    <!-- Profile form -->
+    <div id="back-image"></div>
+    <div id="back-image2"></div>
+
+    <form id="form">
+
+        <div class="users_page">
+
+            <div class="profile1">
+                <div class="grey-img"></div>
+                <div class="inside-img"></div>
+                <div class="inside1-img"></div>
+                <fieldset disabled>
+                    <h1>My Profile</h1>
+                    <h4>First Name</h4>
+                    <input type="text" id="fname" placeholder="First Name" /><br><br>
+                    <h4>Last Name</h4>
+                    <input type="text" id="lname" placeholder="Last Name" /><br><br>
+                    <h4>Phone no</h4>
+                    <input type="tel" id="telephone" placeholder="Phone no" /><br><br>
+                </fieldset>
+                <!-- <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
+                <!-- <button onclick="process()" class="submit action-button" target="_top">Submit</button> -->
+                <button id="erase">LOG OUT</button>
+                <div class="grey1-img"></div>
+            </div>
+
+            <div class="profile">
+                <!-- <img id="profile2_gif" src="../assets/image/profile.gif" alt="gif-image">
+                    <img id="profile_gif" src="../assets/image/profile2.gif" alt="gif image">
+                    <img id="anime_image" src="../assets/image/anime_image1.gif" alt="anime image">  -->
+                <!-- <button>Save</button> -->
+                <button id="getDetails">Edit</button>
+                <div class="profile_photo">
+
+                    <img src="../assets/image/profile.icon">
+                </div>
+            </div>
+        </div>
+
+        <!-- <img id="changing_photo" src="../assets/image/changing-photo-icon.png"> -->
+        <div class="popup">
+            <div class="popup_form">
+                <h3>First Name</h3>
+                <input type="text" id="fname1" placeholder="First Name" required /><br><br>
+                <h3>Last Name</h3>
+                <input type="text" id="lname1" placeholder="Last Name" /><br><br>
+                <h3>Phone no</h3>
+                <input type="tel" id="telephone1" placeholder="Phone no" /><br><br>
+                <button id="save-btn"> Save</button>
+                <button id="save-btn2">Cancel</button>
+
+
+            </div>
+            <div class="popup_images">
+                <img src="../assets/image/popup-image9.png" alt="profile_photo">
+                <img id="beard_image" src="../assets/image/popup-image8.png" alt="profile_photo">
+                <img id="longer_image" src="../assets/image/pop-image2.png" alt="profile_photo">
+                <img id="longer_image2" src="../assets/image/pop-image3.png" alt="profile_photo">
+                <img id="longer_image3" src="../assets/image/pop-image4.png" alt="profile_photo">
+                <img id="without_beard" src="../assets/image/popup-image6.png" alt="profile_photo">
+                <img src="../assets/image/popup-image7.png" alt="profile_photo">
+                <img id="beard_and_spec" src="../assets/image/popup-image10.png" alt="profile_photo">
+            </div>
+        </div>
+        <br>
+
+
+
+    </form>`
+</body>
+<script>
+
+    // Storing the data from the signup page 
+    let users = JSON.parse(localStorage.getItem('store_data'));
+    let data = JSON.parse(localStorage.getItem('profile_details'));
+    let fname = document.getElementById("fname");
+    let lname = document.getElementById("lname");
+    let phone = document.getElementById("telephone");
+    let fname1 = document.getElementById("fname1");
+    let lname1 = document.getElementById("lname1");
+    let phone1 = document.getElementById("telephone1");
+    let submit_btn = document.getElementById("save-btn");
+    // let edit=document.getElementById("getDetails");
+    let result;
+
+    // for (let i = 0; i < users.length; i++) {
+    //     document.getElementById("fname").value = users[i]["user_name"]; //users[1][name]
+    //     document.getElementById("lname").value = users[i]["last_name"];
+    //     document.getElementById("telephone").value = users[i]["phone_no"];
+    // }
+
+    // let users1 = JSON.parse(localStorage.getItem('store_data'));
+    // for (let i = 0; i < users1.length; i++) {
+    //     document.getElementById("fname1").value = users[i]["user_name"]; //users[1][name]
+    //     document.getElementById("lname1").value = users[i]["last_name"];
+    //     document.getElementById("telephone1").value = users[i]["phone_no"];
+    // }
+
+
+    // let firstName = document.getElementById("fname");
+    // document.getElementById("save-btn").addEventListener('click', e => {
+    //     // document.getElementById("fname1").value  =firstName.value;
+
+    //    firstName.find(JSON.parse(localStorage.getItem('store_data')))=users[i]["user_name"]
+    //    console.log("firstName");
+    // })
+
+    users.find(e => {
+        if (e["mail_id"] == data["username"]) {
+            return result = e;
+        }   
+    })       
+    console.log(result)    
+    fname.value = result["user_name"]   
+    lname.value = result["last_name"]   
+    phone.value = result["phone_no"]  
+    fname1.value = result["user_name"]
+    lname1.value = result["last_name"]   
+    phone1.value = result["phone_no"]   
+    submit_btn.addEventListener("click", e => {
+        // e.preventDefault();
+        result["user_name"] = fname1.value
+        result["last_name"] = lname1.value
+        result["phone_on"] = phone1.value
+        console.log(result)
+
+        localStorage.setItem('store_data', JSON.stringify(users))
+    
+    })
+
+    // // This function is for when the user click the log out button
+    // // all the data should erase and it will go back to the home page.
+    // // function go_out() {
+
+    // document.getElementById("erase").addEventListener('submit', e => {
+    //     document.getElementById("fname").value = "";
+    //     document.getElementById("lname").value = "";
+    //     document.getElementById("telephone").value = "";
+    //     // localStorage.removeItem("store_data");
+    //     // window.location.href = "..//index.html";
+    // })
+    // // }
+
+    // This code is for popup 
+    let image = document.getElementById("getDetails");
+    let pop = document.querySelector(".popup");
+    image.addEventListener("click", e => {
+        e.preventDefault();
+        pop.classList.add("change");
+    })
+    let dis = document.getElementsByClassName(".users_page");
+    dis.addEventListener("click", e=>{
+        e.preventDefault();
+        dis.classList.add("none");
+    })     
+
+    // let body = document.getElementById("hidebtn")
+    // body.addEventListener("click", e => {
+    //     e.preventDefault();
+    //     document.getElementByClassName(".popup")
+    //     body.classList.toggle("hide-it");
+    // })
+
+    // let body_toggle=document.getElementsByClassName("users_page")[0];
+    // body_toggle.addEventListener("click",e=>{
+    //     pop.classList.remove("change");
+    //     console.log("clicked")
+    // })
+        //    let wholeBody =document.querySelector("body");
+        //     wholeBody.addEventListener("click", e => {
+        //     pop.classList.remove("change");
+        //     console.log(wholeBody)
+        //     })
+</script>
+
+
+
+
+</html>

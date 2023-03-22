@@ -11,43 +11,77 @@
     <!-- This is the header section -->
     <header>
         <div class="nav">
-            <div class="navbar1 pinkcolor">
+            <div id="for_padd" class="navbar1 pinkcolor">
                 <div><a href="index.html">Hardenz </a></div>
             </div>
-            <div class="navbar1 bluecolor">
+            <div id="for_padd" class="navbar1 bluecolor none ">
                 <div><a href="#"></a></div>
             </div>
-            <div class="navbar1 green">
+            <div id="for_padd" class="navbar1 green none">
                 <div><a href="#"></a></div>
             </div>
-            <div class="navbar1 sky">
+            <div id="for_padd" class="navbar1 sky none">
                 <div><a href="#">About us</a></div>
             </div>
-            <div class="navbar1 light">
-                <div><a href="#">Contact us</a></div>
+            <div id="for_padd" class="navbar1 light none">
+                <div><a id="callin" href="#">Contact us</a></div>
             </div>
-            <div class="navbar1 violet ">
-                <div><a id="callin"  href="#">Login</a></div>
+            <div class="navbar1 violet none ">
+                <div><a id="callin"  href="#"><img src="../assets/image/main_img.jpg"></a></div>
             </div>
         </div>
    </header>
+   <main>
+
+   </main>
    <!-- These are seveth chords and video for reference -->
-   <div class="seven">
-    <div class="seven1">
-        <h1>Seventh chords</h1>
-        <h3>A seventh chord is a chord consisting of a triad plus a note forming an interval of a seventh above the chord's root. 
-            When not otherwise specified,
-             a "seventh chord" usually means a dominant seventh chord: a major triad together with a minor seventh.</h3>
-        <h2>For example </h2>
-        <div><img src="../assets/image/ezample.png" alt="error"></div>
-    </div>
-    <div class="seven2">
-        <video controls src="../assets/video/Y2Mate.is - How To Use Seventh Chords  Keyboard Tutorial  Tamil  Allegro Keyz-82F-_MD187g-720p-1654296644439.mp4"></video>
        
-    </div>
-   </div>
-   <!-- These are scales practicies and ear training for user -->
-  <div> <a href="exercise3.html"><button>Exercise</button></a></div>
-    
+<script>
+  let seventh_chord  =[
+{   
+"heading":"Seventh chords",
+"heading2":"A seventh chord is a chord consisting of a triad plus a note forming an interval of a seventh above the chord's root. When not otherwise specified,a seventh chord usually means a dominant seventh chord: a major triad together with a minor seventh.",
+"seventh_chord_image":"../assets/image/ezample.png",
+"seventh_image_alt":"Seventh_chord photo",
+"chord_video":"../assets/video/Y2Mate.is - How To Use Seventh Chords  Keyboard Tutorial  Tamil  Allegro Keyz-82F-_MD187g-720p-1654296644439.mp4"
+}]
+  let seven_div;
+  let seven1_div;
+  let seven2_div;
+
+  seven_div = document.createElement("div");
+  seven_div.setAttribute("class","seven");
+  
+
+  seven1_div = document.createElement("div");
+  seven1_div.setAttribute("class","seven1");
+  seven_div.append(seven1_div);
+
+  seven1_h1 = document.createElement("h1");
+  seven1_h1.innerHTML = seventh_chord[0]["heading"];
+  seven1_div.append(seven1_h1);
+
+  seven1_h3 = document.createElement("h3");
+  seven1_h3.innerText = seventh_chord[0]["heading2"];
+  seven1_div.append(seven1_h3);
+
+  seven1_image = document.createElement("img");
+  seven1_image.setAttribute("src",seventh_chord[0]["seventh_chord_image"]);
+  seven1_image.setAttribute("alt",seventh_chord[0]["seventh_chord_alt"]);
+  seven1_div.append(seven1_image);
+
+  seven2_div = document.createElement("div");
+  seven2_div.setAttribute("class","seven2");
+  seven_div.append(seven2_div);
+  
+  seven2_video = document.createElement("video");
+  seven2_video.setAttribute("src",seventh_chord[0]["chord_video"]);
+  seven2_div.append(seven2_video)
+
+  seven3_div = document.createElement("div");
+  seven_div.append(seven3_div)
+
+  document.querySelector("main").append(seven_div);
+</script>
 </body>
 </html>

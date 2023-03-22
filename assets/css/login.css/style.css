@@ -1,89 +1,133 @@
+/* This is the css for login page to sign up */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Rubik&display=swap');
 body {
     margin:0px;
+    background-color:#f2f5ff ;
+    font-family: 'Rubik', sans-serif;
 }
-.nav {
-    display: flex;
-    width: 1500px;
-    height:100px;
-}
-.pinkcolor {
-    background-color: rgb(240, 9, 132);
-    width: 250px;
-}
-.bluecolor {
-    background-color:#dbdbdb;
-    width: 250px;
-    /* margin-top: 100px; */
+.form1 {
    
-}
-.green {
-    background-color: rgb(152, 211, 65);
-    width: 250px;
-}
-.sky {
-    background-color: rgb(84, 183, 222);
-    width: 250px;
-}
-
-.light {
-    background-color: rgb(220, 220, 30);
-    /* height: 980px; */
-    width: 250px;
-}
-
-.violet {
-    background-color: blueviolet;
-    text-align: center;
-    width: 250px;
-    /* height:600px; */
-}
-.navbar1 a {
-    text-decoration: none;
-    font-size: 40px;
-    color: white;
-    padding-left: 25px;
-    font-weight: bold;
-}
-.background-img {
-    background-image: url(../../image/unsplash_3k9PGKWt7ik-2.png);
-    opacity:0.8;
-    padding-top:190px;
-    padding-bottom: 80px;
-    background-repeat: no-repeat;
-    background-size: 1500px 1000px;
-}
-forms {
-    /* position:absolute; */
     display: block;
-   
-    font-weight:bold;
-    margin-left: 500px;
-    border-radius:10px;
-    border: none;
-    border: 1px solid black;
-    width: 200px;
-    padding: 120px;
-    padding-top: 0px;
+    /* /* justify-content:center;  */
+    /* font-weight: bold; */
+    /* margin-left: 500px; */
+    border-radius: 10px;
+  
+    /* width: 800px;
+    height: 500px;
+    padding: 50px; */
     color: black;
-    background:transparent;
-    height: 400px;
+    background-color: white;
     /* margin-top: 80px; */
-    box-shadow: 2px 2px 20px black;
+    /* box-shadow: 2px 2px 20px rgb(212, 210, 210); */
 }
-forms button {
-    background-image:linear-gradient() ;
-    font-weight:bold;
-    padding:10px;
-    margin-left: 50px;
-    margin-top: 30px;
+.form1{
+    
+    height:700px;
+    width: 300px;
+    margin: 20px auto;
 }
-forms h1 {
-    margin-left: 30px;
-}
-.mid img {
-   width:1000px;
-    height:auto;
-}
-.mid {
-    position:relative;
+
+
+
+.form1 input{
+    /* width: 100%; */
+    border-radius:5px;
+    padding-left:15px;
+    height:30px;
+    border:0px solid #9c9d9f;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 } 
+.form {
+    background-color: white;
+    display:flex;
+    justify-content: space-evenly;
+     width: 1200px;
+    height: 750px;
+    border-radius: 10px; 
+    box-shadow: 2px 2px 20px #f6f8fa;
+    border: none;
+    border: 0px solid black;
+    margin-left: 200px;
+    margin-top:50px;
+    font-size:18px;
+    font-family: 'Rubik', sans-serif;
+}
+.login-img{
+     position:relative;
+}
+.login-img img {
+   
+    margin-right: 60px;
+    margin-top: 60px;
+    width:600px;
+    height:550px;
+    border-radius:10px;
+}
+#imgin{
+    font-size:35px;
+    width:499px;
+    height:120px;
+    padding:50px;
+    position:absolute;
+    top: 200px;
+    color:white;
+    border:2px solid white;
+    background: -webkit-linear-gradient(0deg,rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    backdrop-filter: blur(10px);
+
+} 
+/* #imgin.background {
+   filter:blur(100px);
+} */
+
+a{
+    /* width:30px; */
+   color:black;
+   background-color:white;
+   padding:10px;
+   padding-left:40px;
+   padding-right:40px;
+   border-radius: 10px;
+   text-decoration: none;
+   color: black;
+   border:1px solid grey;
+}
+#sub{
+    margin:20px 20px 0px 55px ;
+   
+   
+}
+#blur {
+    color:#c7c8ca;
+}
+@media only screen and (max-width:700px){
+main {
+    width:400px;
+}
+.login-img img {
+    width:500px;
+    height:1050px;
+    margin-right:150px;
+} 
+.form {
+    margin-top:150px;
+    margin-left: 0px;
+    height:1200px;
+}
+.form1 {
+    font-size:35px;
+}
+.a  {
+   margin-left:0px;
+}
+#imgin {
+    top:300px;
+    height:350px;
+    font-size:60px;
+    width:399px;
+}
+}
