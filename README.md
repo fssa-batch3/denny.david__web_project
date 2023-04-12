@@ -68,7 +68,7 @@
  -Scenario 1: Successfully Edit profile
   -Steps:
         1.Log in as a learner.
-        2.Navigate to the profile page by clicking "profile" button
+        2.Navigate to the profile page by clicking "profile" button.
         3.Click "Delete" button to delete
    -Expected Result:
         The user can delete profile
