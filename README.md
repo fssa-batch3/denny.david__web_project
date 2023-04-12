@@ -74,4 +74,8 @@
         2. Navigate to the profile page by clicking "profile" button.
         3. Click "Delete" button to delete
     - Expected Result:
-        - The user can delete profile
+        - The user can delete profile.
+
+  Creating a piano to do a exercise in the website ( yet to start ❌ ).
+  Course progress( yet to start ❌ ).
+  Changing profile photo( yet to start ❌ ).
