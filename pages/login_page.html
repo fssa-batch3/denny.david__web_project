@@ -30,10 +30,15 @@
             "username":user,
             "password":pass
         }    
-        let res;           
+        let res;
+        let user_email;           
         details.find(e=>{
             if(e["mail_id"]==user && e["password"]==pass){
+
+                user_email = e["mail_id"];
+
                 return res=1;
+                
             }
             else{
                 return res=0;
@@ -41,8 +46,9 @@
         })  
         if(res==1){
             // alert("logged in")
-            localStorage.setItem("profile_details",JSON.stringify(data))
-            window.location.href="profile.html"
+            // localStorage.setItem("profile_details",JSON.stringify(data));
+            localStorage.setItem("logged_in", user_email);
+            window.location.href="../index.html";
         }
         else{
             alert("error")

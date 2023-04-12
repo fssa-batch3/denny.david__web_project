@@ -7,114 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   
+<head>
+  <div class="piano">
+    <div class="white-key" data-note="C"></div>
+    <div class="black-key" data-note="C#""></div>
+    <div class="white-key" data-note="D"></div>
+    <div class="black-key" data-note="D#"></div>
+    <div class="white-key" data-note="E"></div>
+    <div class="white-key" data-note="F"></div>
+    <div class="black-key" data-note="F#"></div>
+    <div class="white-key" data-note="G"></div>
+    <div class="black-key" data-note="G#"></div>
+    <div class="white-key" data-note="A"></div>
+    <div class="black-key" data-note="A#"></div>
+    <div class="white-key" data-note="B"></div>
+  </div>
+  <audio id="C" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+  <audio id="C#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+  <audio id="D" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+  <audio id="D#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+  <audio id="E" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+  <audio id="F" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+  <audio id="F#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+  <audio id="G" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+  <audio id="G#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+  <audio id="A" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+  <audio id="A#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+  <audio id="B" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
 </head>
-<body>
-    <header>
-    <div is="C-note" class="key white"></div>
-    <div id="C#-note" class="key black"></div>
-    <div id="D-note" class="key white"></div>
-    <div id="Eflat-note" class="key black"></div>
-    <div id="E-note" class="key white"></div>
-    <div id="F-note" class="key white"></div>
-    <div id="F#-note" class="key black"></div>
-    <div id="G-note" class="key white"></div>
-    <div id="G#-note" class="key black"></div>
-    <div id="A-note" class="key white"></div>
-    <div id="Bflat-note" class="key black"></div>
-    <div id="B-note" class="key white "></div>
-    <div is="C-note" class="key white"></div>
-    <div id="C#-note" class="key black"></div>
-    <div id="D-note" class="key white"></div>
-    <div id="Eflat-note" class="key black"></div>
-    <div id="E-note" class="key white"></div>
-    </header>
-<main>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
-    <audio controls src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
-   
-</main>
-   
-
-    
-</body>
 <script>
-    const keys = document.querySelectorAll(".key"),
-  note = document.querySelector(".nowplaying"),
-  hints = document.querySelectorAll(".hints");
+const whiteKeys = document.querySelectorAll(".white-key");
+const blackKeys = document.querySelectorAll(".black-key");
 
-function playNote(e) {
-  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
-    key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 
-  if (!key) return;
-
-  const keyNote = key.getAttribute("data-note");
-
-  key.classList.add("playing");
-  note.innerHTML = keyNote;
-  audio.currentTime = 0;
-  audio.play();
-}
-
-function removeTransition(e) {
-  if (e.propertyName !== "transform") return;
-  this.classList.remove("playing");
-}
-
-function hintsOn(e, index) {
-  e.setAttribute("style", "transition-delay:" + index * 50 + "ms");
-}
-
-hints.forEach(hintsOn);
-
-keys.forEach(key => key.addEventListener("transitionend", removeTransition));
-
-window.addEventListener("keydown", playNote);
-
-
-
-    // const WHITE_KEYS = ['z','x','c','v','b','n','m'];
-    // const BLACK_KEYS = ['s','d','g','h','j'];  
-
-
-    // const keys = document.querySelectorAll('.key')
-    // const whtiekey = document.querySelectorAll('.key')
-
-    // keys.forEach(key =>{
-    //     key.addEventListener('click',() => playNote(key))
-    // })
-    // document.addEventListener(keydown, e => {
-    //     const key = e.key
-    //     const whtiekeyindex = WHITE_KEYS.indexOf(key)
-    //     const blackkeyindex = BLACK_KEYS.indexOf(key)
-
-    //     if(whtiekeyindex > 1) playNote(){
-
-    //     }
-    // })
-
-    // function playNote(key) {
-    //     const noteAudio = document.getElementById(key.dataset.note)
-    //     noteAudio.currentTime = 0
-    //     noteAudio.play()
-    //     key.classList.add('active')
-    //     noteAudio.addEventListener('ended')
-    //     key.classList.remove('active')
-    // }
+function playSound(note) {
+const audio = document.getElementById(note);
+audio.currentTime =
+  }
 </script>
-</html>

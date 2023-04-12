@@ -171,7 +171,7 @@ body {
     margin-left: 70px;
 }
 
-.content1 a {
+#get_started {
     margin-top: 20px;
     width: 150px;
     padding: 20px;
@@ -185,7 +185,7 @@ body {
     display: flex;
     justify-content: flex-start;
     background-color: #9445fd;
-    border: 0px solid;
+    border: 0px;
     color: white;
     box-shadow: 2px 2px 20px #6937aa;
 }
@@ -455,7 +455,7 @@ hr {
     .content1 a {
         font-size: 10px;
         padding-left: 10px;
-        padding: 10px;
+        
         width: 100px;
         padding-right: 5px;
     }

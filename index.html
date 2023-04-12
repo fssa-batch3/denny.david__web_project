@@ -48,7 +48,7 @@
         <!-- This container is used for above the color the text should come. -->
         <div class="content1">
             Discover the<br> world<br> through music
-            <a href="pages/lessons.html">Get started</a>
+            <p id="get_started">Get started</p>
         </div>
         </div>
 
@@ -142,5 +142,26 @@
 
         </footer>
         <script>
+        let user_cre = localStorage.getItem("logged_in");
 
+         let direct = document.getElementById("get_started");
+
+         direct.addEventListener('click',() =>{
+
+              if(user_cre === null){
+
+                alert("Please signup");
+
+                window.location.href = "pages/signup.html";
+              }
+
+              else if(user_cre !== null){
+
+                alert("Successfully");
+
+                window.location.href= "pages/lessons.html";
+              }
+
+         });
+        
         </script>
