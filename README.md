@@ -52,10 +52,11 @@
 ###  View Profile ( completed ✅ )
 -Scenario 1: Successfully the user can view his profile
   -Steps:
-        1.After Log in as a learner.He can view his profile.
-        2.Navigate to the profile page by clicking the "profile" button
+        1. After Log in as a learner.He can view his profile.
+        2. Navigate to the profile page by clicking the "profile" button
    -Expected Result:
-        The user can view profile
+        - The user can view profile
+
 ###  Edit Profile ( completed ✅ )
 -Scenario 1: Successfully Edit profile
   -Steps:
