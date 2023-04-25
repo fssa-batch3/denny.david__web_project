@@ -9,11 +9,25 @@ body {
     display:flex;
     justify-content: space-around;
     font-size: 25px;
-    height:75px;
-   color:black;
-   padding-top:25px;
+    height:70px;
+    color:black;
+    padding-top:20px;
     cursor: pointer;
-    background-color: white;
+    background-color:white;
+
+}
+.website_name{
+    width:250px;
+    padding-right:350px;
+    color:#f67600;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+}
+.others {
+    margin-left: 50px;
+    display:flex;
+    justify-content: space-around;
+    width:450px;
 }
 /* .spans{
     width:100px;
@@ -25,7 +39,9 @@ body {
     height:500px;
     padding-top:100px;
    margin-top:-15px;
-  
+ padding-left:60px;
+
+ 
 }
 #hardenz {
     width:500px;
@@ -33,12 +49,7 @@ body {
 .spans{
     width:500px;
 }
-.website_name{
-    width:250px;
-    padding-right:350px;
-    font-weight: bold;
-    font-family: 'Rubik', sans-serif;
-}
+
 .signup{
     border: 1px solid blue;
     width:90px;
@@ -52,12 +63,9 @@ body {
     padding-left:10px;
     margin-top:-8px;
 }
-
-.others {
-    margin-left: 50px;
-    display:flex;
-    justify-content: space-around;
-    width:450px;
+.main {
+    background-color: #E8EBF0;
+    
 }
 .navbar1 {
     display: flex;
@@ -232,11 +240,16 @@ div .side_text{
 }
 
 .haikei{
-    width:400px;
-   
-    height:auto;
-}
+    position: absolute;
+    left: 850px;
+    top:150px;
+    width:500px;
+    z-index: -10;
 
+}
+/* .piano_img{
+    z-index: -100;
+} */
 .index_image{
     width:1487px;
     opacity:0.6;
