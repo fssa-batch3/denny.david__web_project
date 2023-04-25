@@ -19,11 +19,11 @@
             <div class="form1">
                 <h1>Sign Up</h1>
                 <p id="blur">How will i started?</p>
-                <p>First name :</p> <input type="text" placeholder="enter your first name"  id="first" required/><br>
-                <p> Last name:</p> <input type="text"  id="last" required/><br>
-                <p>Email:</p> <input type="email"  id="email" required/><br>
-                <p>New Password:</p><input type="password" id="npsw" required/><br>
-                <p>Confirm Password:</p><input type="password" id="psw" required/><br>
+                <p>First name :</p> <input type="text"  pattern="^[a-zA-Z0-9_-]{3,16}$" placeholder="enter your first name"  id="first" required/><br>
+                <p> Last name:</p> <input type="text"  pattern="^[a-zA-Z0-9_-]{3,16}$"  id="last" required/><br>
+                <p>Email:</p> <input type="email"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" required/><br>
+                <p>New Password:</p><input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$" id="npsw" required/><br>
+                <p>Confirm Password:</p><input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$" id="psw" required/><br>
                 <p>Phone.no:</p><input type="tel"  id="contact" placeholder="contact no" required/><br>
                 <div class="a">
                     <button id="sub">Submit</button>

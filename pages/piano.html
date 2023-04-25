@@ -1,48 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="..//assets/css/piano.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  
-<head>
-  <div class="piano">
-    <div class="white-key" data-note="C"></div>
-    <div class="black-key" data-note="C#""></div>
-    <div class="white-key" data-note="D"></div>
-    <div class="black-key" data-note="D#"></div>
-    <div class="white-key" data-note="E"></div>
-    <div class="white-key" data-note="F"></div>
-    <div class="black-key" data-note="F#"></div>
-    <div class="white-key" data-note="G"></div>
-    <div class="black-key" data-note="G#"></div>
-    <div class="white-key" data-note="A"></div>
-    <div class="black-key" data-note="A#"></div>
-    <div class="white-key" data-note="B"></div>
-  </div>
-  <audio id="C" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
-  <audio id="C#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
-  <audio id="D" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
-  <audio id="D#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
-  <audio id="E" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
-  <audio id="F" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
-  <audio id="F#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
-  <audio id="G" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
-  <audio id="G#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
-  <audio id="A" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
-  <audio id="A#" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
-  <audio id="B" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+  <link rel="stylesheet" href="..//assets/css/piano.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
 </head>
-<script>
-const whiteKeys = document.querySelectorAll(".white-key");
-const blackKeys = document.querySelectorAll(".black-key");
 
-const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+<body>
+  <section id="wrap">
+    <section id="main">
+      <div class="keys">
+        <div data-key="65" class="key" data-note="C">
+        </div>
+        <div data-key="87" class="key sharp" data-note="C#">
+        </div>
+        <div data-key="83" class="key" data-note="D">
+        </div>
+        <div data-key="69" class="key sharp" data-note="D#">
+        </div>
+        <div data-key="68" class="key" data-note="E">
+        </div>
+        <div data-key="70" class="key" data-note="F">
+        </div>
+        <div data-key="84" class="key sharp" data-note="F#">
+        </div>
+        <div data-key="71" class="key" data-note="G">
+        </div>
+        <div data-key="89" class="key sharp" data-note="G#">
+        </div>
+        <div data-key="72" class="key" data-note="A">
+        </div>
+        <div data-key="85" class="key sharp" data-note="A#">
+        </div>
+        <div data-key="74" class="key" data-note="B">
+        </div>
+        <div data-key="75" class="key" data-note="C">
+        </div>
+        <div data-key="79" class="key sharp" data-note="C#">
+        </div>
+        <div data-key="76" class="key" data-note="D">
+        </div>
+        <div data-key="80" class="key sharp" data-note="D#">
+        </div>
+        <div data-key="186" class="key" data-note="E">
+        </div>
+      </div>
 
-function playSound(note) {
-const audio = document.getElementById(note);
-audio.currentTime =
-  }
+      <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+      <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+      <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+      <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+      <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+      <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+      <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+      <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+      <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+      <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+      <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+      <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+      <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+      <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+      <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+      <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+      <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
+    </section>
+  </section>
+  <script>
+    let keys = document.querySelectorAll(".key")
+
+    keys.forEach(e => {
+      e.addEventListener("click", (el) => {
+        playNote(el)
+      });
+    });
+
+    keys.forEach((e) => {
+      e.addEventListener("transitionend", (ev) => {
+        removeTransition(ev);
+      });
+    })
+
+    function playNote(e) {
+
+      let audio = document.querySelector(`audio[data-key="${e.target.dataset["key"]}"]`);
+      let key = document.querySelector(`.key[data-key="${e.target.dataset["key"]}"]`);
+
+      let keyNote = key.getAttribute("data-note");
+      key.classList.add("playing");
+      audio.play();
+    }
+    function removeTransition(e) {
+      e.target.classList.remove("playing");
+    }
 </script>
+</body>
+
+</html>

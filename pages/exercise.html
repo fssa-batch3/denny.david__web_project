@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../assets/css/exercise/exercise.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- chart js link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"
+        integrity="sha512-U3hGSfg6tQWADDQL2TUZwdVSVDxUt2HZ6IMEIskuBizSDzoe65K3ZwEybo0JOcEjZWtWY3OJzouhmlGop+/dBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- chart css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"
+        integrity="sha512-SUJFImtiT87gVCOXl3aGC00zfDl6ggYAw5+oheJvRJ8KBXZrr/TMISSdVJ5bBarbQDRC2pR5Kto3xTR0kpZInA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
     <!-- This is my header section -->
     <header>
@@ -32,86 +46,281 @@
         </div>
     </header>
     <main>
-        <!-- This is full of giving audio for user to identify the notes  -->
         <h2> Ear training</h2>
-        <div class="earlesson">
-          <div class="earlesson1">  
-            <h3>1.Reference note: C</h3>
-            <audio controls>
-                <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-            </audio>
-            <h3>Question note</h2>
-            <audio controls>
-                <source src="../assets/audio/Y2Mate.is - Piano Middle D-dwtfCQ25qTU-480p-1654247328252.mp4">
-            </audio>
-         </div>
-            <div class="quest">
-               <h3> What is this note?<h3>
-              <p>(a)<button id="special">D</button>
-              (b)<button id="special1" >C#</button>
-              (c)<button id="special1">A</button>
-              (d)<button id="special1">Bflat</button></p>
+
+        <!-- This is full of giving audio for user to identify the notes  -->
+        <div class="main_div">
+            <div class="first_one block">
+                <h3>1.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h2>
+                    <audio controls>
+                        <source src="../assets/audio/Y2Mate.is - Piano Middle D-dwtfCQ25qTU-480p-1654247328252.mp4">
+                    </audio>
+                    <h3> What is this note?<h3>
+                            <p id="mcq">(a)<button id="special1" class="options">D</button>
+                                (b)<button id="special1" class="options">C#</button>
+                                (c)<button id="special1" class="options">A</button>
+                                (d)<button id="special1" class="options">Bflat</button></p>
+
             </div>
-        </div><hr>
-        <div class="earlesson">
-        <div class="earlesson1">
-             <h3>2.Reference note: C</h3>
-            <audio controls>
-                <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-            </audio>
-            <h3>Question note</h3>
-            <audio controls>
-                <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid G Sharp or A Flat-2o1T6oV9YIQ-128k-1654544383428 (1).mp3">
-            </audio>
-        </div>
-        <div class="quest">
-            <h3> What is this note?<h3>
-           <p>(a)<button id="special1">F</button>
-           (b)<button id="special" >G#</button>
-           (c)<button id="special1">G</button>
-           (d)<button id="special1">B</button></p>
-         </div>
-        </div><hr>
-        <div class="earlesson">
-         <div class="earlesson1">
-            <h3>3.Reference note: C</h3>
-           <audio controls>
-               <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-           </audio>
-           <h3>Question note</h3>
-           <audio controls>
-               <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid C Sharp or D Flat-Fjie6s5OU9g-128k-1656822827405.mp3">
-           </audio>
-       </div>
-       <div class="quest">
-           <h3> What is this note?<h3>
-          <p>(a)<button id="special1">Eflat</button>
-          (b)<button id="special1" >E</button>
-          (c)<button id="special1">D</button>
-          (d)<button id="special">C#</button></p>
-        </div>
-        </div><hr>
-        <div class="earlesson">
-            <div class="earlesson1">
-            <h3>4.Reference note: C</h3>
-           <audio controls>
-               <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-           </audio>
-           <h3>Question note</h3>
-           <audio controls>
-               <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
-           </audio>
-       </div>
-       <div class="quest">
-           <h3> What is this note?<h3>
-          <p>(a)<button id="special1">E</button>
-          (b)<button id="special">F</button>
-          (c)<button id="special1">F#</button>
-          (d)<button id="special1">D</button></p>
-        </div>
-        </div>
+            <div class="second_one block hide">
+                <h3>2.Reference note:C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid G Sharp or A Flat-2o1T6oV9YIQ-128k-1654544383428 (1).mp3">
+                </audio>
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">F</button>
+                            (b)<button id="special1" class="options">G#</button>
+                            (c)<button id="special1" class="options">G</button>
+                            (d)<button id="special1" class="options">B</button></p>
+                        <!-- <p id="nxt_btn" class="pointer"> Next >></p> -->
+            </div>
+            <div class="third_one block hide">
+                <h3>3.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid C Sharp or D Flat-Fjie6s5OU9g-128k-1656822827405.mp3">
+                </audio>
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">Eflat</button>
+                            (b)<button id="special1" class="options">E</button>
+                            (c)<button id="special1" class="options">D</button>
+                            (d)<button id="special1" class="options">C#</button></p>
+                        <!-- <p id="nxt_btn" class="pointer"> Next >></p> -->
+            </div>
+
+            <div class="fourth_one block hide">
+                <h3>4.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+                </audio>
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">E</button>
+                            (b)<button id="special1" class="options">F</button>
+                            (c)<button id="special1" class="options">F#</button>
+                            (d)<button id="special1" class="options">D</button></p>
+
+            </div>
+
+            <div class="fifth_one block hide">
+                <h3>5.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+                </audio>
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">E</button>
+                            (b)<button id="special1" class="options">F</button>
+                            (c)<button id="special1" class="options">F#</button>
+                            (d)<button id="special1" class="options">D</button></p>
+
+            </div>
+            <div class="sixth_one block hide">
+                <h3>6.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+                </audio>
+
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">E</button>
+                            (b)<button id="special1" class="options">F</button>
+                            (c)<button id="special1" class="options">F#</button>
+                            (d)<button id="special1" class="options">D</button></p>
+
+            </div>
+
+            <div class="seventh_one block hide">
+                <h3>7.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+                </audio>
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">E</button>
+                            (b)<button id="special1" class="options">F</button>
+                            (c)<button id="special1" class="options">F#</button>
+                            (d)<button id="special1" class="options">D</button></p>
+
+            </div>
+            <div class="eigth_one block hide">
+                <h3>8.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+                </audio>
+
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">E</button>
+                            (b)<button id="special1" class="options">F</button>
+                            (c)<button id="special1" class="options">F#</button>
+                            (d)<button id="special1" class="options">D</button></p>
+
+            </div>
+            <div class="nineth_one block hide">
+                <h3>9.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+                </audio>
+
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">E</button>
+                            (b)<button id="special1" class="options">F</button>
+                            (c)<button id="special1" class="options">F#</button>
+                            (d)<button id="special1" class="options">D</button></p>
+
+
+            </div>
+            <div class="tenth_one block hide">
+                <h3>10.Reference note: C</h3>
+                <audio controls>
+                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+                </audio>
+                <h3>Question note</h3>
+                <audio controls>
+                    <source
+                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+                </audio>
+
+                <h3> What is this note?<h3>
+                        <p id="mcq">(a)<button id="special1" class="options">E</button>
+                            (b)<button id="special1" class="options">F</button>
+                            (c)<button id="special1" class="options">F#</button>
+                            (d)<button id="special1" class="options">D</button></p>
+
+            </div><p id="nxt_btn" class="pointer"> Next >></p></div>
         
+        <div>
+            <canvas="chart_js" width="450" height="150"></canvas></div>
     </main>
-    
+
+    <script>
+        let next = document.querySelector("#nxt_btn");
+        let main = document.getElementsByClassName("main_div");
+        let firstOne = document.getElementsByClassName("first_one")
+        let secondOne = document.getElementsByClassName("second_one");
+        let buttons = document.querySelectorAll("#special1")
+       
+
+        let i = 0;
+        buttons.forEach((f) => {
+            f.addEventListener('click', k => {
+                k.preventDefault();
+            })
+        })
+        let toggle = 0;
+        let pressKey = document.querySelectorAll("#special1");
+        pressKey.forEach(e => {
+            e.addEventListener("click", el => {
+                toggle = 1
+                return toggle
+            })
+        })
+        let nextz = document.getElementById("nxt_btn");
+        nextz.addEventListener('click', e => {
+            e.preventDefault();
+            if (toggle == 1) {
+                main[0].children[i].style.display = "none";
+                main[0].children[i + 1].style.display = "block";
+                i++;
+                return toggle = 0;
+            }
+        })
+
+    // <block:setup:1>
+// const data = {
+//   labels: [
+//     'Red',
+//     'Blue',
+//     'Yellow'
+//   ],
+//   datasets: [{
+//     label: 'My First Dataset',
+//     data: [300, 50, 100],
+//     backgroundColor: [
+//       'rgb(255, 99, 132)',
+//       'rgb(54, 162, 235)',
+//       'rgb(255, 205, 86)'
+//     ],
+//     hoverOffset: 4
+//   }]
+// };
+// </block:setup>
+
+// <block:config:0>
+// const config = {
+//   type: 'doughnut',
+//   data: data,
+// };
+// </block:config>
+
+// module.exports = {
+//   actions: [],
+//   config: config,
+// };
+
+//        let mychart = document.getElementById("chart_js");
+//        mychart = new chart (mychart,{
+//          type:doughnut;
+//          data:data
+//          })
+//          const data = {
+//   labels: [
+//     'Red',
+//     'Blue',
+//     'Yellow'
+//   ],
+//   datasets: [{
+//     label: 'My First Dataset',
+//     data: [300, 50, 100],
+//     backgroundColor: [
+//       'rgb(255, 99, 132)',
+//       'rgb(54, 162, 235)',
+//       'rgb(255, 205, 86)'
+//     ],
+//     hoverOffset: 4
+//   }]
+// };
+    </script>
+
 </body>
+
 </html>
