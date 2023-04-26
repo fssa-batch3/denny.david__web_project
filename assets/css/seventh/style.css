@@ -13,8 +13,8 @@ body {
     justify-content: space-around;
     font-size: 25px;
     height:60px;
-   color:black;
-   padding-top:20px;
+    color:black;
+    padding-top:20px;
     cursor: pointer;
     background-color: white;
     -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
@@ -35,9 +35,7 @@ body {
     justify-content: space-around;
     width:450px;
 }
-/* hr{
-    box-shadow:2px 2px black;
-} */
+
 .profile_img{
     width:60px;
     height:60px;

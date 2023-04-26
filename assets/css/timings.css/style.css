@@ -8,6 +8,40 @@ body {
     width: 1485px;
     height: 100px;
 }
+.header {
+    display:flex;
+    justify-content: space-around;
+    font-size: 25px;
+    height:60px;
+    color:black;
+    padding-top:20px;
+    cursor: pointer;
+    background-color: white;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+.website_name{
+    width:250px;
+    padding-right:350px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    color: #f67600;
+}
+.others {
+    margin-left: 50px;
+    display:flex;
+    justify-content: space-around;
+    width:450px;
+}
+
+.profile_img{
+    width:60px;
+    height:60px;
+    margin-left:15px;
+   margin-top:-10px;
+}
 #for_padd {
     padding-top: 20px;
     padding-left:20px;
