@@ -83,6 +83,9 @@
     - Expected Result:
         - By clicking that the user can play the piano.
  
+  Quiz to the user( yet to start ❌).
+  
+  Result for the quiz( yet to start ❌).
   
   Course progress( yet to start ❌).
   
