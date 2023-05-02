@@ -205,6 +205,7 @@
         <div>
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
         </div>
+      
     </main>
 
     <script>
@@ -229,6 +230,12 @@
         const Asharp = document.querySelectorAll("asharp")
         const B = document.querySelectorAll("b")
        var correct =0;
+        let logo = document.getElementsByClassName("website_name");
+        logo[0].addEventListener("click",e=>{
+            window.location.href="../index.html"
+           
+        })
+
        function myFunction() {
            correct+=10;
         }
