@@ -14,60 +14,171 @@
             <div class="website_name">Hardenz</div>
             <div class="others">
                <div class="courses">Courses</div>
-               <div class="about">About us </div>
-               <div class="contact">Contact us</div>
+               <div class="about">About  </div>
+               <div class="contact">Contact </div>
                <div><img class="profile_img" src="../assets/image/main_img.jpg"></div>
             </div>
            </div>
         </div>
     </header>
     <!-- Practicing exercises to finding chords -->
+   <div class="maindiv">
     <div class="listening">
     <div class="listening1">
         <h1>Practice for finding chords</h1>
         
-          <h2> 1.Which chord is this?</h2> 
+          <h2> 1.What is that chord?</h2> 
           <img src="../assets/image/a chord.png" alt="error"><br>
            <div>
-            a).<button id="special1">C E G</button>
-            b).<button id="special">A C# D</button>
-            c).<button id="special1">A# C D# </button>
-    </div>
+            a).<button class="special1">C E G</button>
+            b).<button class="special">A C# D</button>
+            c).<button class="special1">A# C D# </button>
+          </div>
     <div class="listening1">
-        <h2>2.Which chord is this?</h2>
+        <h2>2.What is that chord?</h2>
         <img src="../assets/image/b flat.png" alt="bflat image">
-        <div> a).<button id="special">B D# F# </button>
-            b).<button id="special1">Bflat D F</button>
-            c).<button id="special">Bflat Eflat G</button></div>
+        <div> 
+            a).<button class="special1">B D# F# </button>
+            b).<button class="special">Bflat D F</button>
+            c).<button class="special1">Bflat Eflat G</button>
+        </div>
     </div>
     <div class="listening1">
-        <h2>3.Which chord is this?</h2>
+        <h2>3.What is that chord?</h2>
         <img src="../assets/image/g_flat.png" alt="g-flat">
        <div>
-        a).<button id="special">F# A# C#</button>
-        b).<button id="special1">F# B D#</button>
-        c).<button id="special">F A C</button>
+        a).<button class="special">F# A# C#</button>
+        b).<button class="special1">F# B D#</button>
+        c).<button class="special">F A C</button>
        </div>
     
     </div>
     <div class="listening1">
-        <h2>4.Which chord is this?</h2>
+        <h2>4.What is that chord?</h2>
         <img src="../assets/image/e_flat_m.png" alt="eflat minor">
        <div>
-        a).<button id="special">D# F# Bflat </button>
-        b).<button id="special1">D# G# C</button>
-        c).<button id="special">D# G# B</button>
+        a).<button class="special">D# F# Bflat </button>
+        b).<button class="special1">D# G# C</button>
+        c).<button class="special">D# G# B</button>
        </div>
     </div>
     <div class="listening1">
-        <h2>5.Which chord is this?</h2>
+        <h2>5.What is that chord?</h2>
         <img src="../assets/image/d_flat_m.png" alt="dflat minor">
        <div>
-        a).<button id="special">C# E G#</button>
-        b).<button id="special1">C# F G#</button>
-        c).<button id="special">Aflat C Eflat</button>
+        a).<button class="special">C# E G#</button>
+        b).<button class="special1">C# F G#</button>
+        c).<button class="special">Aflat C Eflat</button>
+
        </div>
     </div>
+    <p id="nxt_btn" class="pointer"> Next >></p>
+
     </div>
+</div></div>
+
+ 
 </body>
+<script>
+
+        let next = document.querySelector("#nxt_btn");
+    let green = document.querySelectorAll(".special")
+    let main = document.getElementsByClassName("maindiv");
+            let red = document.querySelectorAll(".special1")
+           red.forEach((e, index) => {
+    
+    e.addEventListener('click', el => {
+        e.style.backgroundColor = 'red';
+    })
+    e.addEventListener('click', el => {
+        if (e.value == '') {
+            // green.disabled = true
+            green.forEach(e => {
+                e.disabled = true
+            })
+            red.forEach((r, ind) => {
+                if (index != ind) {
+                    r.disabled = true
+                }
+            })
+        }
+    })
+    })
+    green.forEach((e, index) => {
+    e.addEventListener('click', e => {
+    
+        green.forEach(e => {
+            e.style.backgroundColor = 'green';
+        })
+        red.forEach((r, ind) => {
+            r.disabled = true
+    
+        })
+    })
+    })
+     
+    let i = 0;
+
+next.addEventListener('click', e => {
+    e.preventDefault();
+    if (red[0].disabled == true || green[0].disabled == true) {
+        main[0].children[i].style.display = "none";
+        main[0].children[i + 1].style.display = "block";
+
+        i++;
+        // storing the correct answers
+      
+        if (i == 4) {
+            next.style.display = "none";
+            let submit_btn = document.createElement("button");
+            submit_btn.setAttribute("id", "result_btn")
+            submit_btn.innerHTML = "SUBMIT";
+            maindiv.appendChild(submit_btn);
+
+            document.querySelector("#result_btn").addEventListener('click', e => {
+                tenth[0].style.display = "none";
+                submit_btn.style.display = "none";
+                let savedData = JSON.parse(localStorage.getItem(forResults));
+                let options = document.querySelectorAll(".options");
+                // options.addEventListener('click',e=>{
+                //    let value= e.target.value
+                // })
+               
+                let xValues = ["correct","wrong"];
+                let yValues = [correct,100-correct];
+                let barColors = [
+                   "#00aba9", "#b91d47",
+                ];
+
+                new Chart("myChart", {
+                    type: "pie",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        title: {
+                            display: true,
+                            text: "Results for the ear training test"
+                        }
+                    }
+                })
+            })}
+        red.forEach(e => {
+            e.disabled = false
+        })
+        green.forEach(e => {
+            e.disabled = false
+            e.style.backgroundColor = '#F0F0F0';
+            e.style.border = ".5px solid black"
+
+        }) }})
+
+
+    
+    
+    </script>
 </html>

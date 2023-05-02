@@ -13,8 +13,8 @@
             <div class="website_name">Hardenz</div>
             <div class="others">
                <div class="courses">Courses</div>
-               <div class="about">About us </div>
-               <div class="contact">Contact us</div>
+               <div class="about">About  </div>
+               <div class="contact">Contact</div>
                <div><img class="profile_img" src="../assets/image/main_img.jpg"></div>
             </div>
            </div>
@@ -30,7 +30,7 @@
             <p>This is for those who learn at the first time</p>
         </div>
         </div>
-        <div class="intermediate">
+        <div id="page_into_inter" class="intermediate">
             <div class="intermediate_img">
             <img src="../assets/image/logopiano.jpg" alt="piano_logo">
             </div>
@@ -44,7 +44,11 @@
     <script>
         let beginners = document.getElementById('page_into')
         beginners.addEventListener('click',e=>{
-            window.location.href="..assests."
+            window.location.href="basics.html"
+        })
+        let intermediate = document.getElementById('page_into_inter')
+        intermediate.addEventListener('click',e=>{
+            window.location.href="lessons.html"
         })
     </script>
     

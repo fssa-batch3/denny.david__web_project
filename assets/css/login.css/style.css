@@ -3,7 +3,7 @@
 body {
     margin:0px;
     background-color:#f2f5ff ;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
 }
 .header {
     display:flex;

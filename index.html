@@ -15,8 +15,8 @@
          <div class="website_name">Hardenz</div>
          <div class="others">
             <div class="courses">Courses</div>
-            <div class="about">About us </div>
-            <div class="contact">Contact us</div>
+            <div class="about">About  </div>
+            <div class="contact">Contact </div>
             <div id="signing "class="signup">Sign up</div>
          </div>
         </div>
@@ -126,16 +126,30 @@
                 <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
               </section>
             </section></div>
-            
+            <div class="test_head">
+            <h1>Testimonials</h1>  </div>
         <div class="testimonials">
+         
             <div class="testimonials1">
             <img src="https://media.licdn.com/dms/image/D5603AQHpRPEs8bGe2A/profile-displayphoto-shrink_400_400/0/1669552077623?e=1684368000&v=beta&t=cZNLvWWvg1jt4sV9t9NlTELR3NsE_u2UgmEEzvieCLQ" alt="testimonials_photo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales felis non nulla tincidunt dictum. 
+              Ut vitae augue tortor. Proin placerat erat diam, at ornare est ornare non. Mauris dapibus imperdiet arcu. 
+              Donec varius venenatis augue, quis facilisis nisi ultrices quis. 
+              </p>
             </div>
             <div class="testimonials1">
-            <img src="" alt="reviewer_photo"> 
+              <img src="https://media.licdn.com/dms/image/D5603AQHpRPEs8bGe2A/profile-displayphoto-shrink_400_400/0/1669552077623?e=1684368000&v=beta&t=cZNLvWWvg1jt4sV9t9NlTELR3NsE_u2UgmEEzvieCLQ" alt="testimonials_photo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales felis non nulla tincidunt dictum. 
+                Ut vitae augue tortor. Proin placerat erat diam, at ornare est ornare non. Mauris dapibus imperdiet arcu. 
+                Donec varius venenatis augue, quis facilisis nisi ultrices quis.
+                 .</p>
             </div>
             <div class="testimonials1">
-            <img src="" alt="reviewer_photo">    
+              <img src="https://media.licdn.com/dms/image/D5603AQHpRPEs8bGe2A/profile-displayphoto-shrink_400_400/0/1669552077623?e=1684368000&v=beta&t=cZNLvWWvg1jt4sV9t9NlTELR3NsE_u2UgmEEzvieCLQ" alt="testimonials_photo">   
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales felis non nulla tincidunt dictum. 
+                Ut vitae augue tortor. Proin placerat erat diam, at ornare est ornare non. Mauris dapibus imperdiet arcu. 
+                Donec varius venenatis augue, quis facilisis nisi ultrices quis.
+                </p>
             </div>
         </div>
         <!-- Here i am giving the benefits of learning music -->
@@ -239,8 +253,14 @@
       e.target.classList.remove("playing");
     }
 
-    let sign = document.getElementById("signing");
-    sign.addEventListener('click',e=>{
-      window.location.href = "pages/signup.html"
+    // let sign = document.getElementById("signing");
+    // sign.addEventListener('click',e=>{
+    //   window.location.href = "pages/signup.html"
+    // })
+
+
+    let courses = document.getElementsByClassName("courses")
+    courses[0].addEventListener('click',e=>{
+      window.location.href="pages/lessons.html"
     })
-        </script>
+    </script>

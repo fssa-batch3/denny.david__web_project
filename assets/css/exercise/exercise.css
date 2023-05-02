@@ -1,7 +1,11 @@
 /* This is the first exercise to practise scales in website and this is also the header section  */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 body {
     margin: 0px;
     background-color: #eae9e9;
+    font-family: 'Rubik';
 }
 
 .nav {
@@ -16,32 +20,35 @@ body {
     height:60px;
     color:black;
     padding-top:20px;
-    cursor: pointer;
     background-color: white;
     -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
-
-.website_name{
+div .website_name{
     width:250px;
-    padding-right:350px;
     font-weight: bold;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     color: #f67600;
+    cursor: pointer;
+    margin-left:-50px;
 }
 .others {
-    margin-left: 50px;
+    margin-left: 300px;
     display:flex;
     justify-content: space-around;
     width:450px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top:5px;
+    font-size:20px;
 }
 
 .profile_img{
-    width:60px;
-    height:60px;
+    width:36px;
+    height:auto;
     margin-left:15px;
-   margin-top:-10px;
+   margin-top:-8px;
 }
 #for_padd {
     padding-top: 20px;
@@ -124,9 +131,9 @@ body {
 }
 main h2 {
     font-size: 40px;
-    position: fixed;
-    margin-left: 120px;
-    background-color:#fff ;
+    
+    margin-left: 650px;
+   
     /* margin-left: 550px; */
 }
 #mcq {
@@ -148,14 +155,24 @@ main h2 {
 .quest button {
     font-size: 22px;
 }
+.chartjs-render-monitor {
+    animation: chartjs-render-animation 0.001s;
+    position: absolute;
+    top: 27%;
+    left: 30%;
+}
+/* button.special,.special1 {
+    background-color: #F0F0F0;
+    border:0.5px solid black;
+} */
 
-#special1:focus {
-    background-color: red;
+/* #special1:checked {
+    background: red;
 }
 
-#special:focus {
-    background-color: green;
-}
+#special:checked {
+    background: green;
+} */
 
 .listening {
     margin-left: 450px;
@@ -226,15 +243,21 @@ main h2 {
     border-radius: 15px;
     margin-bottom: 40px;
 }
-
-h1 {
-    text-align: center;
-    text-shadow: 2px 2px #eae9e9;
+.listening{
+    width:500px;
+}
+.maindiv{
+    margin-left:30px;
+}
+.listening h1 {
+  
+    /* text-shadow: 2px 2px #eae9e9;
     width: 1000px;
     position: relative;
-    margin-left: 250px;
-    border-radius: 15px;
-    color: blueviolet;
+    
+    border-radius: 15px; */
+    color: black;
+    margin-left: 10px;
 }
 
 .metronom {

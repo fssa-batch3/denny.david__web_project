@@ -4,12 +4,13 @@ body {
     background-color: #f8f8f8;
     margin:0px;
     padding:0px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
 }
 form {
     display:flex;
     align-items:center;
     justify-content:center;
+    margin-top: 200px;
 }
 fieldset {
     border:none;
@@ -75,6 +76,9 @@ fieldset {
     border : 1px solid black; 
     margin-left:25px;
 }
+#getDetails {
+    margin-left:250px;
+}
 /* .profile {
     /* margin-top:0px; 
 } */
@@ -109,14 +113,24 @@ fieldset {
     
     /* box-shadow: rpopupgba(149, 157, 165, 0.2) 0px 8px 24px; */
 
-#save-btn,#save-btn2 {
+#save-btn {
     
     color:white;
     border-radius: 5px;
     font-size:18px;
-   margin-left: 120px;
+   margin-left: 40px;
+   margin-bottom:10px;
    margin-top:25px;
    background-image:linear-gradient(to right,#eb1874,#ef525e)
+}
+#save-btn2{
+   background-image:linear-gradient(to right,#eb1874,#ef525e);
+   color:white;
+   border-radius: 5px;
+   font-size:18px;
+   margin-left: 40px;
+   margin-right:20px;
+   margin-top:25px;
 }
 .popup_images img {
      width:70px;
@@ -169,17 +183,17 @@ fieldset {
 } */
 .popup {
     display:none;
-    /* border-radius: 5px;
+     /* border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display:flex;
     width: 500px;
     position:relative;
     bottom:150px;
-    right:150px;
+    right:150px; */
     background-color:white;
-    justify-content: space-around;
+    /* justify-content: space-around;
     font-size: 12px;
-    border:1px solid black;  */
+    border:1px solid black;  */ 
 }
 .popup button {
     background-color: white;
@@ -232,7 +246,7 @@ fieldset {
     width: 100px;
     position: relative;
     top:690px;
-    left: 1403.5px; 
+    left: 1386px;
 }
 .grey-img{
     background-color: #f9f9f9;

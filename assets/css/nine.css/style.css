@@ -1,6 +1,9 @@
 /* This is the css for nineth chord page */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 body {
     margin:0px;
+    font-family: 'Rubik';
 }
 .nav {
     display: flex;
@@ -18,32 +21,36 @@ body {
     height:60px;
     color:black;
     padding-top:20px;
-    cursor: pointer;
     background-color: white;
     -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
 
-.website_name{
+div .website_name{
     width:250px;
-    padding-right:350px;
     font-weight: bold;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     color: #f67600;
+    cursor: pointer;
+    margin-left:-50px;
 }
 .others {
-    margin-left: 50px;
+    margin-left: 300px;
     display:flex;
     justify-content: space-around;
     width:450px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top:5px;
+    font-size:20px;
 }
 
 .profile_img{
-    width:60px;
-    height:60px;
+    width:36px;
+    height:auto;
     margin-left:15px;
-   margin-top:-10px;
+   margin-top:-8px;
 }
 .navbar1 img {
     width: 50px;
@@ -97,15 +104,17 @@ body {
 }
 .nineth2 video {
     width:550px;
-    height:auto;
-}
-.nineth {
-    display:flex;
+    margin-left:200px;
+    margin-bottom:100px;
     margin-top:50px;
 }
-.nineth1 h3 {
-    font-size:25px;
+.nineth {
+    margin-left:250px;
+    margin-top:60px;
+    font-size: 19px;
+    width:990px;
 }
+
 button {
     margin-top:30px;
     margin-left:600px;

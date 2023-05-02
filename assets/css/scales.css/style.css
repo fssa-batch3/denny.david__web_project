@@ -1,6 +1,9 @@
 /* THis is the css for scales lesson page */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 body {
     margin:0px;
+    font-family: 'Rubik';
 }
 .nav {
     display: flex;
@@ -14,32 +17,40 @@ body {
     height:60px;
     color:black;
     padding-top:20px;
-    cursor: pointer;
     background-color: white;
     -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
-
-.website_name{
+div .website_name{
     width:250px;
-    padding-right:350px;
     font-weight: bold;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     color: #f67600;
+    cursor: pointer;
+    margin-left:-50px;
 }
 .others {
-    margin-left: 50px;
+    margin-left: 300px;
     display:flex;
     justify-content: space-around;
     width:450px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top:5px;
+    font-size:20px;
 }
-
+.scales {
+    width:990px;
+    font-size: 19px;
+    margin-top:60px;
+    margin-left:250px;
+}
 .profile_img{
-    width:60px;
-    height:60px;
+    width:36px;
+    height:auto;
     margin-left:15px;
-   margin-top:-10px;
+   margin-top:-8px;
 }
 #for_padd {
     padding-top: 20px;
@@ -91,20 +102,13 @@ body {
     font-weight: bold;
     font-family:Arial, Helvetica, sans-serif;
 }
-.scales1  {
-    margin-top:70px;
-}
-.scales {
-    padding: 50px;
-    /* width: 1000px; */
-    display:flex;
-    /* justify-content: space-between; */
-    margin-left: 200px;
-}
+
 .scales video {
-    width:600px;
-    height:500px;
-    border-radius:10px;
+    width:550px;
+    margin-top:30px;
+    height:auto;
+   margin-left:210px;
+   margin-bottom:70px;
 }
 #photo1 {
     width:550px;
