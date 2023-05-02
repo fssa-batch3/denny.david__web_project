@@ -27,49 +27,53 @@
     <div class="listening1">
         <h1>Practice for finding chords</h1>
         
-          <h2> 1.What is that chord?</h2> 
+          <h3> 1.What is that chord?</h3> 
           <img src="../assets/image/a chord.png" alt="error"><br>
-           <div>
+           <div><p id="mcq">
             a).<button class="special1">C E G</button>
             b).<button class="special">A C# D</button>
             c).<button class="special1">A# C D# </button>
+        </p>
           </div>
     <div class="listening1">
-        <h2>2.What is that chord?</h2>
+        <h3>2.What is that chord?</h3>
         <img src="../assets/image/b flat.png" alt="bflat image">
-        <div> 
+        <div><p id="mcq"> 
             a).<button class="special1">B D# F# </button>
             b).<button class="special">Bflat D F</button>
             c).<button class="special1">Bflat Eflat G</button>
+        </p>
         </div>
     </div>
     <div class="listening1">
-        <h2>3.What is that chord?</h2>
+        <h3>3.What is that chord?</h3>
         <img src="../assets/image/g_flat.png" alt="g-flat">
-       <div>
+       <div><p id="mcq">
         a).<button class="special">F# A# C#</button>
         b).<button class="special1">F# B D#</button>
         c).<button class="special">F A C</button>
+    </p>
        </div>
     
     </div>
     <div class="listening1">
-        <h2>4.What is that chord?</h2>
+        <h3>4.What is that chord?</h3>
         <img src="../assets/image/e_flat_m.png" alt="eflat minor">
-       <div>
+       <div><p id="mcq">
         a).<button class="special">D# F# Bflat </button>
         b).<button class="special1">D# G# C</button>
         c).<button class="special">D# G# B</button>
+    </p>
        </div>
     </div>
-    <div class="listening1">
-        <h2>5.What is that chord?</h2>
+    <div class="listening1 fifth">
+        <h3>5.What is that chord?</h3>
         <img src="../assets/image/d_flat_m.png" alt="dflat minor">
-       <div>
+       <div><p id="mcq">
         a).<button class="special">C# E G#</button>
         b).<button class="special1">C# F G#</button>
         c).<button class="special">Aflat C Eflat</button>
-
+        </p>
        </div>
     </div>
     <p id="nxt_btn" class="pointer"> Next >></p>
@@ -81,10 +85,11 @@
 </body>
 <script>
 
-        let next = document.querySelector("#nxt_btn");
+    let next = document.querySelector("#nxt_btn");
     let green = document.querySelectorAll(".special")
     let main = document.getElementsByClassName("maindiv");
-            let red = document.querySelectorAll(".special1")
+    let fifth = document.getElementsByClassName("tenth")
+    let red = document.querySelectorAll(".special1")
            red.forEach((e, index) => {
     
     e.addEventListener('click', el => {
@@ -124,8 +129,7 @@ next.addEventListener('click', e => {
     if (red[0].disabled == true || green[0].disabled == true) {
         main[0].children[i].style.display = "none";
         main[0].children[i + 1].style.display = "block";
-
-        i++;
+     i++;
         // storing the correct answers
       
         if (i == 4) {
