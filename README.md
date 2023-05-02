@@ -75,8 +75,17 @@
         3. Click "Delete" button to delete
     - Expected Result:
         - The user can delete profile.
-
-  Creating a piano to play that in my website ( yet to start ❌ ).
+### Playing piano ( completed :white_check_mark:) 
+- Scenario 1: Successfully the user can play piano.
+    - Steps:
+        1. The user can play the piano in the home page.
+        2. He can play it by clicking the button.
+    - Expected Result:
+        - By clicking that the user can play the piano.
+ 
+  Quiz to the user( yet to start ❌).
+  
+  Result for the quiz( yet to start ❌).
   
   Course progress( yet to start ❌).
   
