@@ -67,7 +67,33 @@ div .website_name{
     width: 250px;
 
 }
-
+.instructions {
+    background-color: white;
+    width: 500px;
+    height: auto;
+    
+    /* border: 1px solid black; */
+    padding: 50px 0px 50px 110px;
+    position:absolute;
+    top:35%;
+    left:30%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius:5px;
+}
+.instructions h2 {
+    margin-left:110px;
+}
+main h2 {
+    margin-left:680px;
+    font-size:26px;
+}
+.instructions button {
+    font-size:15px;
+    background-color:green;
+    border:1px solid black;
+    margin-left:150px;
+    padding:5px 10px 5px 10px;
+} 
 .bluecolor {
     background-color: #09006d;
     width: 250px;
@@ -110,10 +136,21 @@ div .website_name{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.main_div .hide {
+/* .main_div .hide {
+    display:none;
+} */
+.maindiv .hide {
     display:none;
 }
-
+.seventh_test .hide {
+    display:none;
+}
+.diminished .hide {
+    display:none;   
+}
+.threenotes .hide{
+    display:none;   
+}
 .main_div h3{
     font-size:25px;
 }
@@ -129,16 +166,21 @@ div .website_name{
 .block {
     display:block;
 }
-main h2 {
+/* main h2 {
     font-size: 40px;
     
     margin-left: 650px;
    
-    /* margin-left: 550px; */
+     margin-left: 550px; 
+}*/
+
+img#chord_img{
+    width:500px;
+    height:auto;
 }
 #mcq {
     width:500px;
-    margin-left:25px; 
+    /* margin-left:25px;  */
     font-size: 25px;  
 }
 #mcq button {
@@ -146,6 +188,9 @@ main h2 {
 }
 .pointer{
     cursor:pointer;
+}
+.diminished {
+    margin-left:550px;
 }
 /* .earlesson {
     font-family: Arial, Helvetica, sans-serif;
@@ -202,10 +247,10 @@ main h2 {
     /* border: 1px solid black; */
 }
 
-.threenotes {
+/* .threenotes {
     margin-left: 600px;
     margin-top: 30px;
-}
+} */
 
 .threenotes1 button {
     font-size: 18px;
@@ -247,7 +292,10 @@ main h2 {
     width:500px;
 }
 .maindiv{
-    margin-left:30px;
+    margin-left:500px;
+}
+.heading h2 {
+    margin-left: 500px;
 }
 .listening h1 {
   
@@ -297,6 +345,53 @@ main h2 {
 .earlesson h2 {
     font-size: 45px;
 }
+
+.dim {
+    display:flex;
+    box-shadow: 1px solid black;
+ }
+ .dim1 h2 {
+     
+     margin-top:50px;
+     font-family:Arial, Helvetica, sans-serif;
+ }
+ .dimnat{
+     display: flex;
+     
+ }
+ .dim-img {
+     position:relative;
+ }
+ h3 {
+    
+     
+    
+   
+    
+     font-size:20px;
+     /* background: -webkit-linear-gradient(0deg,rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+     background-clip: text;
+     -webkit-background-clip: text;
+     /* -webkit-text-fill-color: transparent; */
+     backdrop-filter: blur(10px); */
+ }
+ .dim-img img {
+     position:fixed;
+     width:740px;
+     height:900px;
+     
+     
+ }
+ 
+ .di {
+     margin-top:100px;
+ }
+ .dim2 {
+    margin-top:28px;
+    margin-left:20px;
+}
+
+
 @media only screen and (max-width:900px){
     header {
         width:400px;

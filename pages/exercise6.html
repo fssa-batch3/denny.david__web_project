@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -20,61 +22,404 @@
             </div>
            </div>
    </header>
-   <main>
+   
     <!-- This is the exercise for inversions -->
-    <div class="threenotes">
-        <div class="threenotes1">
-    <h2>Inversions</h2>
+    <div style="margin-left:660px;" class="inversion_head"><h1>Inversions</h1></div>
+    <div class="main_div" id="main_div"></div>
+    <!-- <div class="threenotes">
+       <div class="first_quest">
+   
     <h2>1.What is this inversion?</h2>
-    <img src="../assets/image/Fsharp.png" alt="F#"> 
-    <div>
-        a).<button id="special">1st inversion</button>
-        b).<button id="special1">2nd inversion</button>
-        C).<button id="special1">3rd inversion</button>
-       
+    <img id="chord_img" src="../assets/image/Fsharp.png" alt="F#"> 
+    <div><p id="mcq">
+        a).<button class="special">1st inversion</button>
+        b).<button class="special1">2nd inversion</button>
+        C).<button class="special1">3rd inversion</button>
+    </p>
       </div>  
     </div>
-    <div class="threenotes1">
+    <div class="second_quest hide">
        <h2>2.What is this inversion?</h2>
-        <img src="../assets/image/b_d_sharp.png" alt="B chord"> 
-        <div>
-            a).<button id="special1">1st inversion</button>
-            b).<button id="special">2nd inversion</button>
-            C).<button id="special1">3rd inversion</button>
+        <img id="chord_img" src="../assets/image/b_d_sharp.png" alt="B chord"> 
+        <div><p id="mcq">
+            a).<button class="special1">1st inversion</button>
+            b).<button class="special">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
           </div>  
         </div>
-    <div class="threenotes1">
+    <div class="third_quest hide">
             <h2>3.What is this inversion?</h2>
-            <img src="../assets/image/em inversion.png" alt="em chord"> 
-            <div>
-                a).<button id="special1">1st inversion</button>
-                b).<button id="special">2nd inversion</button>
-                C).<button id="special1">3rd inversion</button>
-               
+            <img id="chord_img" src="../assets/image/em inversion.png" alt="em chord"> 
+            <div><p id="mcq">
+                a).<button class="special1">1st inversion</button>
+                b).<button class="special">2nd inversion</button>
+                C).<button class="special1">3rd inversion</button>
+            </p>
               </div>  
     </div>
-    <div class="threenotes1">
+    <div class="fourth_quest hide">
         <h2>4.What is this inversion?</h2>
-        <img src="../assets/image/gminor.png" alt="Gm"> 
-        <div>
-            a).<button id="special">1st inversion</button>
-            b).<button id="special1">2nd inversion</button>
-            C).<button id="special1">3rd inversion</button>
-         
+        <img id="chord_img" src="../assets/image/gminor.png" alt="Gm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
           </div>  
     </div>
-    <div class="threenotes1">
+    <div class="fifth_quest fifth hide">
         <h2>5.What is this inversion?</h2>
-        <img src="../assets/image/Fm.png" alt="Fm"> 
-        <div>
-            a).<button id="special">ist inversion</button>
-            b).<button id="special1">2nd inversion</button>
-            C).<button id="special1">3rd inversion</button>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
           </div>  
     </div>
-</div>
-    
+    <p id="nxt_btn" class="pointer"> Next >></p> -->
 
-   </main>
+    <div class="instructions" style="display: none;">
+        <h2 style="color:green">Instructions</h2>
+        <h4>You should first hear the audio and find the answers</h4>
+        <button id="ok_btn">OK</button>
+      </div>
+   
+   
+    
+  
 </body>
 </html>
+
+<script>
+
+let questions = {
+    1:` <div class="first_quest">
+   
+   <h2>1.What is this inversion?</h2>
+   <img  id="chord_img" src="../assets/image/Fsharp.png" alt="F#"> 
+   <div><p id="mcq">
+       a).<button class="special">1st inversion</button>
+       b).<button class="special1">2nd inversion</button>
+       C).<button class="special1">3rd inversion</button>
+   </p>
+     </div>  
+   </div>
+   <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    2:` <div class="second_quest hide">
+       <h2>2.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/b_d_sharp.png" alt="B chord"> 
+        <div><p id="mcq">
+            a).<button class="special1">1st inversion</button>
+            b).<button class="special">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+        </div>
+        <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    3:` <div class="third_quest hide">
+            <h2>3.What is this inversion?</h2>
+            <img id="chord_img" src="../assets/image/em inversion.png" alt="em chord"> 
+            <div><p id="mcq">
+                a).<button class="special1">1st inversion</button>
+                b).<button class="special">2nd inversion</button>
+                C).<button class="special1">3rd inversion</button>
+            </p>
+              </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    4:` <div class="fourth_quest hide">
+        <h2>4.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/gminor.png" alt="Gm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    5:` <div class="fifth_quest fifth hide">
+        <h2>5.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            6:` <div class="sixth_quest sixth hide">
+        <h2>6.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            7:` <div class="seventh_quest seventh hide">
+        <h2>7.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            8:` <div class="eight_quest eigth hide">
+        <h2>8.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            9:` <div class="nineth_quest nineth hide">
+        <h2>9.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+           10:` <div class="tenth_quest tenth hide">
+        <h2>10.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`
+    }
+
+let url = window.location.search
+        let url_params =new URLSearchParams(url)
+        let params_data_id= url_params.get("data_id") 
+        
+        let main_div = document.getElementById("main_div")
+        let div_create = questions[params_data_id]
+        main_div.innerHTML=div_create
+       
+        let anchor_button = document.getElementById("a_btn")    
+        let next = document.querySelectorAll(".nxt_btn");
+
+
+let green = document.querySelectorAll(".special")
+let threenotes = document.getElementsByClassName("threenotes");
+let tenth= document.getElementsByClassName("tenth")
+let red = document.querySelectorAll(".special1")
+let mychart = document.getElementById("mychart")
+
+red.forEach((e, index) => {
+ 
+e.addEventListener('click', el => {
+   
+   e.style.backgroundColor = 'red';
+})
+e.addEventListener('click', el => {
+   if (e.value == '') {
+       // green.disabled = true
+       green.forEach(e => {
+           e.disabled = true
+       })
+       red.forEach((r, ind) => {
+           if (index != ind) {
+               r.disabled = true
+           }
+       })
+   }
+})
+})
+green.forEach((e, index) => {
+e.addEventListener('click', e => {
+
+   green.forEach(e => {
+       e.style.backgroundColor = 'green';
+   })
+   red.forEach((r, ind) => {
+       r.disabled = true
+
+   })
+})
+})
+
+next.forEach((el,ind)=>{
+    // el.preventDefault
+    
+    el.addEventListener('click', e => {
+        e.preventDefault();
+        if (red[0].disabled == true || green[0].disabled == true) {
+        window.location.href =`./exercise6.html?data_id=${Number(params_data_id)+1}`
+        } 
+        } )
+     })
+
+
+let logo = document.getElementsByClassName("website_name");
+        logo[0].addEventListener("click",e=>{
+            window.location.href="../index.html"
+           
+        })
+
+        let instruction = document.getElementsByClassName("instructions");
+        let okay = document.getElementById("ok_btn")
+        let body =document.querySelector("main")
+        let header = document.querySelector("header")
+        function setupEvents(){
+             body.style.filter= "blur(2px)";
+             header.style.filter= "blur(2px)";
+             instruction[0].style.filter="none"
+             instruction[0].style.display="block";
+             
+        }
+        okay.addEventListener('click',e=>{
+                body.style.filter= "none";
+             header.style.filter= "none";
+                body.style.display="block";
+             header.style.display="block";
+               instruction[0].style.display="none";
+        })
+
+        var correct = 0;
+        let pieChart =  parseInt(localStorage.getItem("correct"));
+
+        if(params_data_id==1){
+        window.onload =function(){
+            setupEvents();
+         }}
+
+         if (params_data_id==10) {
+       
+       anchor_button.style.display = "none";
+       let submit_btn = document.createElement("button");
+       submit_btn.setAttribute("id", "result_btn")
+       submit_btn.innerHTML = "SUBMIT";
+      
+       tenth[0].appendChild(submit_btn)
+      
+       document.querySelector("#result_btn").addEventListener('click', e => {
+           fifth[0].style.display = "none";
+           submit_btn.style.display = "none";
+           let xValues = ["correct","wrong"];
+            let yValues = [pieChart,100-pieChart];
+      let barColors = [
+             "#00aba9", "#b91d47",
+            ];
+
+            new Chart("myChart", {
+               type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                  }]
+              },
+                options: {
+                   title: {
+                       display: true,
+                        text: "Results for the hearing test"
+                    }
+                } })
+         })}
+         
+
+
+// let i = 0;
+// next.addEventListener('click', e => {
+// e.preventDefault();
+// if (red[0].disabled == true || green[0].disabled == true) {
+   
+//    threenotes[0].children[i].style.display = "none";
+//    threenotes[0].children[i+1].style.display = "block";
+  
+// i++;
+//    // storing the correct answers
+ 
+//    if (i == 4) {
+//        next.style.display = "none";
+       
+//        let submit_btn = document.createElement("button");
+      
+//        submit_btn.setAttribute("id", "result_btn")
+//        submit_btn.innerHTML = "SUBMIT";
+//        seventhTest[0].append(submit_btn);
+   
+//        document.querySelector("#result_btn").addEventListener('click', e => {
+//            fifth[0].style.display = "none";
+//            submit_btn.style.display = "none";
+//            // let savedData = JSON.parse(localStorage.getItem(forResults));
+//            // let options = document.querySelectorAll(".options");
+//            // options.addEventListener('click',e=>{
+//            //    let value= e.target.value
+//            // })
+          
+//            let xValues = ["correct","wrong"];
+//            let yValues = [20,30];
+//            let barColors = [
+//               "#00aba9", "#b91d47",
+//            ];
+
+//            new Chart("myChart", {
+//                type: "pie",
+//                data: {
+//                    labels: xValues,
+//                    datasets: [{
+//                        backgroundColor: barColors,
+//                        data: yValues
+//                    }]
+//                },
+//                options: {
+//                    title: {
+//                        display: true,
+//                        text: "Results for the ear training test"
+//                    }
+//                }
+//            })
+//        })}
+//    red.forEach(e => {
+//        e.disabled = false
+//    })
+//    green.forEach(e => {
+//        e.disabled = false
+//        e.style.backgroundColor = '#F0F0F0';
+//        e.style.border = ".5px solid black"
+
+//    }) }})
+</script>

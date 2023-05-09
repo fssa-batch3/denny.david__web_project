@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
     <!-- This is my header section -->
@@ -20,37 +21,393 @@
             </div>
            </div>
     </header>
-    <!-- This is my relative seventh chord execise -->
-    <div class="relative-seventh">
-        <h2>1.Which note wiil be the relative seventh chord?</h2>
-        a).<button id="special">5th note</button>
-        b).<button id="special1">4thnote</button>
-        C).<button id="special1">6th note</button>
-        d).<button id="special1">2nd note</button>
-    </div>
-    <div class="relative-seventh">
+     <!-- This is my relative seventh chord execise -->
+    <h2 style="margin-left:640px;">Seventh Chord Test</h2>
+    <div class="main_div" id="main_div">
+    
+        <!-- <div class="first_quest ">
+            <h2>1.Which note wiil be the relative seventh chord?</h2>
+            <p id="mcq">
+             a).<button class="special">5th note</button>
+             b).<button class="special1">4thnote</button>
+             C).<button class="special1">6th note</button>
+             d).<button class="special1">2nd note</button></p>
+        </div>
+    <div class="second_quest hide">
         <h2>2.What is that chord?</h2>
         <img src="../assets/image/em7.png" alt="Em7 chord"><br><br>
-        a).<button id="special1">Am7</button>
-        b).<button id="special1">Dm7</button>
-        C).<button id="special1">Gm7</button>
-        d).<button id="special">Em7</button>
+        <p id="mcq">
+        a).<button class="special1">Am7</button>
+        b).<button class="special1">Dm7</button>
+        C).<button class="special1">Gm7</button>
+        d).<button class="special">Em7</button></p>
     </div>
-    <div class="relative-seventh">
+    <div class="third_quest hide">
         <h2>3.What is the relative seventh chord of F?</h2>
         <img src="../assets/image/em7.png" alt="Em7 chord"><br><br>
-        a).<button id="special1">G7</button>
-        b).<button id="special">C7</button>
-        C).<button id="special1">E7</button>
-        d).<button id="special1">D7</button>
+        <p id="mcq">
+        a).<button class="special1">G7</button>
+        b).<button class="special">C7</button>
+        C).<button class="special1">E7</button>
+        d).<button class="special1">D7</button></p>
     </div>
-    <div class="relative-seventh">
+    <div class="fourth_quest fourth hide">
         <h2>4.What is the relative seventh chord of G?</h2>
         <img src="../assets/image/d7 chord.png" alt="Em7 chord"><br><br>
-        a).<button id="special">D7</button>
-        b).<button id="special1">C7</button>
-        C).<button id="special1">G7</button>
-        d).<button id="special1">A7</button>
+        <p id="mcq">
+        a).<button class="special">D7</button>
+        b).<button class="special1">C7</button>
+        C).<button class="special1">G7</button>
+        d).<button class="special1">A7</button>
+        </p>
     </div>
+    <p id="nxt_btn" class="pointer"> Next >></p>
+</div> -->
+</div>
+<div>
+    <canvas id="myChart" style="width:100%; max-width:600px" ></canvas>
+</div>
+<div class="instructions" style="display: none;">
+    <h2 style="color:green">Instructions</h2>
+    <h4>You should first hear the audio and find the answers</h4>
+    <button id="ok_btn">OK</button>
+  </div>
+<script>
+
+      let questions = {
+        1:` <div class="first_quest ">
+            <h2>1.Which note wiil be the relative seventh chord?</h2>
+            <p id="mcq">
+             a).<button class="special">5th note</button>
+             b).<button class="special1">4thnote</button>
+             C).<button class="special1">6th note</button>
+             d).<button class="special1">2nd note</button></p>
+        </div>
+        <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+        2:`<div class="second_quest hide">
+        <h2>2. What is that chord?</h2>
+        <img src="../assets/image/em7.png" alt="Em7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special1">Am7</button>
+        b).<button class="special1">Dm7</button>
+        C).<button class="special1">Gm7</button>
+        d).<button class="special">Em7</button></p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+       3:`<div class="third_quest hide">
+        <h2>3.What is the relative seventh chord of F?</h2>
+        <img src="../assets/image/em7.png" alt="Em7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special1">G7</button>
+        b).<button class="special">C7</button>
+        C).<button class="special1">E7</button>
+        d).<button class="special1">D7</button></p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+      4:`<div class="fourth_quest fourth hide">
+        <h2>4.What is the relative seventh chord of G?</h2>
+        <img src="../assets/image/d7 chord.png" alt="Em7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special">D7</button>
+        b).<button class="special1">C7</button>
+        C).<button class="special1">G7</button>
+        d).<button class="special1">A7</button>
+        </p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+        5:`<div class="fifth_quest fourth hide">
+        <h2>5. What is that chord?</h2>
+        <img src="https://www.pianochord.org/images/e7.png" alt="E7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special1">Dm7</button>
+        b).<button class="special1">C7</button>
+        C).<button class="special1">B7</button>
+        d).<button class="special">E7</button>
+        </p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`, 
+        6:`<div class="sixth_quest fourth hide">
+        <h2>6. What is that chord?</h2>
+        <img src="https://www.pianochord.org/images/g_flat_7.png" alt="gflat7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special1">F7</button>
+        b).<button class="special">F#7</button>
+        C).<button class="special1">E7</button>
+        d).<button class="special1">G7</button>
+        </p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+        7:`<div class="seventh_quest fourth hide">
+        <h2>7. What is that chord?</h2>
+        <img src="https://www.pianochord.org/images/g7.png" alt="G7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special1">Gm7</button>
+        b).<button class="special">G7</button>
+        C).<button class="special1">Cm7</button>
+        d).<button class="special1">Dm7</button>
+        </p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+        8:`<div class="eigth_quest fourth hide">
+        <h2>8. What is that chord?</h2>
+        <img src="https://www.pianochord.org/images/f7.png" alt="F7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special1">B7</button>
+        b).<button class="special1">Eflat7</button>
+        C).<button class="special1">F#7</button>
+        d).<button class="special">F7</button>
+        </p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+        9:`<div class="nineth_quest fourth hide">
+        <h2>9. What is that chord?</h2>
+        <img src="https://www.pianochord.org/images/a7.png" alt="a7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special1">G7</button>
+        b).<button class="special1">C7</button>
+        C).<button class="special">A7</button>
+        d).<button class="special1">Am7</button>
+        </p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+        10:`<div class="tenth_quest tenth hide">
+        <h2>10. What is that chord?</h2>
+        <img src="https://www.pianochord.org/images/b7.png" alt="b7 chord"><br><br>
+        <p id="mcq">
+        a).<button class="special1">A7</button>
+        b).<button class="special1">Em7</button>
+        C).<button class="special1">F7</button>
+        d).<button class="special">B7</button>
+        </p>
+    </div>
+    <a id="a_btn" >
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`
+      }
+
+
+    
+
+
+    let url = window.location.search
+        let url_params =new URLSearchParams(url)
+        let params_data_id= url_params.get("data_id") 
+        
+        let main_div = document.getElementById("main_div")
+        let div_create = questions[params_data_id]
+        main_div.innerHTML=div_create
+        let anchor_button = document.getElementById("a_btn") 
+
+    let next = document.querySelectorAll(".nxt_btn");
+    let green = document.querySelectorAll(".special")
+    let seventhTest = document.getElementsByClassName("seventh_test");
+    let tenth = document.getElementsByClassName("tenth")
+    let red = document.querySelectorAll(".special1")
+    let mychart = document.getElementById("mychart")
+    
+
+    let i=1;
+     next.forEach((el,ind)=>{
+    // el.preventDefault
+    
+    el.addEventListener('click', e => {
+       
+        e.preventDefault();
+        if (red[0].disabled == true || green[0].disabled == true) {
+        window.location.href =`./exercise3.html?data_id=${Number(params_data_id)+1}`
+        } 
+        } )
+     })
+
+     let instruction = document.getElementsByClassName("instructions");
+        let okay = document.getElementById("ok_btn")
+        let body =document.querySelector("#main_div")
+        let header = document.querySelector("header")
+        function setupEvents(){
+             body.style.filter= "blur(2px)";
+             header.style.filter= "blur(2px)";
+             instruction[0].style.filter="none"
+             instruction[0].style.display="block";
+             
+        }
+        okay.addEventListener('click',e=>{
+           
+                body.style.filter= "none";
+                header.style.filter= "none";
+                body.style.display="block";
+                header.style.display="block";
+                instruction[0].style.display="none";
+        })
+        if(params_data_id==1){
+        window.onload =function(){
+            setupEvents();
+         }}
+
+
+        function myFunction() {
+        let value = parseInt(localStorage.getItem("correct"))
+           value+=10;
+           localStorage.setItem("correct",value)
+        //    console.log(correct,"correct");
+        }
+
+    red.forEach((e, index) => {
+    
+    e.addEventListener('click', el => {
+        e.style.backgroundColor = 'red';
+    })
+    e.addEventListener('click', el => {
+        if (e.value == '') {
+            // green.disabled = true
+            green.forEach(e => {
+                e.disabled = true
+            })
+            red.forEach((r, ind) => {
+                if (index != ind) {
+                    r.disabled = true
+                }
+            })
+        }
+    })
+    })
+    green.forEach((e, index) => {
+    e.addEventListener('click', e => {
+    
+        green.forEach(e => {
+            e.style.backgroundColor = 'green';
+        })
+        red.forEach((r, ind) => {
+            r.disabled = true
+    
+        })
+    })
+    })
+
+    var correct = 0;
+    
+        let pieChart =  parseInt(localStorage.getItem("correct"));
+
+    if (params_data_id==10) {
+       
+       anchor_button.style.display = "none";
+       let submit_btn = document.createElement("button");
+       submit_btn.setAttribute("id", "result_btn")
+       submit_btn.innerHTML = "SUBMIT";
+      
+       body.appendChild(submit_btn)
+      
+       document.querySelector("#result_btn").addEventListener('click', e => {
+           tenth[0].style.display = "none";
+           submit_btn.style.display = "none";
+           let xValues = ["correct","wrong"];
+            let yValues = [pieChart,100-pieChart];
+      let barColors = [
+             "#00aba9", "#b91d47",
+            ];
+
+            new Chart("myChart", {
+               type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                  }]
+              },
+                options: {
+                   title: {
+                       display: true,
+                        text: "Results for the hearing test"
+                    }
+                } })
+         })}
+         
+
+
+
+//     let i = 0;
+//    next.addEventListener('click', e => {
+//     e.preventDefault();
+//     if (red[0].disabled == true || green[0].disabled == true) {
+        
+//         seventhTest[0].children[i].style.display = "none";
+//         seventhTest[0].children[i+1].style.display = "block";
+       
+//      i++;
+//         // storing the correct answers
+      
+//         if (i == 3) {
+//             next.style.display = "none";
+            
+//             let submit_btn = document.createElement("button");
+           
+//             submit_btn.setAttribute("id", "result_btn")
+//             submit_btn.innerHTML = "SUBMIT";
+//             seventhTest[0].append(submit_btn);
+        
+//             document.querySelector("#result_btn").addEventListener('click', e => {
+//                 fourth[0].style.display = "none";
+//                 submit_btn.style.display = "none";
+//                 // let savedData = JSON.parse(localStorage.getItem(forResults));
+//                 // let options = document.querySelectorAll(".options");
+//                 // options.addEventListener('click',e=>{
+//                 //    let value= e.target.value
+//                 // })
+               
+//                 let xValues = ["correct","wrong"];
+//                 let yValues = [20,30];
+//                 let barColors = [
+//                    "#00aba9", "#b91d47",
+//                 ];
+
+//                 new Chart("myChart", {
+//                     type: "pie",
+//                     data: {
+//                         labels: xValues,
+//                         datasets: [{
+//                             backgroundColor: barColors,
+//                             data: yValues
+//                         }]
+//                     },
+//                     options: {
+//                         title: {
+//                             display: true,
+//                             text: "Results for the ear training test"
+//                         }
+//                     }
+//                 })
+//             })}
+//         red.forEach(e => {
+//             e.disabled = false
+//         })
+//         green.forEach(e => {
+//             e.disabled = false
+//             e.style.backgroundColor = '#F0F0F0';
+//             e.style.border = ".5px solid black"
+
+//         }) }})
+
+
+    
+    
+</script>
 </body>
 </html>

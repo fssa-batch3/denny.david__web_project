@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,22 +23,24 @@
         </div>
     </header>
     <!-- Practicing exercises to finding chords -->
-   <div class="maindiv">
-    <div class="listening">
-    <div class="listening1">
-        <h1>Practice for finding chords</h1>
+    <main>
+    <div class="heading"><h2> Practice for finding chords</h2></div>
+   <div class="main_div" id="main_div">
+   
+    <!-- <div class="first_quest">
+       
         
-          <h3> 1.What is that chord?</h3> 
-          <img src="../assets/image/a chord.png" alt="error"><br>
+          <h3> 1.What is this chord?</h3> 
+          <img id="chord_img" src="../assets/image/a chord.png" alt="error"><br>
            <div><p id="mcq">
             a).<button class="special1">C E G</button>
             b).<button class="special">A C# D</button>
             c).<button class="special1">A# C D# </button>
         </p>
-          </div>
-    <div class="listening1">
-        <h3>2.What is that chord?</h3>
-        <img src="../assets/image/b flat.png" alt="bflat image">
+          </div></div>
+    <div class="second_quest hide">
+        <h3>2.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/b flat.png" alt="bflat image">
         <div><p id="mcq"> 
             a).<button class="special1">B D# F# </button>
             b).<button class="special">Bflat D F</button>
@@ -45,141 +48,403 @@
         </p>
         </div>
     </div>
-    <div class="listening1">
-        <h3>3.What is that chord?</h3>
-        <img src="../assets/image/g_flat.png" alt="g-flat">
+    <div class="third_quest hide">
+        <h3>3.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/g_flat.png" alt="g-flat">
        <div><p id="mcq">
-        a).<button class="special">F# A# C#</button>
-        b).<button class="special1">F# B D#</button>
-        c).<button class="special">F A C</button>
+        a).<button class="special1">F# A# C#</button>
+        b).<button class="special">F# B D#</button>
+        c).<button class="special1">F A C</button>
     </p>
        </div>
     
     </div>
-    <div class="listening1">
-        <h3>4.What is that chord?</h3>
-        <img src="../assets/image/e_flat_m.png" alt="eflat minor">
+    <div class="fourth_quest hide">
+        <h3>4.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/e_flat_m.png" alt="eflat minor">
        <div><p id="mcq">
         a).<button class="special">D# F# Bflat </button>
         b).<button class="special1">D# G# C</button>
-        c).<button class="special">D# G# B</button>
+        c).<button class="special1">D# G# B</button>
     </p>
        </div>
     </div>
-    <div class="listening1 fifth">
-        <h3>5.What is that chord?</h3>
-        <img src="../assets/image/d_flat_m.png" alt="dflat minor">
+    <div class="fifth_quest fifth hide">
+        <h3>5.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
        <div><p id="mcq">
         a).<button class="special">C# E G#</button>
         b).<button class="special1">C# F G#</button>
-        c).<button class="special">Aflat C Eflat</button>
+        c).<button class="special1">Aflat C Eflat</button>
         </p>
        </div>
     </div>
     <p id="nxt_btn" class="pointer"> Next >></p>
-
+   
+    </div> --> 
+    <div>
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
     </div>
-</div></div>
-
- 
+</main>
+<div class="instructions" style="display: none;">
+    <h2 style="color:green">Instructions</h2>
+    <h4>You should find the question is in which chord and you find the answers</h4>
+    <button id="ok_btn">OK</button>
+  </div>
 </body>
 <script>
 
-    let next = document.querySelector("#nxt_btn");
-    let green = document.querySelectorAll(".special")
-    let main = document.getElementsByClassName("maindiv");
-    let fifth = document.getElementsByClassName("tenth")
-    let red = document.querySelectorAll(".special1")
-           red.forEach((e, index) => {
+   
+
+    let questions= {
+        1 : `<div data-id="1" class="first_quest block">
+       <h3> 1.What is this chord?</h3> 
+       <img id="chord_img" src="../assets/image/a chord.png" alt="error"><br>
+        <div><p id="mcq">
+         a).<button  class="special1">C E G</button>
+         b).<button class="special">A C# E</button>
+         c).<button class="special1">A# C D# </button>
+     </p>
+       </div></div>
+       <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+       2:` <div data-id="2" class="second_quest block hide">
+        <h3>2.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/b flat.png" alt="bflat image">
+        <div><p id="mcq"> 
+            a).<button class="special1">B D# F# </button>
+            b).<button class="special">Bflat D F</button>
+            c).<button class="special1">Bflat Eflat G</button>
+        
+        </p>
+        </div>
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    3:`<div data-id="3" class="third_quest block hide">
+        <h3>3.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/g_flat.png" alt="g-flat">
+       <div><p id="mcq">
+        a).<button class="special1">F# A# C#</button>
+        b).<button class="special">F# B D#</button>
+        c).<button class="special1">F A C</button>
+    </p>
+       </div>
     
-    e.addEventListener('click', el => {
-        e.style.backgroundColor = 'red';
-    })
-    e.addEventListener('click', el => {
-        if (e.value == '') {
-            // green.disabled = true
-            green.forEach(e => {
-                e.disabled = true
-            })
-            red.forEach((r, ind) => {
-                if (index != ind) {
-                    r.disabled = true
-                }
-            })
-        }
-    })
-    })
-    green.forEach((e, index) => {
-    e.addEventListener('click', e => {
-    
-        green.forEach(e => {
-            e.style.backgroundColor = 'green';
-        })
-        red.forEach((r, ind) => {
-            r.disabled = true
-    
-        })
-    })
-    })
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    4:` <div data-id="4" class="fifth_quest block fifth hide">
+        <h3>5.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
+       <div><p id="mcq">
+        a).<button class="special">C# E G#</button>
+        b).<button class="special1">C# F G#</button>
+        c).<button class="special1">Aflat C Eflat</button>
+        </p>
+       </div>
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    5:`<div data-id="5" class="fifth_quest fifth hide">
+        <h3>5.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
+       <div><p id="mcq">
+        a).<button class="special">C# E G#</button>
+        b).<button class="special1">C# F G#</button>
+        c).<button class="special1">Aflat C Eflat</button>
+        </p>
+       </div>
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            6:`<div data-id="5" class="sixth_quest sixth hide">
+        <h3>6.What is this chord?</h3>
+        <img id="chord_img" src="https://www.pianochord.org/images/f.png" alt="f chord">
+       <div><p id="mcq">
+        a).<button class="special1">D F A</button>
+        b).<button class="special1">A C# E</button>
+        c).<button class="special">F A C</button>
+        </p>
+       </div>
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            7:`<div data-id="5" class="seventh_quest seventh hide">
+        <h3>7.What is this chord?</h3>
+        <img id="chord_img" src="https://www.pianochord.org/images/b.png" alt="b chord">
+       <div><p id="mcq">
+        a).<button class="special1">D# G Aflat</button>
+        b).<button class="special">B D# F#</button>
+        c).<button class="special1">B D F#</button>
+        </p>
+       </div>
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            8:`<div data-id="5" class="eigth_quest eigth hide">
+        <h3>8.What is this chord?</h3>
+        <img id="chord_img" src="https://www.pianochord.org/images/d_flat.png" alt="dflat chord">
+       <div><p id="mcq">
+        a).<button class="special">C# F G#</button>
+        b).<button class="special1">C F A</button>
+        c).<button class="special1">C D F</button>
+        </p>
+       </div>
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            9:`<div data-id="5" class="nineth_quest nineth hide">
+        <h3>9.What is this chord?</h3>
+        <img id="chord_img" src="https://www.pianochord.org/images/a_flat.png" alt="Aflat chord">
+       <div><p id="mcq">
+        a).<button class="special">A C# D</button>
+        b).<button class="special1">Aflat C Dflat</button>
+        c).<button class="special1">A C E</button>
+        </p>
+       </div>
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            10:`<div data-id="5" class="tenth_quest tenth hide">
+        <h3>10.What is this chord?</h3>
+        <img id="chord_img" src="https://www.pianochord.org/images/e.png" alt="E chord">
+       <div><p id="mcq">
+        a).<button class="special">E G B</button>
+        b).<button class="special1">F A C</button>
+        c).<button class="special1">E G# B</button>
+        </p>
+       </div>
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`
+    }
+    let url = window.location.search
+    let url_params =new URLSearchParams(url)
+    let params_data_id= url_params.get("data_id") 
+        
+    let main_div = document.getElementById("main_div")
+    let div_create = questions[params_data_id]
+    main_div.innerHTML=div_create
      
-    let i = 0;
 
-next.addEventListener('click', e => {
-    e.preventDefault();
-    if (red[0].disabled == true || green[0].disabled == true) {
-        main[0].children[i].style.display = "none";
-        main[0].children[i + 1].style.display = "block";
-     i++;
-        // storing the correct answers
-      
-        if (i == 4) {
-            next.style.display = "none";
-            let submit_btn = document.createElement("button");
-            submit_btn.setAttribute("id", "result_btn")
-            submit_btn.innerHTML = "SUBMIT";
-            maindiv.appendChild(submit_btn);
+    let anchor_button = document.getElementById("a_btn")    
+    let next = document.querySelectorAll(".nxt_btn");
+    let green = document.querySelectorAll(".special")
+    let red = document.querySelectorAll(".special1")
+    let main = document.getElementsByClassName("main_div");
+    let tenth = document.getElementsByClassName("tenth")
+   
+    let mychart = document.getElementById("mychart")
+    let div_ids=document.querySelectorAll(".block")
+   
 
-            document.querySelector("#result_btn").addEventListener('click', e => {
-                tenth[0].style.display = "none";
-                submit_btn.style.display = "none";
-                let savedData = JSON.parse(localStorage.getItem(forResults));
-                let options = document.querySelectorAll(".options");
-                // options.addEventListener('click',e=>{
-                //    let value= e.target.value
-                // })
-               
-                let xValues = ["correct","wrong"];
-                let yValues = [correct,100-correct];
-                let barColors = [
-                   "#00aba9", "#b91d47",
-                ];
+        let id;
+        div_ids.forEach((e)=>{
+            let ids = e.dataset.id
+          
+            next.forEach((el,ind)=>{
+                el.addEventListener("click", function(){
+                id = e.dataset.id
+            })
+            })
+        }) 
 
-                new Chart("myChart", {
-                    type: "pie",
-                    data: {
-                        labels: xValues,
-                        datasets: [{
-                            backgroundColor: barColors,
-                            data: yValues
-                        }]
-                    },
-                    options: {
-                        title: {
-                            display: true,
-                            text: "Results for the ear training test"
-                        }
-                    }
-                })
-            })}
-        red.forEach(e => {
-            e.disabled = false
+        red.forEach((e, index) => {
+        e.addEventListener('click', el => {
+        e.style.backgroundColor = 'red';
         })
-        green.forEach(e => {
-            e.disabled = false
-            e.style.backgroundColor = '#F0F0F0';
-            e.style.border = ".5px solid black"
+  e.addEventListener('click', el => {
+      if (e.value == '') {
+          // green.disabled = true
+          green.forEach(e => {
+              e.disabled = true
+          })
+          red.forEach((r, ind) => {
+              if (index != ind) {
+                  r.disabled = true
+              }
+          })
+      }
+  })
+  })
 
-        }) }})
+  green.forEach((e, index) => {
+  e.addEventListener('click', e => {
+ 
+      green.forEach(e => {
+          e.style.backgroundColor = 'green';
+      })
+      red.forEach((r, ind) => {
+          r.disabled = true
+  
+      })
+  })
+  })
+
+ 
+
+
+        var correct = 0;
+        let pieChart =  parseInt(localStorage.getItem("correct"));
+
+        let logo = document.getElementsByClassName("website_name");
+        logo[0].addEventListener("click",e=>{
+            window.location.href="../index.html"
+           
+        })
+
+        let instruction = document.getElementsByClassName("instructions");
+        let okay = document.getElementById("ok_btn")
+        let body =document.querySelector("main")
+        let header = document.querySelector("header")
+        function setupEvents(){
+             body.style.filter= "blur(2px)";
+             header.style.filter= "blur(2px)";
+             instruction[0].style.filter="none"
+             instruction[0].style.display="block";
+             
+        }
+        okay.addEventListener('click',e=>{
+                body.style.filter= "none";
+             header.style.filter= "none";
+                body.style.display="block";
+             header.style.display="block";
+               instruction[0].style.display="none";
+        })
+        if(params_data_id==1){
+        window.onload = function(){
+            setupEvents();
+         }}
+
+         
+
+         
+  
+     
+    let i = 1;
+    next.forEach((el,ind)=>{
+    el.preventDefault
+    
+    el.addEventListener('click', e => {
+        e.preventDefault();
+
+        if (red[0].disabled == true || green[0].disabled == true) {
+        window.location.href =`./exercise2.html?data_id=${Number(params_data_id)+1}`
+        } 
+    })} )
+     
+     
+
+     if (params_data_id==10) {
+       
+                    anchor_button.style.display = "none";
+                    let submit_btn = document.createElement("button");
+                    submit_btn.setAttribute("id", "result_btn")
+                    submit_btn.innerHTML = "SUBMIT";
+                   
+                    main[0].appendChild(submit_btn)
+                   
+                    document.querySelector("#result_btn").addEventListener('click', e => {
+                        tenth[0].style.display = "none";
+                        submit_btn.style.display = "none";
+                        let xValues = ["correct","wrong"];
+                         let yValues = [pieChart,100-pieChart];
+                   let barColors = [
+                          "#00aba9", "#b91d47",
+                         ];
+
+                         new Chart("myChart", {
+                            type: "pie",
+                             data: {
+                                 labels: xValues,
+                                 datasets: [{
+                                     backgroundColor: barColors,
+                                     data: yValues
+                               }]
+                           },
+                             options: {
+                                title: {
+                                    display: true,
+                                     text: "Results for the ear training test"
+                                 }
+                             } })
+                      })}
+                      
+
+       
+
+//     let i = 0;
+//    next.addEventListener('click', e => {
+//     e.preventDefault();
+//     if (red[0].disabled == true || green[0].disabled == true) {
+        
+//         main[0].children[i].style.display = "none";
+//         main[0].children[i+1].style.display = "block";
+       
+//      i++;
+//         // storing the correct answers
+      
+//         if (i == 4) {
+//             next.style.display = "none";
+            
+//             let submit_btn = document.createElement("button");
+           
+//             submit_btn.setAttribute("id", "result_btn")
+//             submit_btn.innerHTML = "SUBMIT";
+//             main[0].append(submit_btn);
+        
+//             document.querySelector("#result_btn").addEventListener('click', e => {
+//                 fifth[0].style.display = "none";
+//                 submit_btn.style.display = "none";
+//                 // let savedData = JSON.parse(localStorage.getItem(forResults));
+//                 // let options = document.querySelectorAll(".options");
+//                 // options.addEventListener('click',e=>{
+//                 //    let value= e.target.value
+//                 // })
+               
+//                 let xValues = ["correct","wrong"];
+//                 let yValues = [20,30];
+//                 let barColors = [
+//                    "#00aba9", "#b91d47",
+//                 ];
+
+//                 new Chart("myChart", {
+//                     type: "pie",
+//                     data: {
+//                         labels: xValues,
+//                         datasets: [{
+//                             backgroundColor: barColors,
+//                             data: yValues
+//                         }]
+//                     },
+//                     options: {
+//                         title: {
+//                             display: true,
+//                             text: "Results for the ear training test"
+//                         }
+//                     }
+//                 })
+//             })}
+//         red.forEach(e => {
+//             e.disabled = false
+//         })
+//         green.forEach(e => {
+//             e.disabled = false
+//             e.style.backgroundColor = '#F0F0F0';
+//             e.style.border = ".5px solid black"
+
+//         }) }})
 
 
     
