@@ -21,16 +21,17 @@ body {
   -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
-.aug_chords{
+.chords{
     width:990px;
     font-size: 19px;
     margin-top:60px;
     margin-left:250px;
     font-family: 'Rubik';
 }
-.aug_lessons{
+.chord_lessons{
     width:800px;
     height:100px;
+    margin-left:50px;
 }
 
 div .website_name{
@@ -39,13 +40,13 @@ div .website_name{
     font-family: 'Rubik';
     color: #f67600;
     cursor: pointer;
-    margin-left:-50px;
+    margin-left:-10px;
 }
 .others {
     margin-left: 300px;
     display:flex;
-    justify-content: space-around;
-    width:450px;
+    justify-content: space-between;
+    width:550px;
     cursor: pointer;
     font-family: 'Rubik';
     padding-top:5px;
@@ -58,8 +59,9 @@ div .website_name{
    margin-top:-8px;
 }
  video {
-    margin-top:380px;
-    margin-left:150px;
+    margin-top:500px;
+    margin-left:180px;
+    margin-bottom:100px;
     width:500px;
     height:auto;
 }

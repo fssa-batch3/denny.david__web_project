@@ -16,6 +16,7 @@
         <div class="header">
             <div class="website_name">Hardenz</div>
             <div class="others">
+                <div class="exercises">Exercises</div>
                 <div class="courses">Courses</div>
                 <div class="about">About </div>
                 <div class="contact">Contact</div>
@@ -601,39 +602,40 @@
 
      if (params_data_id==10) {
        
-                    anchor_button.style.display = "none";
-                    let submit_btn = document.createElement("button");
-                    submit_btn.setAttribute("id", "result_btn")
-                    submit_btn.innerHTML = "SUBMIT";
-                   
-                    main[0].appendChild(submit_btn)
-                   
-                    document.querySelector("#result_btn").addEventListener('click', e => {
-                        tenth[0].style.display = "none";
-                        submit_btn.style.display = "none";
-                        let xValues = ["correct","wrong"];
-                         let yValues = [pieChart,100-pieChart];
-                   let barColors = [
-                          "#00aba9", "#b91d47",
-                         ];
+       anchor_button.style.display = "none";
+       let submit_btn = document.createElement("button");
+       submit_btn.setAttribute("id", "result_btn")
+       submit_btn.innerHTML = "SUBMIT";
+      
+       main[0].appendChild(submit_btn)
+      
+       document.querySelector("#result_btn").addEventListener('click', e => {
+           tenth[0].style.display = "none";
+           submit_btn.style.display = "none";
+           let xValues = ["correct","wrong"];
+            let yValues = [pieChart,100-pieChart];
+      let barColors = [
+             "#00aba9", "#b91d47",
+            ];
 
-                         new Chart("myChart", {
-                            type: "pie",
-                             data: {
-                                 labels: xValues,
-                                 datasets: [{
-                                     backgroundColor: barColors,
-                                     data: yValues
-                               }]
-                           },
-                             options: {
-                                title: {
-                                    display: true,
-                                     text: "Results for the hearing test"
-                                 }
-                             } })
-                      })}
-                      
+            new Chart("myChart", {
+               type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                  }]
+              },
+                options: {
+                   title: {
+                       display: true,
+                        text: "Results for the hearing test"
+                    }
+                } })
+         })}
+      
+        
 
                  
         

@@ -26,7 +26,7 @@ body {
 
 div .website_name{
     width:250px;
-    margin-left:-50px;
+    margin-left:-10px;
     cursor: pointer;
     font-weight: bold;
     font-family: 'Rubik';
@@ -35,8 +35,8 @@ div .website_name{
 .others {
     margin-left:300px;
     display:flex;
-    justify-content: space-around;
-    width:450px;
+    justify-content: space-between;
+    width:550px;
     cursor: pointer;
     font-family: 'Rubik';
     padding-top:5px;
