@@ -16,7 +16,9 @@
                <div class="courses">Courses</div>
                <div class="about">About  </div>
                <div class="contact">Contact</div>
-               <div><img class="profile_img" src="../assets/image/main_img.jpg"></div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
            </div>
     </header>
@@ -43,11 +45,11 @@
     </div>
     </main>
     <script>
-        let beginners = document.getElementById('page_into')
+        const beginners = document.getElementById('page_into')
         beginners.addEventListener('click',e=>{
             window.location.href="basics.html"
         })
-        let intermediate = document.getElementById('page_into_inter')
+        const intermediate = document.getElementById('page_into_inter')
         intermediate.addEventListener('click',e=>{
             window.location.href="lessons.html"
         })

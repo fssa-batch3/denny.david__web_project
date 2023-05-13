@@ -27,11 +27,17 @@
                 <fieldset disabled>
                     <h1>My Profile</h1>
                     <h4>First Name</h4>
-                    <input type="text" id="fname" placeholder="First Name" /><br><br>
+                    <input type="text" id="fname" placeholder="First Name">
+<br>
+<br>
                     <h4>Last Name</h4>
-                    <input type="text" id="lname" placeholder="Last Name" /><br><br>
+                    <input type="text" id="lname" placeholder="Last Name">
+<br>
+<br>
                     <h4>Phone no</h4>
-                    <input type="tel" id="telephone" placeholder="Phone no" /><br><br>
+                    <input type="tel" id="telephone" placeholder="Phone no">
+<br>
+<br>
                 </fieldset>
                 <!-- <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
                 <!-- <button onclick="process()" class="submit action-button" target="_top">Submit</button> -->
@@ -56,14 +62,19 @@
         <div class="popup">
             <div class="popup_form">
                 <h3>First Name</h3>
-                <input type="text" id="fname1" placeholder="First Name" required /><br><br>
+                <input type="text" id="fname1" placeholder="First Name" required>
+<br>
+<br>
                 <h3>Last Name</h3>
-                <input type="text" id="lname1" placeholder="Last Name" /><br><br>
+                <input type="text" id="lname1" placeholder="Last Name">
+<br>
+<br>
                 <h3>Phone no</h3>
-                <input type="tel" id="telephone1" placeholder="Phone no" /><br><br>
+                <input type="tel" id="telephone1" placeholder="Phone no">
+<br>
+<br>
                 <button id="save-btn"> Save</button>
                 <button id="save-btn2">Cancel</button>
-
 
             </div>
             <!-- <div class="popup_images">
@@ -79,22 +90,18 @@
         </div>
         <br>
 
-
-
     </form>`
 </body>
-<script>
-
-    // Storing the data from the signup page 
-    let users = JSON.parse(localStorage.getItem('store_data'));
-    let data = JSON.parse(localStorage.getItem('profile_details'));
-    let fname = document.getElementById("fname");
-    let lname = document.getElementById("lname");
-    let phone = document.getElementById("telephone");
-    let fname1 = document.getElementById("fname1");
-    let lname1 = document.getElementById("lname1");
-    let phone1 = document.getElementById("telephone1");
-    let submit_btn = document.getElementById("save-btn");
+<script>    // Storing the data from the signup page 
+    const users = JSON.parse(localStorage.getItem('store_data'));
+    const data = JSON.parse(localStorage.getItem('profile_details'));
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const phone = document.getElementById("telephone");
+    const fname1 = document.getElementById("fname1");
+    const lname1 = document.getElementById("lname1");
+    const phone1 = document.getElementById("telephone1");
+    const submit_btn = document.getElementById("save-btn");
     // let edit=document.getElementById("getDetails");
     let result;
 
@@ -111,7 +118,6 @@
     //     document.getElementById("telephone1").value = users[i]["phone_no"];
     // }
 
-
     // let firstName = document.getElementById("fname");
     // document.getElementById("save-btn").addEventListener('click', e => {
     //     // document.getElementById("fname1").value  =firstName.value;
@@ -121,22 +127,22 @@
     // })
 
     users.find(e => {
-        if (e["mail_id"] == data["username"]) {
+        if (e.mail_id == data.username) {
             return result = e;
         }   
     })       
     console.log(result)    
-    fname.value = result["user_name"]   
-    lname.value = result["last_name"]   
-    phone.value = result["phone_no"]  
-    fname1.value = result["user_name"]
-    lname1.value = result["last_name"]   
-    phone1.value = result["phone_no"]   
+    fname.value = result.user_name   
+    lname.value = result.last_name   
+    phone.value = result.phone_no  
+    fname1.value = result.user_name
+    lname1.value = result.last_name   
+    phone1.value = result.phone_no   
     submit_btn.addEventListener("click", e => {
         // e.preventDefault();
-        result["user_name"] = fname1.value
-        result["last_name"] = lname1.value
-        result["phone_on"] = phone1.value
+        result.user_name = fname1.value
+        result.last_name = lname1.value
+        result.phone_on = phone1.value
         console.log(result)
 
         localStorage.setItem('store_data', JSON.stringify(users))
@@ -157,13 +163,13 @@
     // // }
 
     // This code is for popup 
-    let image = document.getElementById("getDetails");
-    let pop = document.querySelector(".popup");
+    const image = document.getElementById("getDetails");
+    const pop = document.querySelector(".popup");
     image.addEventListener("click", e => {
         e.preventDefault();
         pop.classList.add("change");
     })
-    let dis = document.getElementsByClassName(".users_page");
+    const dis = document.getElementsByClassName(".users_page");
     dis.addEventListener("click", e=>{
         e.preventDefault();
         dis.classList.add("none");
@@ -187,8 +193,5 @@
         //     console.log(wholeBody)
         //     })
 </script>
-
-
-
 
 </html>

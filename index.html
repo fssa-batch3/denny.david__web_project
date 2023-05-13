@@ -25,17 +25,23 @@
          
          <!-- This container is used for above the color the text should come. --> 
         <div class="content1">
-            <div id="hardenz"><div class="side_text">
-            Discover the<br> world<br> through music<br></div>
+            <div id="hardenz">
+<div class="side_text">
+            Discover the<br>
+ world<br>
+ through music<br>
+</div>
           <div class="who_we_are">Hardenz allows you to improve your musical skills in a fun and exciting way by adding playful elements to your learning process. Learning is easier and more effective when you have fun.</div>
-            <p id="get_started">Get started</p></div>
+            <p id="get_started">Get started</p>
+</div>
             <div class="flex_image">
                <img src="assets/image/Untitled_design-removebg-preview.png"> 
                <!-- <img class="index_image" src="../denny.david__web_project/assets/image/1682323572482.jpg"> -->
             </div>
         </div>
        
-    <main>        <!-- This content is about small intro about our website -->
+    <main>
+        <!-- This content is about small intro about our website -->
         <div class="content3">
 
             <div class="ours1">
@@ -128,7 +134,8 @@
               </section>
             </section></div>
             <div class="test_head">
-            <h1>Testimonials</h1>  </div>
+            <h1>Testimonials</h1>  
+</div>
         <div class="testimonials">
          
             <div class="testimonials1">
@@ -158,7 +165,9 @@
             <p>Benefits of learning music</p>
             <div class="mid one">
 
-                <h1>Hand<br> Independence</h1>
+                <h1>
+Hand<br> Independence
+</h1>
                 <img src="assets/image/david-pisnoy-UJUgBnemP7o-unsplash.jpg" alt="colorimage">
             </div>
             <div class="mid second">
@@ -175,35 +184,46 @@
         <footer>
             <!-- This is the footer section -->
             <div class="end">
-                <div><a href="index.html">Hardenz </a>
+                <div>
+<a href="index.html">Hardenz </a>
                     <hr>
                 </div>
             </div>
             <div class="en">
                 <div class="end1">
-                    <a href="#">Contact us</a><br>
-                    <a href="#">About us</a><br>
+                    <a href="#">Contact us</a>
+<br>
+                    <a href="#">About us</a>
+<br>
                     <a href="#">7418646406</a>
                 </div>
                 <div class="end2">
-                    <a href="#">Lessons</a><br>
-                    <a href="#">Scales</a><br>
-                    <a href="#">Theory</a><br>
-                    <a href="#">Videos</a><br>
+                    <a href="#">Lessons</a>
+<br>
+                    <a href="#">Scales</a>
+<br>
+                    <a href="#">Theory</a>
+<br>
+                    <a href="#">Videos</a>
+<br>
                 </div>
                 <div class="end3">
-                    <a href="#">Music</a><br>
-                    <a href="#">Exercises</a><br>
-                    <a href="#">Hearing</a><br>
-                    <a href="#">Notes</a><br>
+                    <a href="#">Music</a>
+<br>
+                    <a href="#">Exercises</a>
+<br>
+                    <a href="#">Hearing</a>
+<br>
+                    <a href="#">Notes</a>
+<br>
                 </div>
             </div>
 
         </footer>
         <script>
-        let user_cre = localStorage.getItem("logged_in");
+        const user_cre = localStorage.getItem("logged_in");
 
-         let direct = document.getElementById("get_started");
+         const direct = document.getElementById("get_started");
 
          direct.addEventListener('click',() =>{
 
@@ -223,7 +243,7 @@
 
          });
          
-    let keys = document.querySelectorAll(".key")
+    const keys = document.querySelectorAll(".key")
 
     keys.forEach(e => {
       e.addEventListener("click", (el) => {
@@ -240,13 +260,13 @@
 
     function playNote(e) {
 
-      let audio = document.querySelector(`audio[data-key="${e.target.dataset["key"]}"]`);
+      const audio = document.querySelector(`audio[data-key="${e.target.dataset.key}"]`);
       console.log(e,"gfd")
       console.log(audio);
-      let key = document.querySelector(`.key[data-key="${e.target.dataset["key"]}"]`);
+      const key = document.querySelector(`.key[data-key="${e.target.dataset.key}"]`);
       console.log(key);
 
-      let keyNote = key.getAttribute("data-note");
+      const keyNote = key.getAttribute("data-note");
       key.classList.add("playing");
       audio.play();
     }
@@ -259,8 +279,7 @@
     //   window.location.href = "pages/signup.html"
     // })
 
-
-    let courses = document.getElementsByClassName("courses")
+    const courses = document.getElementsByClassName("courses")
     courses[0].addEventListener('click',e=>{
       window.location.href="pages/two_users.html"
     })

@@ -18,12 +18,16 @@
                <div class="courses">Courses</div>
                <div class="about">About  </div>
                <div class="contact">Contact </div>
-               <div><img class="profile_img" src="../assets/image/main_img.jpg"></div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
            </div>
     </header>
     <!-- These are all diminished chords to practice   -->
-    <div style="margin-left:600px;" class="dim_head"><h1>Diminished chords</h1></div>
+    <div style="margin-left:600px;" class="dim_head">
+<h1>Diminished chords</h1>
+</div>
     <div class="main_div" id="main_div"></div>
      <!-- <div class="first_quest">
         <div class="dim1">
@@ -105,155 +109,154 @@
     <button id="ok_btn">OK</button>
   </div>
 <script>
-   let questions = {
-    1:` <div class="first_quest">
-        <div class="dim1">
-        <h2>1.What is this chord?</h2>
-    </div>
-        <div class="dim2">
-        <audio style="margin-left:-50px;" controls src="../assets/audio/y2mateis-how-to-play-a-c-diminished-chord-on-the-piano-b-hcwvta4iq-160k-16568_r5iEqAtQ.mp3"></audio><br><br>
-        <p id="mcq">a). <button class="special1">Dim7</button>
-        b).<button class="special">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    2:` <div class="second_quest hide">
-         <div class="dim1">
-        <h2>2.What is this chord?</h2>
-        </div>
-        <div class="dim2">
-        <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - D Dim7 Piano Chord-5HeDy5fk_0c-128k-1654554560632.mp3"></audio><br><br>
-        <p id="mcq">a).<button class="special">Dim7</button>
-        b).<button class="special1">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    3:`<div class="third_quest hide">
-    <div class="dim1">
-        <h2>3.What is this chord?</h2>
-    </div>
-    <div class="dim2">
-        <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - C Dim7 Piano Chord-PNGXzPudDf4-128k-1654554890180.mp3"></audio><br><br>
-     <p id="mcq"> a). <button class="special">Dim7</button>
-        b).<button class="special1">Dim</button></p>
-    </div>
-   </div>
-   <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    4:`<div class="fourth_quest hide">
-   <div class="dim1">
-        <h2>4.What is this chord?</h2>
-   </div>
-   <div class="dim2">
-        <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - PIANO  Bdim CHORD-SXaleT0WTLg-128k-1654554462359.mp3"></audio><br><br>
-       <p id="mcq">a). <button class="special">Dim7</button>
-        b).<button class="special1">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    5:`<div class="fifth_quest hide">
-        <div class="dim1">
-        <h2>5.What is this chord?</h2>
-        </div>
-        <div class="dim2">
-        <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
-       <p id="mcq"> a).<button class="special1">Dim7</button>
-        b).<button class="special">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    6:` <div class="sixth_quest hide">
-        <div class="dim1">
-        <h2>6.What is this chord?</h2>
-        </div>
-        <div class="dim2">
-        <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
-       <p id="mcq">a). <button class="special">Dim7</button>
-       b). <button class="special1">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    7:`<div class="seventh_quest seventh hide">
-        <div class="dim1">
-        <h2>7.What is this chord?</h2>
-        </div>
-        <div class="dim2">
-        <audio  controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
-       <p id="mcq"> a).<button class="special1">Dim7</button>
-        b).<button class="special">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    8:`<div class="seventh_quest seventh hide">
-        <div class="dim1">
-        <h2>7.What is this chord?</h2>
-        </div>
-        <div class="dim2">
-        <audio  controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
-       <p id="mcq"> a).<button class="special1">Dim7</button>
-        b).<button class="special">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    9:`<div class="seventh_quest seventh hide">
-        <div class="dim1">
-        <h2>7.What is this chord?</h2>
-        </div>
-        <div class="dim2">
-        <audio  controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
-       <p id="mcq"> a).<button class="special">Dim7</button>
-        b).<button class="special1">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    10:`<div class="seventh_quest seventh hide">
-        <div class="dim1">
-        <h2>7.What is this chord?</h2>
-        </div>
-        <div class="dim2">
-        <audio  controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
-       <p id="mcq"> a).<button class="special">Dim7</button>
-        b).<button class="special1">Dim</button></p>
-    </div>
-    </div>
-    <a id="a_btn">
-                <p class="nxt_btn" class="pointer"> Next >></p>
-            </a>`        
-   }
-    let url = window.location.search
-    let url_params =new URLSearchParams(url)
-    let params_data_id= url_params.get("data_id") 
+   const questions = {
+ 1:` <div class="first_quest">
+     <div class="dim1">
+     <h2>1.What is this chord?</h2>
+ </div>
+     <div class="dim2">
+     <audio style="margin-left:-50px;" controls src="../assets/audio/y2mateis-how-to-play-a-c-diminished-chord-on-the-piano-b-hcwvta4iq-160k-16568_r5iEqAtQ.mp3"></audio><br><br>
+     <p id="mcq">a). <button class="special1">Dim7</button>
+     b).<button class="special">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 2:` <div class="second_quest hide">
+      <div class="dim1">
+     <h2>2.What is this chord?</h2>
+     </div>
+     <div class="dim2">
+     <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - D Dim7 Piano Chord-5HeDy5fk_0c-128k-1654554560632.mp3"></audio><br><br>
+     <p id="mcq">a).<button class="special">Dim7</button>
+     b).<button class="special1">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 3:`<div class="third_quest hide">
+ <div class="dim1">
+     <h2>3.What is this chord?</h2>
+ </div>
+ <div class="dim2">
+     <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - C Dim7 Piano Chord-PNGXzPudDf4-128k-1654554890180.mp3"></audio><br><br>
+  <p id="mcq"> a). <button class="special">Dim7</button>
+     b).<button class="special1">Dim</button></p>
+ </div>
+</div>
+<a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 4:`<div class="fourth_quest hide">
+<div class="dim1">
+     <h2>4.What is this chord?</h2>
+</div>
+<div class="dim2">
+     <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - PIANO  Bdim CHORD-SXaleT0WTLg-128k-1654554462359.mp3"></audio><br><br>
+    <p id="mcq">a). <button class="special">Dim7</button>
+     b).<button class="special1">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 5:`<div class="fifth_quest hide">
+     <div class="dim1">
+     <h2>5.What is this chord?</h2>
+     </div>
+     <div class="dim2">
+     <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
+    <p id="mcq"> a).<button class="special1">Dim7</button>
+     b).<button class="special">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 6:` <div class="sixth_quest hide">
+     <div class="dim1">
+     <h2>6.What is this chord?</h2>
+     </div>
+     <div class="dim2">
+     <audio style="margin-left:-50px;" controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
+    <p id="mcq">a). <button class="special">Dim7</button>
+    b). <button class="special1">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 7:`<div class="seventh_quest seventh hide">
+     <div class="dim1">
+     <h2>7.What is this chord?</h2>
+     </div>
+     <div class="dim2">
+     <audio  controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
+    <p id="mcq"> a).<button class="special1">Dim7</button>
+     b).<button class="special">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 8:`<div class="seventh_quest seventh hide">
+     <div class="dim1">
+     <h2>7.What is this chord?</h2>
+     </div>
+     <div class="dim2">
+     <audio  controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
+    <p id="mcq"> a).<button class="special1">Dim7</button>
+     b).<button class="special">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 9:`<div class="seventh_quest seventh hide">
+     <div class="dim1">
+     <h2>7.What is this chord?</h2>
+     </div>
+     <div class="dim2">
+     <audio  controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
+    <p id="mcq"> a).<button class="special">Dim7</button>
+     b).<button class="special1">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 10:`<div class="seventh_quest seventh hide">
+     <div class="dim1">
+     <h2>7.What is this chord?</h2>
+     </div>
+     <div class="dim2">
+     <audio  controls src="../assets/audio/Y2Mate.is - A Dim7 Piano Chord-p1XFpPsEZFo-128k-1654554844808.mp3"></audio><br><br>
+    <p id="mcq"> a).<button class="special">Dim7</button>
+     b).<button class="special1">Dim</button></p>
+ </div>
+ </div>
+ <a id="a_btn">
+             <p class="nxt_btn" class="pointer"> Next >></p>
+         </a>`        
+}
+    const url = window.location.search
+    const url_params =new URLSearchParams(url)
+    const params_data_id= url_params.get("data_id") 
         
-    let main_div = document.getElementById("main_div")
-    let div_create = questions[params_data_id]
+    const main_div = document.getElementById("main_div")
+    const div_create = questions[params_data_id]
     main_div.innerHTML=div_create
-     
 
-        let anchor_button = document.getElementById("a_btn")    
+        const anchor_button = document.getElementById("a_btn")    
 
-    let next = document.querySelectorAll(".nxt_btn");
-    let green = document.querySelectorAll(".special")
-    let diminishedTest = document.getElementsByClassName("diminished");
-    let seventh = document.getElementsByClassName("seventh")
-    let red = document.querySelectorAll(".special1")
-    let mychart = document.getElementById("mychart")
+    const next = document.querySelectorAll(".nxt_btn");
+    const green = document.querySelectorAll(".special")
+    const diminishedTest = document.getElementsByClassName("diminished");
+    const seventh = document.getElementsByClassName("seventh")
+    const red = document.querySelectorAll(".special1")
+    const mychart = document.getElementById("mychart")
 
     red.forEach((e, index) => {
     
@@ -287,7 +290,7 @@
     })
     })
     
-    let i=1;
+    const i=1;
      next.forEach((el,ind)=>{
     // el.preventDefault
     
@@ -300,10 +303,10 @@
         } )
      })
 
-     let instruction = document.getElementsByClassName("instructions");
-        let okay = document.getElementById("ok_btn")
-        let body =document.querySelector("#main_div")
-        let header = document.querySelector("header")
+     const instruction = document.getElementsByClassName("instructions");
+        const okay = document.getElementById("ok_btn")
+        const body =document.querySelector("#main_div")
+        const header = document.querySelector("header")
         function setupEvents(){
              body.style.filter= "blur(2px)";
              header.style.filter= "blur(2px)";
@@ -324,16 +327,13 @@
             setupEvents();
          }}
 
-
-
-        var correct = 0;
-        let pieChart =  parseInt(localStorage.getItem("correct"));
-
+        const correct = 0;
+        const pieChart =  parseInt(localStorage.getItem("correct"));
 
          if (params_data_id==10) {
        
        anchor_button.style.display = "none";
-       let submit_btn = document.createElement("button");
+       const submit_btn = document.createElement("button");
        submit_btn.setAttribute("id", "result_btn")
        submit_btn.innerHTML = "SUBMIT";
       
@@ -342,11 +342,11 @@
        document.querySelector("#result_btn").addEventListener('click', e => {
            seventh[0].style.display = "none";
            submit_btn.style.display = "none";
-           let xValues = ["correct","wrong"];
-            let yValues = [pieChart,100-pieChart];
-      let barColors = [
-             "#00aba9", "#b91d47",
-            ];
+           const xValues = ["correct","wrong"];
+            const yValues = [pieChart,100-pieChart];
+      const barColors = [
+          "#00aba9", "#b91d47",
+         ];
 
             new Chart("myChart", {
                type: "pie",
@@ -425,8 +425,6 @@
 //             e.style.border = ".5px solid black"
 
 //         }) }})
-
-
 </script>
 </body>
 

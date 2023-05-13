@@ -20,7 +20,9 @@
                 <div class="courses">Courses</div>
                 <div class="about">About </div>
                 <div class="contact">Contact</div>
-                <div><img class="profile_img" src="../assets/image/main_img.jpg"></div>
+                <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
         </div>
     </header>
@@ -182,7 +184,6 @@
                             (c)<button id="c" class="special1" class="options">C</button>
                             (d)<button id="e" class="special1" class="options">E</button></p>
 
-
             </div>
             <div data-id="10" class="tenth_one block hide">
                 <h3>10.Reference note: C</h3>
@@ -210,8 +211,6 @@
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
         </div>
       
-        
-      
     </main>
     <div class="instructions" style="display: none;">
         <h2 style="color:green">Instructions</h2>
@@ -219,227 +218,223 @@
         <button id="ok_btn">OK</button>
       </div>
 
-    <script>
+    <script>        const questions={
+    1:`    <div data-id="1" class="first_one block">
+        <h3>1.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h2>
+            <audio controls>
+                <source src="../assets/audio/Y2Mate.is - Piano Middle D-dwtfCQ25qTU-480p-1654247328252.mp4">
+            </audio>
+            <h3> What is this note?<h3>
+                    <p id="mcq">
+                        (a)<button id="d" onclick="myFunction()" class="special" class="options">D</button>
+                        (b)<button id="c" class="special1" class="options">C#</button>
+                        (c)<button id="a" class="special1" class="options">A</button>
+                        (d)<button id="b" class="special1" class="options">Bflat</button></p>
 
-        let questions={
-            1:`    <div data-id="1" class="first_one block">
-                <h3>1.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h2>
-                    <audio controls>
-                        <source src="../assets/audio/Y2Mate.is - Piano Middle D-dwtfCQ25qTU-480p-1654247328252.mp4">
-                    </audio>
-                    <h3> What is this note?<h3>
-                            <p id="mcq">
-                                (a)<button id="d" onclick="myFunction()" class="special" class="options">D</button>
-                                (b)<button id="c" class="special1" class="options">C#</button>
-                                (c)<button id="a" class="special1" class="options">A</button>
-                                (d)<button id="b" class="special1" class="options">Bflat</button></p>
-
-            </div>
-            <a id="a_btn" >
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            2:`
-            <div data-id="2"  class="second_one block hide">
-                <h3>2.Reference note:C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source
-                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid G Sharp or A Flat-2o1T6oV9YIQ-128k-1654544383428 (1).mp3">
-                </audio>
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button class="special1" id="f" class="options">F</button>
-                            (b)<button class="special" id="gsharp" class="options">G#</button>
-                            (c)<button class="special1" class="options">G</button>
-                            (d)<button id="b" class="special1" class="options">B</button></p>
+    </div>
+    <a id="a_btn" >
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    2:`
+    <div data-id="2"  class="second_one block hide">
+        <h3>2.Reference note:C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source
+                src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid G Sharp or A Flat-2o1T6oV9YIQ-128k-1654544383428 (1).mp3">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button class="special1" id="f" class="options">F</button>
+                    (b)<button class="special" id="gsharp" class="options">G#</button>
+                    (c)<button class="special1" class="options">G</button>
+                    (d)<button id="b" class="special1" class="options">B</button></p>
   
-            </div>
-            <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            3:`<div data-id="3" class="third_one block hide">
-                <h3>3.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source
-                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid C Sharp or D Flat-Fjie6s5OU9g-128k-1656822827405.mp3">
-                </audio>
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button class="special1" id="eflat" class="options">Eflat</button>
-                            (b)<button id="e" class="special1" class="options">E</button>
-                            (c)<button id="d" class="special1" class="options">D</button>
-                            (d)<button id="csharp" class="special" class="options">C#</button></p>
-                        <!-- <p id="nxt_btn" class="pointer"> Next >></p> -->
-            </div>
-            <a id="a_btn" >
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            4:` <div data-id="4" class="fourth_one block hide">
-                <h3>4.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source
-                        src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
-                </audio>
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button class="special1" class="options">E</button>
-                            (b)<button id="f" onclick="myFunction()" class="special" class="options">F</button>
-                            (c)<button id="fsharp" class="special1" class="options">F#</button>
-                            (d)<button id="d " class="special1" class="options">D</button></p>
+    </div>
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    3:`<div data-id="3" class="third_one block hide">
+        <h3>3.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source
+                src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid C Sharp or D Flat-Fjie6s5OU9g-128k-1656822827405.mp3">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button class="special1" id="eflat" class="options">Eflat</button>
+                    (b)<button id="e" class="special1" class="options">E</button>
+                    (c)<button id="d" class="special1" class="options">D</button>
+                    (d)<button id="csharp" class="special" class="options">C#</button></p>
+                <!-- <p id="nxt_btn" class="pointer"> Next >></p> -->
+    </div>
+    <a id="a_btn" >
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    4:` <div data-id="4" class="fourth_one block hide">
+        <h3>4.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source
+                src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button class="special1" class="options">E</button>
+                    (b)<button id="f" onclick="myFunction()" class="special" class="options">F</button>
+                    (c)<button id="fsharp" class="special1" class="options">F#</button>
+                    (d)<button id="d " class="special1" class="options">D</button></p>
 
-            </div>
-            <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            5:` <div data-id="5" class="fifth_one block hide">
-                <h3>5.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav">
-                </audio>
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button id="a" class="special1" class="options">A</button>
-                            (b)<button id="c" class="special1" class="options">C</button>
-                            (c)<button id="asharp" class="special1" class="options">Bflat</button>
-                            (d)<button id="b" onclick="myFunction()" class="special" class="options">B</button></p>
+    </div>
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    5:` <div data-id="5" class="fifth_one block hide">
+        <h3>5.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="a" class="special1" class="options">A</button>
+                    (b)<button id="c" class="special1" class="options">C</button>
+                    (c)<button id="asharp" class="special1" class="options">Bflat</button>
+                    (d)<button id="b" onclick="myFunction()" class="special" class="options">B</button></p>
 
-            </div>
-            <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            6:`
-            <div data-id="6" class="sixth_one block hide">
-                <h3>6.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav">
-                </audio>
+    </div>
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    6:`
+    <div data-id="6" class="sixth_one block hide">
+        <h3>6.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav">
+        </audio>
 
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button id="dsharp" class="special1" class="options">Eflat</button>
-                            (b)<button id="fsharp" class="special1" class="options">F#</button>
-                            (c)<button id="e" onclick="myFunction()" class="special" class="options">E</button>
-                            (d)<button id="d" class="special1" class="options">D</button></p>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="dsharp" class="special1" class="options">Eflat</button>
+                    (b)<button id="fsharp" class="special1" class="options">F#</button>
+                    (c)<button id="e" onclick="myFunction()" class="special" class="options">E</button>
+                    (d)<button id="d" class="special1" class="options">D</button></p>
 
-            </div>
-            <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            7:`  <div data-id="7" class="seventh_one block hide">
-                <h3>7.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav">
-                </audio>
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button id="g" onclick="myFunction()" class="special" class="options">G</button>
-                            (b)<button id="gsharp" class="special1" class="options">G#</button>
-                            (c)<button id="fsharp" class="special1" class="options">F#</button>
-                            (d)<button id="f" class="special1" class="options">F</button></p>
+    </div>
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    7:`  <div data-id="7" class="seventh_one block hide">
+        <h3>7.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="g" onclick="myFunction()" class="special" class="options">G</button>
+                    (b)<button id="gsharp" class="special1" class="options">G#</button>
+                    (c)<button id="fsharp" class="special1" class="options">F#</button>
+                    (d)<button id="f" class="special1" class="options">F</button></p>
 
-            </div>
-            <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            8:` <div data-id="8" class="eigth_one block hide">
-                <h3>8.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav">
-                </audio>
+    </div>
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    8:` <div data-id="8" class="eigth_one block hide">
+        <h3>8.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav">
+        </audio>
 
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button id="gharp" class="special1" class="options">G#</button>
-                            (b)<button id="asharp" onclick="myFunction()" class="special" class="options">Bflat</button>
-                            (c)<button id="b" class="special1" class="options">B</button>
-                            (d)<button id="c" class="special1" class="options">C</button></p>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="gharp" class="special1" class="options">G#</button>
+                    (b)<button id="asharp" onclick="myFunction()" class="special" class="options">Bflat</button>
+                    (c)<button id="b" class="special1" class="options">B</button>
+                    (d)<button id="c" class="special1" class="options">C</button></p>
 
-            </div> <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            9:` <div data-id="9" class="nineth_one block hide">
-                <h3>9.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav">
-                </audio>
+    </div> <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    9:` <div data-id="9" class="nineth_one block hide">
+        <h3>9.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav">
+        </audio>
 
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button id="dsharp" class="special1" class="options">D#</button>
-                            (b)<button id="d" onclick="myFunction()" class="special" class="options">D</button>
-                            (c)<button id="c" class="special1" class="options">C</button>
-                            (d)<button id="e" class="special1" class="options">E</button></p>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="dsharp" class="special1" class="options">D#</button>
+                    (b)<button id="d" onclick="myFunction()" class="special" class="options">D</button>
+                    (c)<button id="c" class="special1" class="options">C</button>
+                    (d)<button id="e" class="special1" class="options">E</button></p>
 
+    </div> <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+    10:` <div data-id="10" class="tenth_one block hide">
+        <h3>10.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav">
+        </audio>
 
-            </div> <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            10:` <div data-id="10" class="tenth_one block hide">
-                <h3>10.Reference note: C</h3>
-                <audio controls>
-                    <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-                </audio>
-                <h3>Question note</h3>
-                <audio controls>
-                    <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav">
-                </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="e" class="special1" class="options">E</button>
+                    (b)<button id="f" onclick="myFunction()" class="special" class="options">F</button>
+                    (c)<button id="csharp" class="special1" class="options">C#</button>
+                    (d)<button id="d" class="special1" class="options">D</button></p>
 
-                <h3> What is this note?<h3>
-                        <p id="mcq">(a)<button id="e" class="special1" class="options">E</button>
-                            (b)<button id="f" onclick="myFunction()" class="special" class="options">F</button>
-                            (c)<button id="csharp" class="special1" class="options">C#</button>
-                            (d)<button id="d" class="special1" class="options">D</button></p>
+     </div> <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`
+}
 
-             </div> <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`
-        }
-
-        let url = window.location.search
-        let url_params =new URLSearchParams(url)
-        let params_data_id= url_params.get("data_id") 
+        const url = window.location.search
+        const url_params =new URLSearchParams(url)
+        const params_data_id= url_params.get("data_id") 
         
-        let main_div = document.getElementById("main_div")
-        let div_create = questions[params_data_id]
+        const main_div = document.getElementById("main_div")
+        const div_create = questions[params_data_id]
         main_div.innerHTML=div_create
-
    
-          let anchor_button = document.getElementById("a_btn")    
-        let next = document.querySelectorAll(".nxt_btn");
-        let main = document.getElementsByClassName("main_div");
-        let firstOne = document.getElementsByClassName("first_one")
-        let secondOne = document.getElementsByClassName("second_one");
-        let buttons = document.querySelectorAll("#special1")
-        let green = document.querySelectorAll(".special")
-        let red = document.querySelectorAll(".special1")
-        let tenth = document.getElementsByClassName("tenth_one")
+          const anchor_button = document.getElementById("a_btn")    
+        const next = document.querySelectorAll(".nxt_btn");
+        const main = document.getElementsByClassName("main_div");
+        const firstOne = document.getElementsByClassName("first_one")
+        const secondOne = document.getElementsByClassName("second_one");
+        const buttons = document.querySelectorAll("#special1")
+        const green = document.querySelectorAll(".special")
+        const red = document.querySelectorAll(".special1")
+        const tenth = document.getElementsByClassName("tenth_one")
         const C = document.querySelectorAll("d")
         const Csharp = document.querySelectorAll("csharp")
         const D = document.querySelectorAll("d")
@@ -452,35 +447,34 @@
         const A = document.querySelectorAll("a")
         const Asharp = document.querySelectorAll("asharp")
         const B = document.querySelectorAll("b")
-        let div_ids=document.querySelectorAll(".block")
+        const div_ids=document.querySelectorAll(".block")
         //dataset.id
 
         let id;
         div_ids.forEach((e)=>{
-            let ids = e.dataset.id
+            const ids = e.dataset.id
            
             next.forEach((el,ind)=>{
-                el.addEventListener("click", function(){
+                el.addEventListener("click", () =>{
                 id = e.dataset.id
             })
             })
         })
         
         //[0,1,2,3,4,5,]
-        var correct = 0;
-        let pieChart =  parseInt(localStorage.getItem("correct"));
+        const correct = 0;
+        const pieChart =  parseInt(localStorage.getItem("correct"));
 
-
-        let logo = document.getElementsByClassName("website_name");
+        const logo = document.getElementsByClassName("website_name");
         logo[0].addEventListener("click",e=>{
             window.location.href="../index.html"
            
         })
 
-        let instruction = document.getElementsByClassName("instructions");
-        let okay = document.getElementById("ok_btn")
-        let body =document.querySelector("main")
-        let header = document.querySelector("header")
+        const instruction = document.getElementsByClassName("instructions");
+        const okay = document.getElementById("ok_btn")
+        const body =document.querySelector("main")
+        const header = document.querySelector("header")
         function setupEvents(){
              body.style.filter= "blur(2px)";
              header.style.filter= "blur(2px)";
@@ -548,7 +542,6 @@
             "tenthwrong": "[E, Csharp, D]"
         }
         ]
-      
                    
         red.forEach((e, index) => {
         
@@ -581,14 +574,8 @@
                 })
             })
         })
-
-
-
-
-
-       
         
-            let i = 1;
+            const i = 1;
     next.forEach((el,ind)=>{
     el.preventDefault
     
@@ -603,7 +590,7 @@
      if (params_data_id==10) {
        
        anchor_button.style.display = "none";
-       let submit_btn = document.createElement("button");
+       const submit_btn = document.createElement("button");
        submit_btn.setAttribute("id", "result_btn")
        submit_btn.innerHTML = "SUBMIT";
       
@@ -612,11 +599,11 @@
        document.querySelector("#result_btn").addEventListener('click', e => {
            tenth[0].style.display = "none";
            submit_btn.style.display = "none";
-           let xValues = ["correct","wrong"];
-            let yValues = [pieChart,100-pieChart];
-      let barColors = [
-             "#00aba9", "#b91d47",
-            ];
+           const xValues = ["correct","wrong"];
+            const yValues = [pieChart,100-pieChart];
+      const barColors = [
+     "#00aba9", "#b91d47",
+    ];
 
             new Chart("myChart", {
                type: "pie",
@@ -634,10 +621,6 @@
                     }
                 } })
          })}
-      
-        
-
-                 
         
             //  i++;
 
@@ -646,11 +629,8 @@
             //     main[0].children[i + 1].style.display = "block";
                 
             //     i++
-            
              
             //  // storing the correct answers
-              
-      
        
             //     localStorage.setItem('forResults', JSON.stringify(forResults));
        
@@ -703,10 +683,6 @@
             //         e.style.border = ".5px solid black"
 
             //     }) }
-
-     
-
-
     </script>
 
 </body>

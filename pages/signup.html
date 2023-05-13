@@ -21,12 +21,24 @@
                 <!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$" -->
                 <!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$" -->
                 <p id="blur">How will i started?</p>
-                <p>First name :</p> <input type="text"  pattern="^[a-zA-Z0-9_-]{3,16}$" placeholder="enter your first name"  id="first" required/><br>
-                <p> Last name:</p> <input type="text"  pattern="^[a-zA-Z0-9_-]{3,16}$"  id="last" required/><br>
-                <p>Email:</p> <input type="email"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" required/><br>
-                <p>New Password:</p><input type="password" id="npsw" required/><br>
-                <p>Confirm Password:</p><input type="password"  id="psw" required/><br>
-                <p>Phone.no:</p><input type="tel"  id="contact" placeholder="contact no" required/><br>
+                <p>First name :</p>
+ <input type="text" pattern="^[a-zA-Z0-9_-]{3,16}$" placeholder="enter your first name" id="first" required>
+<br>
+                <p> Last name:</p>
+ <input type="text" pattern="^[a-zA-Z0-9_-]{3,16}$" id="last" required>
+<br>
+                <p>Email:</p>
+ <input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" required>
+<br>
+                <p>New Password:</p>
+<input type="password" id="npsw" required>
+<br>
+                <p>Confirm Password:</p>
+<input type="password" id="psw" required>
+<br>
+                <p>Phone.no:</p>
+<input type="tel" id="contact" placeholder="contact no" required>
+<br>
                 <div class="a">
                     <button id="sub">Submit</button>
                 </div>
@@ -34,15 +46,14 @@
         </form>
             <div class="login-img">
                 <img src="../assets/image/austin-pacheco-HQvMTkiNhpk-unsplash.jpg">
-                <p id="imgin" >Start your passion here with us and work together</p>
+                <p id="imgin">Start your passion here with us and work together</p>
             </div>
  
         </div>
 
     </main>
     <script>
-
-let forms=document.querySelector("form");
+const forms=document.querySelector("form");
 forms.addEventListener("submit",e=>{
     e.preventDefault();
     signup();
@@ -59,7 +70,7 @@ forms.addEventListener("submit",e=>{
     alert("spaces is not required");
 }
 if(npassw==passw){
-        let user_data = {    
+        const user_data = {    
         "user_name": first,
         "last_name":last,
         "mail_id":email,
@@ -67,7 +78,7 @@ if(npassw==passw){
         "phone_no":contact     
     }
 
-    let store_data =JSON.parse(localStorage.getItem("store_data"))?JSON.parse(localStorage.getItem("store_data")):
+    const store_data =JSON.parse(localStorage.getItem("store_data"))?JSON.parse(localStorage.getItem("store_data")):
     [];
 
     store_data.push(user_data)
@@ -81,7 +92,6 @@ if(npassw==passw){
     }
 
 }
-
 
 //   window.onload = function(){
 //     const google_mail= document.getElementById("email")

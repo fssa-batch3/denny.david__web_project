@@ -18,18 +18,21 @@
                <div class="courses">Courses</div>
                <div class="about">About</div>
                <div class="contact">Contact</div>
-               <div><img class="profile_img" src="../assets/image/main_img.jpg"></div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
            </div>
         </div>
     </header>
     <!-- Practicing exercises to finding chords -->
     <main>
-    <div class="heading"><h2> Practice for finding chords</h2></div>
+    <div class="heading">
+<h2> Practice for finding chords</h2>
+</div>
    <div class="main_div" id="main_div">
    
     <!-- <div class="first_quest">
-       
         
           <h3> 1.What is this chord?</h3> 
           <img id="chord_img" src="../assets/image/a chord.png" alt="error"><br>
@@ -93,169 +96,163 @@
     <button id="ok_btn">OK</button>
   </div>
 </body>
-<script>
-
-   
-
-    let questions= {
-        1 : `<div data-id="1" class="first_quest block">
-       <h3> 1.What is this chord?</h3> 
-       <img id="chord_img" src="../assets/image/a chord.png" alt="error"><br>
-        <div><p id="mcq">
-         a).<button  class="special1">C E G</button>
-         b).<button class="special">A C# E</button>
-         c).<button class="special1">A# C D# </button>
-     </p>
-       </div></div>
-       <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-       2:` <div data-id="2" class="second_quest block hide">
-        <h3>2.What is this chord?</h3>
-        <img id="chord_img" src="../assets/image/b flat.png" alt="bflat image">
-        <div><p id="mcq"> 
-            a).<button class="special1">B D# F# </button>
-            b).<button class="special">Bflat D F</button>
-            c).<button class="special1">Bflat Eflat G</button>
-        
-        </p>
-        </div>
-    </div>
+<script>    const questions= {
+     1 : `<div data-id="1" class="first_quest block">
+    <h3> 1.What is this chord?</h3> 
+    <img id="chord_img" src="../assets/image/a chord.png" alt="error"><br>
+     <div><p id="mcq">
+      a).<button  class="special1">C E G</button>
+      b).<button class="special">A C# E</button>
+      c).<button class="special1">A# C D# </button>
+  </p>
+    </div></div>
     <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    3:`<div data-id="3" class="third_quest block hide">
-        <h3>3.What is this chord?</h3>
-        <img id="chord_img" src="../assets/image/g_flat.png" alt="g-flat">
-       <div><p id="mcq">
-        a).<button class="special1">F# A# C#</button>
-        b).<button class="special">F# B D#</button>
-        c).<button class="special1">F A C</button>
-    </p>
-       </div>
-    
-    </div>
-    <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    4:` <div data-id="4" class="fifth_quest block fifth hide">
-        <h3>5.What is this chord?</h3>
-        <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
-       <div><p id="mcq">
-        a).<button class="special">C# E G#</button>
-        b).<button class="special1">C# F G#</button>
-        c).<button class="special1">Aflat C Eflat</button>
-        </p>
-       </div>
-    </div>
-    <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-    5:`<div data-id="5" class="fifth_quest fifth hide">
-        <h3>5.What is this chord?</h3>
-        <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
-       <div><p id="mcq">
-        a).<button class="special">C# E G#</button>
-        b).<button class="special1">C# F G#</button>
-        c).<button class="special1">Aflat C Eflat</button>
-        </p>
-       </div>
-    </div>
-    <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            6:`<div data-id="5" class="sixth_quest sixth hide">
-        <h3>6.What is this chord?</h3>
-        <img id="chord_img" src="https://www.pianochord.org/images/f.png" alt="f chord">
-       <div><p id="mcq">
-        a).<button class="special1">D F A</button>
-        b).<button class="special1">A C# E</button>
-        c).<button class="special">F A C</button>
-        </p>
-       </div>
-    </div>
-    <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            7:`<div data-id="5" class="seventh_quest seventh hide">
-        <h3>7.What is this chord?</h3>
-        <img id="chord_img" src="https://www.pianochord.org/images/b.png" alt="b chord">
-       <div><p id="mcq">
-        a).<button class="special1">D# G Aflat</button>
-        b).<button class="special">B D# F#</button>
-        c).<button class="special1">B D F#</button>
-        </p>
-       </div>
-    </div>
-    <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            8:`<div data-id="5" class="eigth_quest eigth hide">
-        <h3>8.What is this chord?</h3>
-        <img id="chord_img" src="https://www.pianochord.org/images/d_flat.png" alt="dflat chord">
-       <div><p id="mcq">
-        a).<button class="special">C# F G#</button>
-        b).<button class="special1">C F A</button>
-        c).<button class="special1">C D F</button>
-        </p>
-       </div>
-    </div>
-    <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            9:`<div data-id="5" class="nineth_quest nineth hide">
-        <h3>9.What is this chord?</h3>
-        <img id="chord_img" src="https://www.pianochord.org/images/a_flat.png" alt="Aflat chord">
-       <div><p id="mcq">
-        a).<button class="special">A C# D</button>
-        b).<button class="special1">Aflat C Dflat</button>
-        c).<button class="special1">A C E</button>
-        </p>
-       </div>
-    </div>
-    <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`,
-            10:`<div data-id="5" class="tenth_quest tenth hide">
-        <h3>10.What is this chord?</h3>
-        <img id="chord_img" src="https://www.pianochord.org/images/e.png" alt="E chord">
-       <div><p id="mcq">
-        a).<button class="special">E G B</button>
-        b).<button class="special1">F A C</button>
-        c).<button class="special1">E G# B</button>
-        </p>
-       </div>
-    </div>
-    <a id="a_btn">
-                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
-            </a>`
-    }
-    let url = window.location.search
-    let url_params =new URLSearchParams(url)
-    let params_data_id= url_params.get("data_id") 
-        
-    let main_div = document.getElementById("main_div")
-    let div_create = questions[params_data_id]
-    main_div.innerHTML=div_create
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+    2:` <div data-id="2" class="second_quest block hide">
+     <h3>2.What is this chord?</h3>
+     <img id="chord_img" src="../assets/image/b flat.png" alt="bflat image">
+     <div><p id="mcq"> 
+         a).<button class="special1">B D# F# </button>
+         b).<button class="special">Bflat D F</button>
+         c).<button class="special1">Bflat Eflat G</button>
      
+     </p>
+     </div>
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 3:`<div data-id="3" class="third_quest block hide">
+     <h3>3.What is this chord?</h3>
+     <img id="chord_img" src="../assets/image/g_flat.png" alt="g-flat">
+    <div><p id="mcq">
+     a).<button class="special1">F# A# C#</button>
+     b).<button class="special">F# B D#</button>
+     c).<button class="special1">F A C</button>
+ </p>
+    </div>
+ 
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 4:` <div data-id="4" class="fifth_quest block fifth hide">
+     <h3>5.What is this chord?</h3>
+     <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
+    <div><p id="mcq">
+     a).<button class="special">C# E G#</button>
+     b).<button class="special1">C# F G#</button>
+     c).<button class="special1">Aflat C Eflat</button>
+     </p>
+    </div>
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 5:`<div data-id="5" class="fifth_quest fifth hide">
+     <h3>5.What is this chord?</h3>
+     <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
+    <div><p id="mcq">
+     a).<button class="special">C# E G#</button>
+     b).<button class="special1">C# F G#</button>
+     c).<button class="special1">Aflat C Eflat</button>
+     </p>
+    </div>
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         6:`<div data-id="5" class="sixth_quest sixth hide">
+     <h3>6.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/f.png" alt="f chord">
+    <div><p id="mcq">
+     a).<button class="special1">D F A</button>
+     b).<button class="special1">A C# E</button>
+     c).<button class="special">F A C</button>
+     </p>
+    </div>
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         7:`<div data-id="5" class="seventh_quest seventh hide">
+     <h3>7.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/b.png" alt="b chord">
+    <div><p id="mcq">
+     a).<button class="special1">D# G Aflat</button>
+     b).<button class="special">B D# F#</button>
+     c).<button class="special1">B D F#</button>
+     </p>
+    </div>
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         8:`<div data-id="5" class="eigth_quest eigth hide">
+     <h3>8.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/d_flat.png" alt="dflat chord">
+    <div><p id="mcq">
+     a).<button class="special">C# F G#</button>
+     b).<button class="special1">C F A</button>
+     c).<button class="special1">C D F</button>
+     </p>
+    </div>
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         9:`<div data-id="5" class="nineth_quest nineth hide">
+     <h3>9.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/a_flat.png" alt="Aflat chord">
+    <div><p id="mcq">
+     a).<button class="special">A C# D</button>
+     b).<button class="special1">Aflat C Dflat</button>
+     c).<button class="special1">A C E</button>
+     </p>
+    </div>
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         10:`<div data-id="5" class="tenth_quest tenth hide">
+     <h3>10.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/e.png" alt="E chord">
+    <div><p id="mcq">
+     a).<button class="special">E G B</button>
+     b).<button class="special1">F A C</button>
+     c).<button class="special1">E G# B</button>
+     </p>
+    </div>
+ </div>
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`
+ }
+    const url = window.location.search
+    const url_params =new URLSearchParams(url)
+    const params_data_id= url_params.get("data_id") 
+        
+    const main_div = document.getElementById("main_div")
+    const div_create = questions[params_data_id]
+    main_div.innerHTML=div_create
 
-    let anchor_button = document.getElementById("a_btn")    
-    let next = document.querySelectorAll(".nxt_btn");
-    let green = document.querySelectorAll(".special")
-    let red = document.querySelectorAll(".special1")
-    let main = document.getElementsByClassName("main_div");
-    let tenth = document.getElementsByClassName("tenth")
+    const anchor_button = document.getElementById("a_btn")    
+    const next = document.querySelectorAll(".nxt_btn");
+    const green = document.querySelectorAll(".special")
+    const red = document.querySelectorAll(".special1")
+    const main = document.getElementsByClassName("main_div");
+    const tenth = document.getElementsByClassName("tenth")
    
-    let mychart = document.getElementById("mychart")
-    let div_ids=document.querySelectorAll(".block")
-   
+    const mychart = document.getElementById("mychart")
+    const div_ids=document.querySelectorAll(".block")
 
         let id;
         div_ids.forEach((e)=>{
-            let ids = e.dataset.id
+            const ids = e.dataset.id
           
             next.forEach((el,ind)=>{
-                el.addEventListener("click", function(){
+                el.addEventListener("click", () =>{
                 id = e.dataset.id
             })
             })
@@ -293,22 +290,19 @@
   })
   })
 
- 
+        const correct = 0;
+        const pieChart =  parseInt(localStorage.getItem("correct"));
 
-
-        var correct = 0;
-        let pieChart =  parseInt(localStorage.getItem("correct"));
-
-        let logo = document.getElementsByClassName("website_name");
+        const logo = document.getElementsByClassName("website_name");
         logo[0].addEventListener("click",e=>{
             window.location.href="../index.html"
            
         })
 
-        let instruction = document.getElementsByClassName("instructions");
-        let okay = document.getElementById("ok_btn")
-        let body =document.querySelector("main")
-        let header = document.querySelector("header")
+        const instruction = document.getElementsByClassName("instructions");
+        const okay = document.getElementById("ok_btn")
+        const body =document.querySelector("main")
+        const header = document.querySelector("header")
         function setupEvents(){
              body.style.filter= "blur(2px)";
              header.style.filter= "blur(2px)";
@@ -327,13 +321,8 @@
         window.onload = function(){
             setupEvents();
          }}
-
-         
-
-         
-  
      
-    let i = 1;
+    const i = 1;
     next.forEach((el,ind)=>{
     el.preventDefault
     
@@ -344,13 +333,11 @@
         window.location.href =`./exercise2.html?data_id=${Number(params_data_id)+1}`
         } 
     })} )
-     
-     
 
      if (params_data_id==10) {
        
                     anchor_button.style.display = "none";
-                    let submit_btn = document.createElement("button");
+                    const submit_btn = document.createElement("button");
                     submit_btn.setAttribute("id", "result_btn")
                     submit_btn.innerHTML = "SUBMIT";
                    
@@ -359,11 +346,11 @@
                     document.querySelector("#result_btn").addEventListener('click', e => {
                         tenth[0].style.display = "none";
                         submit_btn.style.display = "none";
-                        let xValues = ["correct","wrong"];
-                         let yValues = [pieChart,100-pieChart];
-                   let barColors = [
-                          "#00aba9", "#b91d47",
-                         ];
+                        const xValues = ["correct","wrong"];
+                         const yValues = [pieChart,100-pieChart];
+                   const barColors = [
+                       "#00aba9", "#b91d47",
+                      ];
 
                          new Chart("myChart", {
                             type: "pie",
@@ -381,9 +368,6 @@
                                  }
                              } })
                       })}
-                      
-
-       
 
 //     let i = 0;
 //    next.addEventListener('click', e => {
@@ -446,9 +430,5 @@
 //             e.style.border = ".5px solid black"
 
 //         }) }})
-
-
-    
-    
     </script>
 </html>

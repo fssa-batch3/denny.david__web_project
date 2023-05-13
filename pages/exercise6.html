@@ -19,13 +19,17 @@
                <div class="courses">Courses</div>
                <div class="about">About </div>
                <div class="contact">Contact </div>
-               <div><img class="profile_img" src="../assets/image/main_img.jpg"></div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
            </div>
    </header>
    
     <!-- This is the exercise for inversions -->
-    <div style="margin-left:660px;" class="inversion_head"><h1>Inversions</h1></div>
+    <div style="margin-left:660px;" class="inversion_head">
+<h1>Inversions</h1>
+</div>
     <div class="main_div" id="main_div"></div>
     <!-- <div class="threenotes">
        <div class="first_quest">
@@ -86,16 +90,12 @@
         <h4>You should first hear the audio and find the answers</h4>
         <button id="ok_btn">OK</button>
       </div>
-   
-   
-    
   
 </body>
 </html>
 
 <script>
-
-let questions = {
+const questions = {
     1:` <div class="first_quest">
    
    <h2>1.What is this inversion?</h2>
@@ -229,23 +229,22 @@ let questions = {
             </a>`
     }
 
-let url = window.location.search
-        let url_params =new URLSearchParams(url)
-        let params_data_id= url_params.get("data_id") 
+const url = window.location.search
+        const url_params =new URLSearchParams(url)
+        const params_data_id= url_params.get("data_id") 
         
-        let main_div = document.getElementById("main_div")
-        let div_create = questions[params_data_id]
+        const main_div = document.getElementById("main_div")
+        const div_create = questions[params_data_id]
         main_div.innerHTML=div_create
        
-        let anchor_button = document.getElementById("a_btn")    
-        let next = document.querySelectorAll(".nxt_btn");
+        const anchor_button = document.getElementById("a_btn")    
+        const next = document.querySelectorAll(".nxt_btn");
 
-
-let green = document.querySelectorAll(".special")
-let threenotes = document.getElementsByClassName("threenotes");
-let tenth= document.getElementsByClassName("tenth")
-let red = document.querySelectorAll(".special1")
-let mychart = document.getElementById("mychart")
+const green = document.querySelectorAll(".special")
+const threenotes = document.getElementsByClassName("threenotes");
+const tenth= document.getElementsByClassName("tenth")
+const red = document.querySelectorAll(".special1")
+const mychart = document.getElementById("mychart")
 
 red.forEach((e, index) => {
  
@@ -291,34 +290,33 @@ next.forEach((el,ind)=>{
         } )
      })
 
-
-let logo = document.getElementsByClassName("website_name");
+const logo = document.getElementsByClassName("website_name");
         logo[0].addEventListener("click",e=>{
             window.location.href="../index.html"
            
         })
 
-        let instruction = document.getElementsByClassName("instructions");
-        let okay = document.getElementById("ok_btn")
-        let body =document.querySelector("main")
-        let header = document.querySelector("header")
+        const instruction = document.getElementsByClassName("instructions");
+        const okay = document.getElementById("ok_btn")
+        const body =document.querySelector("main")
+        const header = document.querySelector("header")
         function setupEvents(){
-             body.style.filter= "blur(2px)";
+             main_div.style.filter= "blur(2px)";
              header.style.filter= "blur(2px)";
              instruction[0].style.filter="none"
              instruction[0].style.display="block";
              
         }
         okay.addEventListener('click',e=>{
-                body.style.filter= "none";
-             header.style.filter= "none";
-                body.style.display="block";
-             header.style.display="block";
+                main_div.style.filter= "none";
+                header.style.filter= "none";
+                main_div.style.display="block";
+                header.style.display="block";
                instruction[0].style.display="none";
         })
 
-        var correct = 0;
-        let pieChart =  parseInt(localStorage.getItem("correct"));
+        const correct = 0;
+        const pieChart =  parseInt(localStorage.getItem("correct"));
 
         if(params_data_id==1){
         window.onload =function(){
@@ -328,7 +326,7 @@ let logo = document.getElementsByClassName("website_name");
          if (params_data_id==10) {
        
        anchor_button.style.display = "none";
-       let submit_btn = document.createElement("button");
+       const submit_btn = document.createElement("button");
        submit_btn.setAttribute("id", "result_btn")
        submit_btn.innerHTML = "SUBMIT";
       
@@ -337,9 +335,9 @@ let logo = document.getElementsByClassName("website_name");
        document.querySelector("#result_btn").addEventListener('click', e => {
            fifth[0].style.display = "none";
            submit_btn.style.display = "none";
-           let xValues = ["correct","wrong"];
-            let yValues = [pieChart,100-pieChart];
-      let barColors = [
+           const xValues = ["correct","wrong"];
+            const yValues = [pieChart,100-pieChart];
+      const barColors = [
              "#00aba9", "#b91d47",
             ];
 
@@ -359,8 +357,6 @@ let logo = document.getElementsByClassName("website_name");
                     }
                 } })
          })}
-         
-
 
 // let i = 0;
 // next.addEventListener('click', e => {
