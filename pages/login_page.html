@@ -50,7 +50,7 @@
 })  
         if(res==1){
             // alert("logged in")
-            // localStorage.setItem("profile_details",JSON.stringify(data));
+            localStorage.setItem("profile_details",JSON.stringify(data));
             localStorage.setItem("logged_in", user_email);
             window.location.href="../index.html";
         }

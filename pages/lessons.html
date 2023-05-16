@@ -87,6 +87,7 @@ Suspended<br>chords
                 </div>
             </div>
         </div>
+      
     </main>
     <script>
         function scale() {
@@ -116,6 +117,23 @@ Suspended<br>chords
         function nineth() {
             window.location.href = "9thchords.html"
         }
+
+        const courses = document.getElementsByClassName("courses")
+    courses[0].addEventListener('click',e=>{
+      window.location.href="two_users.html"
+    })
+
+    let exercise = document.getElementsByClassName("exercises")
+    exercise[0].addEventListener("click",e=>{
+      window.location.href ="exercise_list.html"
+    })
+
+     let website = document.getElementsByClassName("website_name")
+     website[0].addEventListener("click",e=>{
+        window.location.href="../index.html"
+        console.log(website)
+     })
+
     </script>
 
 </body>

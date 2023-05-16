@@ -13,87 +13,117 @@ body {
     width: 1487px;
     height: 100px;
 }
+
 .header {
-    display:flex;
+    display: flex;
     justify-content: space-around;
     font-size: 25px;
-    height:60px;
-    color:black;
-    padding-top:20px;
+    height: 60px;
+    color: black;
+    padding-top: 20px;
     background-color: white;
     -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
-div .website_name{
-    width:250px;
+/* div.hint{
+    position:absolute;
+    top:15%;
+    border: ;
+} */
+.hint {
+    width: 40px;
+    position: relative;
+    top: -370px;
+    left: 135%;
+    /* margin-top: -350px;
+    margin-left: 90%; */
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+div .website_name {
+    width: 250px;
     font-weight: bold;
     font-family: 'Rubik';
     color: #f67600;
     cursor: pointer;
-    margin-left:-10px;
-}
-.others {
-    margin-left: 300px;
-    display:flex;
-    justify-content: space-between;
-    width:550px;
-    cursor: pointer;
-    font-family: 'Rubik';
-    padding-top:5px;
-    font-size:20px;
+    margin-left: -10px;
 }
 
-.profile_img{
-    width:36px;
-    height:auto;
-    margin-left:15px;
-   margin-top:-8px;
+.others {
+    margin-left: 300px;
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top: 5px;
+    font-size: 20px;
 }
+
+.profile_img {
+    width: 36px;
+    height: auto;
+    margin-left: 15px;
+    margin-top: -8px;
+}
+
 #for_padd {
     padding-top: 20px;
-    padding-left:20px;
-} 
+    padding-left: 20px;
+}
+
 .navbar1 img {
     width: 50px;
     height: 50px;
-    z-index:2;
+    z-index: 2;
     border-radius: 50%;
     margin-top: 20px;
-    margin-left:-15px;
+    margin-left: -15px;
 }
+
 .pinkcolor {
     background-color: #f1306b;
     width: 250px;
 
 }
+
 .instructions {
     background-color: white;
     width: 500px;
     height: auto;
-    
+
     /* border: 1px solid black; */
     padding: 50px 0px 50px 110px;
-    position:absolute;
-    top:35%;
-    left:30%;
+    position: absolute;
+    top: 35%;
+    left: 30%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius:5px;
+    border-radius: 5px;
 }
+
 .instructions h2 {
-    margin-left:110px;
+    margin-left: 110px;
 }
+
 main h2 {
-    margin-left:680px;
-    font-size:26px;
+    margin-left: 680px;
+    font-size: 26px;
 }
+
 .instructions button {
-    font-size:15px;
-    background-color:green;
-    border:1px solid black;
-    margin-left:150px;
-    padding:5px 10px 5px 10px;
-} 
+    font-size: 15px;
+    background-color: green;
+    border: 1px solid black;
+    margin-left: 150px;
+    padding: 5px 10px 5px 10px;
+}
+
 .bluecolor {
     background-color: #09006d;
     width: 250px;
@@ -135,25 +165,33 @@ main h2 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* div#main_div.main_div {
+    width:500px;
+} */
 
 /* .main_div .hide {
     display:none;
 } */
 .maindiv .hide {
-    display:none;
+    display: none;
 }
+
 .seventh_test .hide {
-    display:none;
+    display: none;
 }
+
 .diminished .hide {
-    display:none;   
+    display: none;
 }
-.threenotes .hide{
-    display:none;   
+
+.threenotes .hide {
+    display: none;
 }
-.main_div h3{
-    font-size:25px;
+
+.main_div h3 {
+    font-size: 25px;
 }
+
 .main_div {
     text-align: center;
     /* border: 5px solid red; */
@@ -163,9 +201,11 @@ main h2 {
     margin-left: 500px;
     margin-top: 50px;
 }
+
 .block {
-    display:block;
+    display: block;
 }
+
 /* main h2 {
     font-size: 40px;
     
@@ -174,24 +214,29 @@ main h2 {
      margin-left: 550px; 
 }*/
 
-img#chord_img{
-    width:500px;
-    height:auto;
+img#chord_img {
+    width: 500px;
+    height: auto;
 }
+
 #mcq {
-    width:500px;
+    width: 500px;
     /* margin-left:25px;  */
-    font-size: 25px;  
+    font-size: 25px;
 }
+
 #mcq button {
-    font-size:20px;
+    font-size: 20px;
 }
-.pointer{
-    cursor:pointer;
+
+.pointer {
+    cursor: pointer;
 }
+
 .diminished {
-    margin-left:550px;
+    margin-left: 550px;
 }
+
 /* .earlesson {
     font-family: Arial, Helvetica, sans-serif;
     margin-left:550px;
@@ -200,12 +245,14 @@ img#chord_img{
 .quest button {
     font-size: 22px;
 }
+
 .chartjs-render-monitor {
     animation: chartjs-render-animation 0.001s;
     position: absolute;
     top: 27%;
     left: 30%;
 }
+
 /* button.special,.special1 {
     background-color: #F0F0F0;
     border:0.5px solid black;
@@ -222,9 +269,10 @@ img#chord_img{
 .listening {
     margin-left: 450px;
 }
+
 .listening h1 {
-    margin-left:-90px;
-   
+    margin-left: -90px;
+
 }
 
 .relative-seventh {
@@ -243,7 +291,7 @@ img#chord_img{
 .metronome2 h2 {
     font-size: 35px;
     /* margin-right:350px; */
-    width:350px;
+    width: 350px;
     /* border: 1px solid black; */
 }
 
@@ -257,7 +305,7 @@ img#chord_img{
 }
 
 .metronome1 audio {
-     
+
     position: absolute;
     top: 168px;
     left: 180px;
@@ -288,17 +336,21 @@ img#chord_img{
     border-radius: 15px;
     margin-bottom: 40px;
 }
-.listening{
-    width:500px;
+
+.listening {
+    width: 500px;
 }
-.maindiv{
-    margin-left:500px;
+
+.maindiv {
+    margin-left: 500px;
 }
+
 .heading h2 {
     margin-left: 500px;
 }
+
 .listening h1 {
-  
+
     /* text-shadow: 2px 2px #eae9e9;
     width: 1000px;
     position: relative;
@@ -347,125 +399,253 @@ img#chord_img{
 }
 
 .dim {
-    display:flex;
+    display: flex;
     box-shadow: 1px solid black;
- }
- .dim1 h2 {
-     
-     margin-top:50px;
-     font-family:Arial, Helvetica, sans-serif;
- }
- .dimnat{
-     display: flex;
-     
- }
- .dim-img {
-     position:relative;
- }
- h3 {
-    
-     
-    
-   
-    
-     font-size:20px;
-     /* background: -webkit-linear-gradient(0deg,rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+}
+
+.dim1 h2 {
+
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dimnat {
+    display: flex;
+
+}
+
+.dim-img {
+    position: relative;
+}
+
+h3 {
+
+
+
+
+
+    font-size: 20px;
+    /* background: -webkit-linear-gradient(0deg,rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
      background-clip: text;
      -webkit-background-clip: text;
      /* -webkit-text-fill-color: transparent; */
-     backdrop-filter: blur(10px); */
- }
- .dim-img img {
-     position:fixed;
-     width:740px;
-     height:900px;
-     
-     
- }
- 
- .di {
-     margin-top:100px;
- }
- .dim2 {
-    margin-top:28px;
-    margin-left:20px;
-}
-
-
-@media only screen and (max-width:900px){
-    header {
-        width:400px;
-    }
-    main{
-        width:400px;
-    }
-    .nav {
-        width:400px;
-        height:100px;
-      }
-      .navbar1 div {
-          height: 100px;
-          padding-top: 25px;
-      }
-      .none {
-          display: none;
-      }
-      .pinkcolor {
-          display: flex;
-          flex-direction: column;
-          width:400px;
-          height: 100px; 
-      }
-      .pinkcolor a{
-         margin-left: 100px;
-      }
-      .metronome1 img {
-         width:180px;
-        border-radius:10px;
-      }
-    .metronome {
-        margin-left:140px;
-        width:260px;
-    }
-    .metronom{
-        margin-left:140px;
-        width:260px;
-    }
-   .metrono{
-       margin-left:140px;
-       width:260px;
-   }
-   .metron {
-    margin-left:140px;
-    width:260px;
-   }
-   .metronome2 h2 {
-     font-size: 20px;
-     width:200px;
-     margin-right:45px;
-     margin-top:0px;
-
-   }
-   .metronome2 button {
-    font-size: 15px;
-}
-h1 {
-    text-align: center;
-    margin-left: 0px;
-    width:400px;
-}
-.metronome2 {
-    width:240px;
-    margin-right:165px;
-    margin-bottom:20px;
-   
-}
-#watch {
-    width:90px;
+    backdrop-filter: blur(10px);
     
 }
-.metronome1 audio {
-    top:75px;
-   left:-100px;
+
+.dim-img img {
+    position: fixed;
+    width: 740px;
+    height: 900px;
+
 }
+
+.di {
+    margin-top: 100px;
+}
+
+.dim2 {
+    margin-top: 28px;
+    margin-left: 20px;
+}
+
+section #main{
+    width:900px;
+    margin-left:300px;
+    margin-top:200px;
+}
+.nowplaying {
+    font-size: 120px;
+    line-height: 1;
+    color: #eee;
+    text-shadow: 0 0 5rem #028ae9;
+    transition: all .07s ease;
+    min-height: 120px;
+    }
+    
+    .keys {
+    display: block;
+    width: 100%;
+    height: 350px;
+    max-width: 880px;
+    position: relative;
+    margin: 40px auto 0;
+    cursor: pointer;
+    }
+    
+    .key {
+    position: relative;
+    border: 2.5px solid grey;
+    border-radius: .5rem;
+    transition: all .07s ease;
+    display: block;
+    box-sizing: border-box;
+    z-index: 2;
+    }
+    
+    .key:not(.sharp) {
+    float: left;
+    width: 9.5%;
+    height: 90%;
+    /* background: rgba(255, 255, 255, .8);    */
+    background-color: white;
+    }
+    
+    .key.sharp {
+    position: absolute;
+    width: 5%;
+    height: 55%;
+    background: #000;
+    color: #eee;
+    top: 0;
+    z-index: 3;
+    }
+    
+    .key[data-key="87"] {
+    left: 7%;
+    }
+    
+    .key[data-key="69"] {
+    left: 16.5%;
+    }
+    
+    .key[data-key="84"]  {
+    left: 35.5%;
+    }
+    
+    .key[data-key="89"] {
+    left: 45%;
+    }
+    
+    .key[data-key="85"] {
+    left: 54.5%;    
+    }
+    
+    .key[data-key="79"] {
+    left: 73.5%;    
+    }
+    section#wrap {
+        position: absolute;
+    top: 10%;
+    width:700px;
+    height:auto;
+}
+    
+    .key[data-key="80"] {
+    left: 83%;    
+    }
+    
+    .playing {
+    transform: scale(.95);
+    border-color: #028ae9;
+    box-shadow: 0 0 1rem #028ae9;
+    }
+    
+    .hints {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    bottom: 7px;
+    transition: opacity .3s ease-out;
+    font-size: 20px;
+    }
+    
+    .keys:hover .hints {
+    opacity: 1;
+    }
+
+@media only screen and (max-width:900px) {
+    header {
+        width: 400px;
+    }
+
+    main {
+        width: 400px;
+    }
+
+    .nav {
+        width: 400px;
+        height: 100px;
+    }
+
+    .navbar1 div {
+        height: 100px;
+        padding-top: 25px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .pinkcolor {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 100px;
+    }
+
+    .pinkcolor a {
+        margin-left: 100px;
+    }
+
+    .metronome1 img {
+        width: 180px;
+        border-radius: 10px;
+    }
+
+    .metronome {
+        margin-left: 140px;
+        width: 260px;
+    }
+
+    .metronom {
+        margin-left: 140px;
+        width: 260px;
+    }
+
+    .metrono {
+        margin-left: 140px;
+        width: 260px;
+    }
+
+    .metron {
+        margin-left: 140px;
+        width: 260px;
+    }
+
+    .metronome2 h2 {
+        font-size: 20px;
+        width: 200px;
+        margin-right: 45px;
+        margin-top: 0px;
+
+    }
+
+    .metronome2 button {
+        font-size: 15px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-left: 0px;
+        width: 400px;
+    }
+
+    .metronome2 {
+        width: 240px;
+        margin-right: 165px;
+        margin-bottom: 20px;
+
+    }
+
+    #watch {
+        width: 90px;
+
+    }
+
+    .metronome1 audio {
+        top: 75px;
+        left: -100px;
+    }
 }

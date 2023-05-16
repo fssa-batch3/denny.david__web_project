@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Rubik&display=swap');
 
 body {
-    background-color: #f8f8f8;
+    background-color: white;
     margin:0px;
     padding:0px;
     font-family: 'Rubik';
 }
-form {
+/* form {
     display:flex;
     align-items:center;
     justify-content:center;
     margin-top: 200px;
 }
-fieldset {
-    border:none;
-   
-}
+
 .hide-it {
     display:none;
 }
@@ -24,7 +21,7 @@ fieldset {
 .users_page {
     margin-top: -100px;
     /* margin-left: 200px; */
-    background-color: white;
+    /* background-color: white;
     display:flex;
     justify-content: space-evenly;
     align-items:center;
@@ -32,10 +29,10 @@ fieldset {
     height:650px;
     border:2px solid white ;
     /* margin-top: 70px; */
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    border-radius: 10px;
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 10px;  */
     /* margin-bottom: 100px ; */
-} 
+/* } 
 .profile_photo img {
     width:250px;
     height:auto;
@@ -50,7 +47,7 @@ fieldset {
 .profile1 h1 {
     color:#932557;
     font-size: 45px;
-    /* padding-bottom: 50px; */
+    padding-bottom: 50px;
 }
 .profile1 {
   padding-bottom:100px;
@@ -82,7 +79,7 @@ fieldset {
 /* .profile {
     /* margin-top:0px; 
 } */
-#erase  {
+/* #erase  {
     margin-top:25px;
     color :white;
     margin-left:70px;
@@ -107,12 +104,12 @@ fieldset {
 }
 .popup_form h3 {
     color: #932557;
-}
+} */
 /* /* .popup{
     display: flex;
     
     /* box-shadow: rpopupgba(149, 157, 165, 0.2) 0px 8px 24px; */
-
+/* 
 #save-btn {
     
     color:white;
@@ -174,28 +171,28 @@ fieldset {
 #without_beard {
     height:62px;
     margin-left:8.5px;
-}
+} */
  /* .popup img { 
     display:none; 
      display: flex; 
     width:40px; 
     
 } */
-.popup {
+/* .popup {
     display:none;
-     /* border-radius: 5px;
+     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display:flex;
     width: 500px;
     position:relative;
     bottom:150px;
-    right:150px; */
-    background-color:white;
-    /* justify-content: space-around;
+    right:150px; 
+    background-color:white; 
+     justify-content: space-around;
     font-size: 12px;
-    border:1px solid black;  */ 
-}
-.popup button {
+    border:1px solid black;   
+} */
+/* .popup button {
     background-color: white;
     border:none;
 }
@@ -211,8 +208,8 @@ fieldset {
 .none {
     display:none;
     backdrop-filter: blur(5px); 
-}
-.change {
+} */
+/* .change {
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display:flex;
@@ -220,15 +217,15 @@ fieldset {
     height:31px;
     /* margin-left:8px;
     margin-top:3px; */
-    height:auto;
+    /* height:auto;
     position:absolute;
     bottom:150px;
-    right:150px;
-    background-color:white;
-    justify-content: space-around;
-    font-size: 12px;
-    border:1px solid black;
-}
+    right:150px; */
+    /* background-color:white; */
+    /* justify-content: space-around; */
+    /* font-size: 12px; */
+    /* border:1px solid black; */
+/*
 #back-image {
     background-color: #f6a740 ;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -317,4 +314,64 @@ fieldset {
     width: 80px;
     height: 75px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}  */
+
+fieldset {
+   width:400px;
+   margin-left:500px;
+   
+}
+/* .profile1 {
+    margin-left:125px;
+} */
+input {
+    width:250px;
+    /* margin-left:-50px; */
+    height:25px;
+    margin-top:15px;
+    
+}
+/* .profile1 h4 {
+   margin-left:35px;
+} */
+.firstname {
+display: flex;
+justify-content: space-between;
+}
+.secondname {
+    display:flex;
+    justify-content: space-between;
+}
+.phoneno {
+    display: flex;
+    justify-content: space-between;
+}
+.emailid {
+    display:flex;
+    justify-content: space-between;
+}
+.progress {
+    margin-left:490px;
+    margin-top:60px;
+    width:450px;
+    height:100px;
+    background-color:white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.progress h3 {
+    text-align:center;
+    padding-top:10px;
+}
+h2.h2 {
+    margin-left:650px;
+    margin-top:100px;
+}
+#redo {
+    font-size: 20px;
+    cursor:pointer;
+    background-color: rgb(250, 250, 7);
+    border: 1px solid black;
+}
+p#score {
+    font-size: 20px;
 }
