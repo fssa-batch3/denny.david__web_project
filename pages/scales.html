@@ -141,14 +141,27 @@
             <!-- This is scales practice for exercise -->
             <div class="go-to">
             <div>
-<a href="./exercise.html?data_id=1">
-<button>Exercises</button> 
+<!-- <a href="./exercise.html?data_id=1">
+<button>Exercises</button>  -->
 </a>
             </div> </div>   
     </main>
 
 </body>
 <script>
-  localStorage.setItem("correct",0)
+//   localStorage.setItem("correct",0)
+
+let exercises = document.getElementsByClassName("exercises")
+exercises[0].addEventListener("click",e=>{
+    if(localStorage.getItem("store_data").length == 0){
+      window.location.href="signup.html"
+    }
+    else{
+        window.location.href="exercise_list.html"
+  }
+}
+   )
 </script>
+<script src="../assets/js/common.js"></script>
+
 </html>

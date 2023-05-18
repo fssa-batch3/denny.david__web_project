@@ -554,7 +554,26 @@ section #main{
     .keys:hover .hints {
     opacity: 1;
     }
-
+    img.bulb_img {
+        width:50px;
+        height:auto;
+        border-radius: 50%;
+        position:absolute;
+        top:15%;
+        left:70%;
+        cursor:pointer;
+    }
+     .hint_para {
+        background-color: white;
+        width:200px;
+        position:absolute;
+        top:20%;
+        left:70%;
+        display: none;
+     }
+     .view{
+        display: block;
+     }
 @media only screen and (max-width:900px) {
     header {
         width: 400px;

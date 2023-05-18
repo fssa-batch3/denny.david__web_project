@@ -79,7 +79,7 @@
   1:` <div class="first_quest ">
       <h2>1.Which note wiil be the relative seventh chord?</h2>
       <p id="mcq">
-       a).<button class="special">5th note</button>
+       a).<button onclick="myFunction()" class="special">5th note</button>
        b).<button class="special1">4thnote</button>
        C).<button class="special1">6th note</button>
        d).<button class="special1">2nd note</button></p>
@@ -94,7 +94,7 @@
   a).<button class="special1">Am7</button>
   b).<button class="special1">Dm7</button>
   C).<button class="special1">Gm7</button>
-  d).<button class="special">Em7</button></p>
+  d).<button onclick="myFunction()" class="special">Em7</button></p>
     </div>
     <a id="a_btn" >
           <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
@@ -104,7 +104,7 @@
   <img src="../assets/image/em7.png" alt="Em7 chord"><br><br>
   <p id="mcq">
   a).<button class="special1">G7</button>
-  b).<button class="special">C7</button>
+  b).<button onclick="myFunction()" class="special">C7</button>
   C).<button class="special1">E7</button>
   d).<button class="special1">D7</button></p>
     </div>
@@ -115,7 +115,7 @@
   <h2>4.What is the relative seventh chord of G?</h2>
   <img src="../assets/image/d7 chord.png" alt="Em7 chord"><br><br>
   <p id="mcq">
-  a).<button class="special">D7</button>
+  a).<button onclick="myFunction()" class="special">D7</button>
   b).<button class="special1">C7</button>
   C).<button class="special1">G7</button>
   d).<button class="special1">A7</button>
@@ -131,7 +131,7 @@
   a).<button class="special1">Dm7</button>
   b).<button class="special1">C7</button>
   C).<button class="special1">B7</button>
-  d).<button class="special">E7</button>
+  d).<button onclick="myFunction()" class="special">E7</button>
   </p>
     </div>
     <a id="a_btn" >
@@ -142,7 +142,7 @@
   <img src="https://www.pianochord.org/images/g_flat_7.png" alt="gflat7 chord"><br><br>
   <p id="mcq">
   a).<button class="special1">F7</button>
-  b).<button class="special">F#7</button>
+  b).<button onclick="myFunction()" class="special">F#7</button>
   C).<button class="special1">E7</button>
   d).<button class="special1">G7</button>
   </p>
@@ -155,7 +155,7 @@
   <img src="https://www.pianochord.org/images/g7.png" alt="G7 chord"><br><br>
   <p id="mcq">
   a).<button class="special1">Gm7</button>
-  b).<button class="special">G7</button>
+  b).<button onclick="myFunction()" class="special">G7</button>
   C).<button class="special1">Cm7</button>
   d).<button class="special1">Dm7</button>
   </p>
@@ -170,7 +170,7 @@
   a).<button class="special1">B7</button>
   b).<button class="special1">Eflat7</button>
   C).<button class="special1">F#7</button>
-  d).<button class="special">F7</button>
+  d).<button onclick="myFunction()" class="special">F7</button>
   </p>
     </div>
     <a id="a_btn" >
@@ -182,7 +182,7 @@
   <p id="mcq">
   a).<button class="special1">G7</button>
   b).<button class="special1">C7</button>
-  C).<button class="special">A7</button>
+  C).<button onclick="myFunction()" class="special">A7</button>
   d).<button class="special1">Am7</button>
   </p>
     </div>
@@ -196,7 +196,7 @@
   a).<button class="special1">A7</button>
   b).<button class="special1">Em7</button>
   C).<button class="special1">F7</button>
-  d).<button class="special">B7</button>
+  d).<button onclick="myFunction()" class="special">B7</button>
   </p>
     </div>
     <a id="a_btn" >
@@ -298,7 +298,20 @@
 
     const correct = 0;
     
-        const pieChart =  parseInt(localStorage.getItem("correct"));
+    function myFunction() {
+            let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    user_data = e
+                    let value = e["seventh_chords"]
+                    value += 10;
+                    e["seventh_chords"] = value
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+            )}  
 
     if (params_data_id==10) {
        
@@ -310,10 +323,19 @@
        body.appendChild(submit_btn)
       
        document.querySelector("#result_btn").addEventListener('click', e => {
+        let logged = localStorage.getItem("logged_in")
+            let user_data;
+            let value 
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    value = e["seventh_chords"]
+                   
+                }
+            })
            tenth[0].style.display = "none";
            submit_btn.style.display = "none";
            const xValues = ["correct","wrong"];
-            const yValues = [pieChart,100-pieChart];
+            const yValues = [value,value-100];
       const barColors = [
        "#00aba9", "#b91d47",
       ];
@@ -398,4 +420,6 @@
 //         }) }})
   </script>
 </body>
+<script src="../assets/js/common.js"></script>
+
 </html>

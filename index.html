@@ -284,8 +284,25 @@ Hand<br> Independence
       window.location.href="pages/two_users.html"
     })
 
-    let exercise = document.getElementsByClassName("exercises")
-    exercise[0].addEventListener("click",e=>{
-      window.location.href ="pages/exercise_list.html"
-    })
-    </script>
+    // let exercise = document.getElementsByClassName("exercises")
+    // exercise[0].addEventListener("click",e=>{
+    //   window.location.href ="pages/exercise_list.html"
+    // })
+
+
+    let exercises = document.getElementsByClassName("exercises")
+exercises[0].addEventListener("click",e=>{
+    if(localStorage.getItem("store_data")==0){
+      window.location.href="pages/signup.html"
+    }
+    else{
+        window.location.href="pages/exercise_list.html"
+  }
+}
+   )
+   let signup = document.getElementsById("signing")
+   signup.addEventListener("click",e=>{
+     window.location.href = "pages/signup.html"
+   })
+</script>
+

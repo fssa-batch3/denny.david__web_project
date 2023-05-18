@@ -84,7 +84,9 @@
           </div>  
     </div>
     <p id="nxt_btn" class="pointer"> Next >></p> -->
-
+    <div>
+        <canvas id="myChart" style="width:100%; max-width:600px"></canvas>
+    </div>
     <div class="instructions" style="display: none;">
         <h2 style="color:green">Instructions</h2>
         <h4>You should first hear the audio and find the answers</h4>
@@ -115,7 +117,7 @@ const questions = {
         <img id="chord_img" src="../assets/image/b_d_sharp.png" alt="B chord"> 
         <div><p id="mcq">
             a).<button class="special1">1st inversion</button>
-            b).<button class="special">2nd inversion</button>
+            b).<button onclick="myFunction()" class="special">2nd inversion</button>
             C).<button class="special1">3rd inversion</button>
         </p>
           </div>  
@@ -128,7 +130,7 @@ const questions = {
             <img id="chord_img" src="../assets/image/em inversion.png" alt="em chord"> 
             <div><p id="mcq">
                 a).<button class="special1">1st inversion</button>
-                b).<button class="special">2nd inversion</button>
+                b).<button onclick="myFunction()" class="special">2nd inversion</button>
                 C).<button class="special1">3rd inversion</button>
             </p>
               </div>  
@@ -140,7 +142,7 @@ const questions = {
         <h2>4.What is this inversion?</h2>
         <img id="chord_img" src="../assets/image/gminor.png" alt="Gm"> 
         <div><p id="mcq">
-            a).<button class="special">1st inversion</button>
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
             b).<button class="special1">2nd inversion</button>
             C).<button class="special1">3rd inversion</button>
         </p>
@@ -153,7 +155,7 @@ const questions = {
         <h2>5.What is this inversion?</h2>
         <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
         <div><p id="mcq">
-            a).<button class="special">1st inversion</button>
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
             b).<button class="special1">2nd inversion</button>
             C).<button class="special1">3rd inversion</button>
         </p>
@@ -166,7 +168,7 @@ const questions = {
         <h2>6.What is this inversion?</h2>
         <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
         <div><p id="mcq">
-            a).<button class="special">1st inversion</button>
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
             b).<button class="special1">2nd inversion</button>
             C).<button class="special1">3rd inversion</button>
         </p>
@@ -179,7 +181,7 @@ const questions = {
         <h2>7.What is this inversion?</h2>
         <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
         <div><p id="mcq">
-            a).<button class="special">1st inversion</button>
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
             b).<button class="special1">2nd inversion</button>
             C).<button class="special1">3rd inversion</button>
         </p>
@@ -192,7 +194,7 @@ const questions = {
         <h2>8.What is this inversion?</h2>
         <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
         <div><p id="mcq">
-            a).<button class="special">1st inversion</button>
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
             b).<button class="special1">2nd inversion</button>
             C).<button class="special1">3rd inversion</button>
         </p>
@@ -205,7 +207,7 @@ const questions = {
         <h2>9.What is this inversion?</h2>
         <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
         <div><p id="mcq">
-            a).<button class="special">1st inversion</button>
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
             b).<button class="special1">2nd inversion</button>
             C).<button class="special1">3rd inversion</button>
         </p>
@@ -218,7 +220,7 @@ const questions = {
         <h2>10.What is this inversion?</h2>
         <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
         <div><p id="mcq">
-            a).<button class="special">1st inversion</button>
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
             b).<button class="special1">2nd inversion</button>
             C).<button class="special1">3rd inversion</button>
         </p>
@@ -315,8 +317,23 @@ const logo = document.getElementsByClassName("website_name");
                instruction[0].style.display="none";
         })
 
+        function myFunction() {
+            let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    user_data = e
+                    let value = e["inversions_practice"]
+                    value += 10;
+                    e["inversions_practice"] = value
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+            )}  
+
         const correct = 0;
-        const pieChart =  parseInt(localStorage.getItem("correct"));
+        // const pieChart =  parseInt(localStorage.getItem("correct"));
 
         if(params_data_id==1){
         window.onload =function(){
@@ -333,10 +350,19 @@ const logo = document.getElementsByClassName("website_name");
        tenth[0].appendChild(submit_btn)
       
        document.querySelector("#result_btn").addEventListener('click', e => {
-           fifth[0].style.display = "none";
+        let logged = localStorage.getItem("logged_in")
+            let user_data;
+            let value 
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    value = e["inversions_practice"]
+                   
+                }
+            })
+           tenth[0].style.display = "none";
            submit_btn.style.display = "none";
            const xValues = ["correct","wrong"];
-            const yValues = [pieChart,100-pieChart];
+            const yValues = [value,value-100];
       const barColors = [
              "#00aba9", "#b91d47",
             ];
@@ -420,3 +446,4 @@ const logo = document.getElementsByClassName("website_name");
 
 //    }) }})
 </script>
+<script src="../assets/js/common.js"></script>

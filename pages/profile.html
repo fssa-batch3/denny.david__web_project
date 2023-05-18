@@ -62,14 +62,33 @@
             </div>
             </div>
         </form>
-        <div style="display:none" id="progress"> 
+        <div  id="progress"> 
         <h2 class="h2">Progress</h2>     
-  <div class ="progress">
+  <div class ="eartraining_progress">
     <h3>Ear training exercise</h3>
-    <p id="score">You got <button id="redo">Redo</button></p>
+    <p id="score">Your Score <span id="ear_training_result">0/100</span> <button id="ear_training_redo">Take challenge</button></p>
   </div></div>
-
-           
+  <div class ="findingchords_progress">
+    <h3>Finding chords exercise</h3>
+    <p id="score">Your score<span id="finding_result">0/100</span> <button id="finding_redo">Take challenge</button></p>
+  </div>
+  
+  <div class ="seventh_progress">
+    <h3>Seventh chords exercise</h3>
+    <p id="score">Your score<span id="seventh_result">0/100</span> <button id="seventh_redo">Take challenge</button></p>
+  </div>
+  <div class ="diminished_progress">
+    <h3>Seventh chords exercise</h3>
+    <p id="score">Your score<span id="dim_result">0/100</span> <button id="dim_redo">Take challenge</button></p>
+  </div>
+  <!-- <div class ="seventh_progress">
+    <h3>Seventh chords exercise</h3>
+    <p id="score">You got <button id="redo">Redo</button></p>
+  </div> -->
+    <div class = "inversions_progress">
+        <h3>Inversion exercise</h3>
+        <p id="score">You got <button id="inversion_redo">Take challenge</button></p>  
+    </div>       
 
        
              
@@ -163,13 +182,14 @@
          lname.setAttribute("disabled","")
          phone.setAttribute("disabled","")
          email.setAttribute("disabled","")
+        //  window.location.href="./index.html"
         }
      })
     })
    
      
-     let redo = document.getElementById("redo")
-     redo.addEventListener("click",e=>{
+     let ear_redo = document.getElementById("ear_training_redo")
+     ear_redo.addEventListener("click",e=>{
         let store_data = JSON.parse(localStorage.getItem("store_data"))
             let logged = localStorage.getItem("logged_in")
             let user_data;
@@ -181,9 +201,97 @@
             })
             localStorage.setItem("store_data", JSON.stringify(store_data)
            )
-           window.location.href="exercise.html"
+           window.location.href="exercise.html?data_id=1"
         }
-           
-     )
+    )
+    let seventh_redo = document.getElementById("seventh_redo")
+    seventh_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["seventh_chords"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise3.html?data_id=1"
+        }
+    )
+    let dim_redo = document.getElementById("dim_redo")
+     dim_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["diminished_chords"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise4.html?data_id=1"
+        }
+    )
+
+    let inversion_redo = document.getElementById("inversion_redo")
+     inversion_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["inversions_practice"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise6.html?data_id=1"
+        }
+    )
+
+    let find_redo = document.getElementById("finding_redo")
+     find_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["finding_chords"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise2.html?data_id=1"
+        }
+    )
+
+    let ear_training_score;
+    let finding_chords_score;
+    let _sore;
+    let __score;
+    let score;
+
+
+    let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    ear_training_score=e["ear_training"]
+                    finding_chords_score =e["finding_chords"]
+                }
+            })
+    let ear_training_result= document.getElementById("ear_training_result")
+    console.log(ear_training_score,ear_training_result);
+    ear_training_result.innerHTML= `${ear_training_score}/100`
+   
+    
+
 </script>
 </html>

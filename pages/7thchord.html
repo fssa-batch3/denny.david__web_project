@@ -65,7 +65,19 @@
    <!-- These are seveth chords and video for reference -->
        
 <script>
-localStorage.setItem("correct",0)
+// localStorage.setItem("correct",0)
+let exercises = document.getElementsByClassName("exercises")
+exercises[0].addEventListener("click",e=>{
+    if(localStorage.getItem("store_data") == 0){
+      window.location.href="signup.html"
+    }
+    else{
+        window.location.href="exercise_list.html"
+  }
+}
+   )
 </script>
 </body>
+<script src="../assets/js/common.js"></script>
+
 </html>
