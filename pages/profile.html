@@ -64,30 +64,30 @@
         </form>
         <div  id="progress"> 
         <h2 class="h2">Progress</h2>     
-  <div class ="eartraining_progress">
-    <h3>Ear training exercise</h3>
+  <div class ="progress_result">
+    <h3>Ear training </h3>
     <p id="score">Your Score <span id="ear_training_result">0/100</span> <button id="ear_training_redo">Take challenge</button></p>
   </div></div>
-  <div class ="findingchords_progress">
-    <h3>Finding chords exercise</h3>
+  <div class ="progress_result">
+    <h3>Finding chords </h3>
     <p id="score">Your score<span id="finding_result">0/100</span> <button id="finding_redo">Take challenge</button></p>
   </div>
   
-  <div class ="seventh_progress">
-    <h3>Seventh chords exercise</h3>
+  <div class ="progress_result">
+    <h3>Seventh chords </h3>
     <p id="score">Your score<span id="seventh_result">0/100</span> <button id="seventh_redo">Take challenge</button></p>
   </div>
-  <div class ="diminished_progress">
-    <h3>Seventh chords exercise</h3>
+  <div class ="progress_result">
+    <h3>Diminished chords </h3>
     <p id="score">Your score<span id="dim_result">0/100</span> <button id="dim_redo">Take challenge</button></p>
   </div>
   <!-- <div class ="seventh_progress">
     <h3>Seventh chords exercise</h3>
     <p id="score">You got <button id="redo">Redo</button></p>
   </div> -->
-    <div class = "inversions_progress">
-        <h3>Inversion exercise</h3>
-        <p id="score">You got <button id="inversion_redo">Take challenge</button></p>  
+    <div class = "progress_result">
+        <h3>Inversion chords</h3>
+        <p id="score">You score<span id="inversion_result">0/100</span> <button id="inversion_redo">Take challenge</button></p>  
     </div>       
 
        
@@ -273,9 +273,9 @@
 
     let ear_training_score;
     let finding_chords_score;
-    let _sore;
-    let __score;
-    let score;
+    let seventh_score;
+    let dim_score;
+    let inversions_score;
 
 
     let store_data = JSON.parse(localStorage.getItem("store_data"))
@@ -284,14 +284,34 @@
             store_data.forEach(e => {
                 if (e.mail_id == logged) {
                     ear_training_score=e["ear_training"]
+                    
                     finding_chords_score =e["finding_chords"]
+                    
+                    seventh_score = e
+                    ["seventh_chords"]
+                   
+                    dim_score = e 
+                    ["diminished_chords"]
+                  
+                    inversion_score = e
+                    ["inversions_practice"]
+                
                 }
             })
     let ear_training_result= document.getElementById("ear_training_result")
-    console.log(ear_training_score,ear_training_result);
     ear_training_result.innerHTML= `${ear_training_score}/100`
    
+    let finding_result = document.getElementById("finding_result")
+    finding_result.innerHTML = `${finding_chords_score}/100`
     
+    let seventh_result = document.getElementById("seventh_result")
+    seventh_result.innerHTML = `${seventh_score}/100`
+
+    let dim_result = document.getElementById("dim_result")
+    dim_result.innerHTML = `${dim_score}/100`
+
+    let inverion_result = document.getElementById("inversion_result")
+    inverion_result.innerHTML = `${inversion_score}/100` 
 
 </script>
 </html>

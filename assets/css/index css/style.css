@@ -24,6 +24,12 @@ div .website_name{
     margin-left:-10px;
     cursor: pointer;
 }
+.profile_img{
+    width:36px;
+    height:auto;
+    margin-left:15px;
+   margin-top:-8px;
+}
 .others {
     margin-left:300px;
     display:flex;

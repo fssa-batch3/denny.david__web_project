@@ -365,6 +365,7 @@ justify-content: space-between;
 h2.h2 {
     margin-left:650px;
     margin-top:100px;
+    /* margin-bottom:25px; */
 }
 #redo {
     font-size: 20px;
@@ -374,4 +375,19 @@ h2.h2 {
 }
 p#score {
     font-size: 20px;
+}
+.progress_result {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width:350px;
+    height:100px;
+    margin-left:525px;
+    margin-top:50px;
+    
+}
+p {
+   text-align:center;
+}
+ h3 {
+     text-align:center; 
 }

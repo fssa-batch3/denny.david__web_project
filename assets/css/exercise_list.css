@@ -36,10 +36,10 @@ div .website_name{
 }
 
 .profile_img{
-    width:60px;
-    height:60px;
+    width:36px;
+    height:auto;
     margin-left:15px;
-   margin-top:-10px;
+   margin-top:-8px;
 }
 .training {
     display:flex;

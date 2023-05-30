@@ -97,6 +97,8 @@
     let seventh_chords = document.getElementById("seventh_chords");
     let timing_practice = document.getElementById("timing_practice")
     let inversion_practice = document.getElementById("inversion_practice")
+    let exercises = document.getElementsByClassName("exercises")
+
     // localStorage.setItem("correct",0)
     // localStorage.setItem
     ear_training.addEventListener("click",e=>{
@@ -116,6 +118,18 @@
     })
     inversion_practice.addEventListener("click",e=>{
         window.location.href="exercise6.html?data_id=1"
+    })
+
+    exercises[0].addEventListener("click",e=>{
+        window.location.href = "exercise_list.html"
+    })
+    let courses = document.getElementsByClassName("courses")
+    courses[0].addEventListener("click",e=>{
+        window.location.href = "lessons.html"
+    })
+    let website_name = document.getElementsByClassName("website_name")
+    website_name[0].addEventListener("click",e=>{
+        window.location.href = "../index.html"
     })
 </script>
 <script src="../assets/js/common.js"></script>

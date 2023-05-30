@@ -18,9 +18,13 @@
             <div class="courses">Courses</div>
             <div class="about">About  </div>
             <div class="contact">Contact </div>
-            <div id="signing "class="signup">Sign up</div>
+            <div id="signing" class="signup" >Sign up</div>
+            <div>
+              <img class="profile_img" id="profile_img" src="../denny.david__web_project/assets/image/main_img.jpg">
+              </div> 
          </div>
         </div>
+    </header>
         <!-- This is content for colouring purpose .So this is below the header section -->
          
          <!-- This container is used for above the color the text should come. --> 
@@ -220,7 +224,11 @@ Hand<br> Independence
             </div>
 
         </footer>
+        <script src="main.js"></script>
         <script>
+        
+
+
         const user_cre = localStorage.getItem("logged_in");
 
          const direct = document.getElementById("get_started");
@@ -236,8 +244,8 @@ Hand<br> Independence
 
               else if(user_cre !== null){
 
-                alert("Successfully");
-
+               
+                
                 window.location.href= "pages/two_users.html";
               }
 
@@ -300,9 +308,20 @@ exercises[0].addEventListener("click",e=>{
   }
 }
    )
-   let signup = document.getElementsById("signing")
-   signup.addEventListener("click",e=>{
+   let sign = document.getElementsByClassName("signup")
+   sign[0].addEventListener("click",e=>{
      window.location.href = "pages/signup.html"
    })
-</script>
 
+   let show_profile = document.getElementById("signing")
+   let profile_img = document.getElementById("profile_img")
+   if (user_cre !== null){
+    show_profile.style.display = "none";
+    profile_img.style.display = "block"
+  }
+  profile_img.addEventListener("click",e=>{
+    window.location.href = "pages/profile.html"
+  })
+</script>
+</body>
+</html>
