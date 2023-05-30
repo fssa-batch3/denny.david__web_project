@@ -2,13 +2,51 @@
 
 body {
     margin: 0px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     font-size: 25px;
 }
 .nav {
     display: flex;
     width: 1485px;
     height:100px;
+}
+.header {
+    display:flex;
+    justify-content: space-around;
+    font-size: 25px;
+    height:60px;
+    color:black;
+    padding-top:20px;
+    background-color: white;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+div .website_name{
+    width:250px;
+    margin-left:-50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Rubik';
+    color: #f67600;
+}
+.others {
+    margin-left:300px;
+    display:flex;
+    justify-content: space-around;
+    width:450px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top:5px;
+    font-size:20px;
+}
+
+.profile_img{
+    width:36px;
+    height:auto;
+    margin-left:15px;
+   margin-top:-8px;
 }
 #for_padd {
     padding-top: 20px;
@@ -73,6 +111,7 @@ body {
 .beginners {
     width : 1320px;
     margin : 100px 0px 80px 80px;
+    font-size: 20px;
 }
 img {
    width: 700px;

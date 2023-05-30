@@ -2,13 +2,51 @@
 
 body {
     margin: 0px;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     font-size: 25px;
 }
 .nav {
     display: flex;
     width: 1485px;
     height:100px;
+}
+.header {
+    display:flex;
+    justify-content: space-around;
+    font-size: 25px;
+    height:60px;
+    color:black;
+    padding-top:20px;
+    background-color: white;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+div .website_name{
+    width:250px;
+    font-weight: bold;
+    font-family: 'Rubik';
+    color: #f67600;
+    cursor: pointer;
+    margin-left:-50px;
+}
+.others {
+    margin-left: 300px;
+    display:flex;
+    justify-content: space-around;
+    width:450px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top:5px;
+    font-size:20px;
+}
+
+.profile_img{
+    width:36px;
+    height:auto;
+    margin-left:15px;
+   margin-top:-8px;
 }
 #for_padd {
     padding-top: 20px;
@@ -85,6 +123,7 @@ body {
 .beginners{
     display:flex;
     width:510px;
+    cursor:pointer;
     justify-content: space-evenly;
    background-color: rgb(237, 237, 237);
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -92,18 +131,19 @@ body {
 .intermediate {
     display:flex;
     width:510px;
+    cursor:pointer;
     justify-content: space-evenly;
     background-color: rgb(237, 237, 237);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
 }
-.beginners:hover {
+/* .beginners:hover {
     width:520px;
     height: 200px;
 }
 .intermediate:hover {
     width:525px;
     height:205px;
-}
+} */
 .two_users h2 {
     text-align:center;
 }

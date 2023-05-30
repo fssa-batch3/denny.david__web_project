@@ -12,26 +12,18 @@
 <body>
     <header>
         <!-- This is header section -->
-        <div class="nav">
-            <div id="for_padd" class="navbar1 pinkcolor">
-                <div><a href="index.html">Hardenz </a></div>
+        <div class="header">
+            <div class="website_name">Hardenz</div>
+            <div class="others">
+                <div class="exercises">Exercises</div>
+               <div class="courses">Courses</div>
+               <div class="about">About </div>
+               <div class="contact">Contact </div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
-            <div class="navbar1 bluecolor none">
-                <div><a href="#"></a></div>
-            </div>
-            <div class="navbar1 green none">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 sky none">
-                <div><a href="#">About us</a></div>
-            </div>
-            <div id="for_padd" class="navbar1 light none">
-                <div><a id="callin" href="#">Contact us</a></div>
-            </div>
-            <div class="navbar1 violet none ">
-                <div><a href="#"><img src="../assets/image/main_img.jpg"></a></div>
-            </div>
-        </div>
+           </div>
     </header>
     <main>
         <!-- This is whole lesson for the user -->
@@ -39,59 +31,72 @@
             <h1>Lessons</h1>
             <div class="lesson1">
                 <div class="lesson2">
-                    <img src="../assets/image/soundtrap-V7z8MGbfF5Q-unsplash.jpg" alt="error"><br>
+                    <img src="../assets/image/soundtrap-V7z8MGbfF5Q-unsplash.jpg" alt="error">
+<br>
                     <button id="extend" onclick="scale()">Scales </button>
                 </div>
                 <div class="lesson2">
-                    <img src="../assets/image/malvestida-FfbVFLAVscw-unsplash.jpg" alt="error"><br>
+                    <img src="../assets/image/malvestida-FfbVFLAVscw-unsplash.jpg" alt="error">
+<br>
                     <button id="expand1" onclick="timing()">Timing </button>
                 </div>
                 <div class="lesson2">
-                    <img src="../assets/image/alexander-shatov-qt7S2QuAhJI-unsplash.jpg" alt="error"><br>
+                    <img src="../assets/image/alexander-shatov-qt7S2QuAhJI-unsplash.jpg" alt="error">
+<br>
                     <button id="expand" onclick="dimnish()" href="diminished.html">Diminshed chords</button>
                 </div>
             </div>
             <div class="lesson1">
                 <div class="lesson2">
-                    <img src="../assets/image/gabriel-gurrola-tdo2GLH18Ls-unsplash.jpg" alt="error"><br>
+                    <img src="../assets/image/gabriel-gurrola-tdo2GLH18Ls-unsplash.jpg" alt="error">
+<br>
                     <button id="extend" onclick="trick()">Tricks </button>
                 </div>
 
                 <div class="lesson2">
-                    <img src="../assets/image/riley-bartel-i6VNX0-o7ro-unsplash.jpg" alt="error"><br>
-                    <button id="expand2" onclick="suspen()">Suspended<br>chords</button>
+                    <img src="../assets/image/riley-bartel-i6VNX0-o7ro-unsplash.jpg" alt="error">
+<br>
+                    <button id="expand2" onclick="suspen()">
+Suspended<br>chords
+</button>
                 </div>
 
                 <div class="lesson2 seven">
-                    <img id="increase" src="../assets/image/johannes-plenio-RWytwNueNng-unsplash.jpg" alt="error"><br>
-                    <button id="extend1" onclick="seventhchord()" href="7thchord.html"> 7th chords</button><br>
+                    <img id="increase" src="../assets/image/johannes-plenio-RWytwNueNng-unsplash.jpg" alt="error">
+<br>
+                    <button id="extend1" onclick="seventhchord()" href="7thchord.html"> 7th chords</button>
+<br>
                 </div>
             </div>
             <div class="lesson1">
                 <div class="lesson2">
-                    <img src="../assets/image/kelly-sikkema-4qnhBQv4qcg-unsplash.jpg" alt="error"><br>
+                    <img src="../assets/image/kelly-sikkema-4qnhBQv4qcg-unsplash.jpg" alt="error">
+<br>
                     <button id="expand3" onclick="find()">Findings chord </button>
                 </div>
 
                 <div class="lesson2">
-                    <img src="../assets/image/nicolas-falgetelli-vAOrHy7y0iQ-unsplash.jpg" alt="error"><br>
+                    <img src="../assets/image/nicolas-falgetelli-vAOrHy7y0iQ-unsplash.jpg" alt="error">
+<br>
                     <button id="extend1" onclick="inversion()" href="inversions.html"> Inversions</button>
                 </div>
                 <div class="lesson2 extend">
-                    <img src="../assets/image/i-aboud-BboEUG7Ncjs-unsplash.jpg" alt="error"><br>
+                    <img src="../assets/image/i-aboud-BboEUG7Ncjs-unsplash.jpg" alt="error">
+<br>
                     <button id="extend1" onclick="nineth()" href="9thchords.html">9th chords</button>
                 </div>
             </div>
         </div>
+      
     </main>
     <script>
         function scale() {
             window.location.href = "scales.html"
         }
         function timing() {
-            window.location.href = "timing.html"
+            window.location.href = "timing .html"
         }
-        function diminsh() {
+        function dimnish() {
             window.location.href = "diminished.html"
         }
         function trick() {
@@ -113,8 +118,35 @@
             window.location.href = "9thchords.html"
         }
 
+        const courses = document.getElementsByClassName("courses")
+    courses[0].addEventListener('click',e=>{
+      window.location.href="two_users.html"
+    })
+
+    // let exercise = document.getElementsByClassName("exercises")
+    // exercise[0].addEventListener("click",e=>{
+    //   window.location.href ="exercise_list.html"
+    // })
+
+     let website = document.getElementsByClassName("website_name")
+     website[0].addEventListener("click",e=>{
+        window.location.href="../index.html"
+        // console.log(website)
+     })
+     
+     let exercises = document.getElementsByClassName("exercises")
+exercises[0].addEventListener("click",e=>{
+    if(localStorage.getItem("store_data").length == 0){
+      window.location.href="signup.html"
+    }
+    else{
+        window.location.href="exercise_list.html"
+  }
+}
+   )
     </script>
 
 </body>
+<script src="../assets/js/common.js"></script>
 
 </html>

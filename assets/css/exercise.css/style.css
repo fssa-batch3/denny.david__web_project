@@ -1,10 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 body {
     margin:0px;
+    font-family: 'Rubik';
 }
 .nav {
     display: flex;
     width: 1500px;
     height:100px;
+}
+.header {
+    display:flex;
+    justify-content: space-around;
+    font-size: 25px;
+    height:60px;
+    color:black;
+    padding-top:20px;
+    background-color: white;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+
+div .website_name{
+    width:250px;
+    font-weight: bold;
+    font-family: 'Rubik';
+    color: #f67600;
+    cursor: pointer;
+    margin-left:-10px;
+}
+.others {
+    margin-left: 300px;
+    display:flex;
+    justify-content: space-between;
+    width:550px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top:5px;
+    font-size:20px;
+}
+
+.profile_img{
+    width:60px;
+    height:60px;
+    margin-left:15px;
+   margin-top:-10px;
 }
 .pinkcolor {
     background-color: rgb(240, 9, 132);
@@ -43,4 +85,58 @@ body {
 .earlesson{
     margin-left:500px;
     font-size: 25px;
+}
+.dim {
+    display:flex;
+    box-shadow: 1px solid black;
+ }
+ .dim1 h2 {
+     font-size:45px;
+     margin-top:50px;
+     font-family:Arial, Helvetica, sans-serif;
+ }
+ .dimnat{
+     display: flex;
+     
+ }
+ .dim-img {
+     position:relative;
+ }
+ h3 {
+    display:flex;
+    justify-content:center;
+     align-items:center;
+     font-family:Arial, Helvetica, sans-serif;
+     position:fixed;
+     top: 30px;
+     right:200px;
+     left:775px;
+     border:2px solid white;
+     width:710px;
+     height:800px;
+     color:white;
+     font-size:70px;
+     background: -webkit-linear-gradient(0deg,rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+     background-clip: text;
+     -webkit-background-clip: text;
+     /* -webkit-text-fill-color: transparent; */
+     backdrop-filter: blur(10px);
+ }
+ .dim-img img {
+     position:fixed;
+     width:740px;
+     height:900px;
+     
+     
+ }
+ .di {
+     margin-top:100px;
+ }
+ .dim2 {
+    margin-top:28px;
+    margin-left:20px;
+}
+.dim2 button {
+    font-size:25px;
+    margin-left:50px;
 }

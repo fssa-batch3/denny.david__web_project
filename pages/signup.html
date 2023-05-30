@@ -18,13 +18,27 @@
         <div class="form">
             <div class="form1">
                 <h1>Sign Up</h1>
+                <!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$" -->
+                <!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$" -->
                 <p id="blur">How will i started?</p>
-                <p>First name :</p> <input type="text" placeholder="enter your first name"  id="first" required/><br>
-                <p> Last name:</p> <input type="text"  id="last" required/><br>
-                <p>Email:</p> <input type="email"  id="email" required/><br>
-                <p>New Password:</p><input type="password" id="npsw" required/><br>
-                <p>Confirm Password:</p><input type="password" id="psw" required/><br>
-                <p>Phone.no:</p><input type="tel"  id="contact" placeholder="contact no" required/><br>
+                <p>First name :</p>
+ <input type="text" pattern="[A-Za-z]+" placeholder="enter your first name" id="first" required>
+<br>
+                <p> Last name:</p>
+ <input type="text" pattern="[A-Za-z]+" id="last" required>
+<br>
+                <p>Email:</p>
+ <input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" id="email" required>
+<br>
+                <p>New Password:</p>
+<input type="password" id="npsw" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"   required>
+<br>
+                <p>Confirm Password:</p>
+<input type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"   id="psw" required>
+<br>
+                <p>Phone.no:</p>
+<input type="tel" id="contact" minlength="10" pattern="[0-9]{10,10}" maxlength="10" placeholder="contact no" required>
+<br>
                 <div class="a">
                     <button id="sub">Submit</button>
                 </div>
@@ -32,15 +46,14 @@
         </form>
             <div class="login-img">
                 <img src="../assets/image/austin-pacheco-HQvMTkiNhpk-unsplash.jpg">
-                <p id="imgin" >Start your passion here with us and work together</p>
+                <p id="imgin">Start your passion here with us and work together</p>
             </div>
  
         </div>
 
     </main>
     <script>
-
-let forms=document.querySelector("form");
+const forms=document.querySelector("form");
 forms.addEventListener("submit",e=>{
     e.preventDefault();
     signup();
@@ -57,29 +70,34 @@ forms.addEventListener("submit",e=>{
     alert("spaces is not required");
 }
 if(npassw==passw){
-        let user_data = {    
+        const user_data = {    
         "user_name": first,
         "last_name":last,
         "mail_id":email,
         "password" : passw,
-        "phone_no":contact     
+        "phone_no":contact,
+        "ear_training":0,
+        "finding_chords":0,
+        "diminished_chords":0,
+        "seventh_chords":0,
+        "timing_practice":0,
+        "inversions_practice":0     
     }
 
-    let store_data =JSON.parse(localStorage.getItem("store_data"))?JSON.parse(localStorage.getItem("store_data")):
+    const store_data =JSON.parse(localStorage.getItem("store_data"))?JSON.parse(localStorage.getItem("store_data")):
     [];
 
     store_data.push(user_data)
 
     localStorage.setItem("store_data",JSON.stringify(store_data))
     
-    window.location.href="./login page.html"
+    window.location.href="./login_page.html"
     }
     else{
         alert("Password is not equal")
     }
 
 }
-
 
 //   window.onload = function(){
 //     const google_mail= document.getElementById("email")
@@ -89,12 +107,8 @@ if(npassw==passw){
 //         alert("no spaces are allowed in your email")
 //     }
 //     })
-
-
-
- 
-    // localStorage.setItem("email-email",mailid)
-    // localStorage.setItem("pass",first)
+// localStorage.setItem("email-email",mailid)
+// localStorage.setItem("pass",first)
 </script>
 </body>
 </html>

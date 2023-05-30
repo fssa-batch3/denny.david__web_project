@@ -5,87 +5,445 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
     <title>Document</title>
 </head>
 <body>
     <!-- This is the header section -->
     <header>
-        <div class="nav">
-            <div id="for_padd" class="navbar1 pinkcolor">
-                <div><a href="index.html">Hardenz </a></div>
+        <div class="header">
+            <div class="website_name">Hardenz</div>
+            <div class="others">
+                <div class="exercises">Exercises</div>
+               <div class="courses">Courses</div>
+               <div class="about">About </div>
+               <div class="contact">Contact </div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
-            <div class="navbar1 bluecolor">
-                <div><a href="#"></a></div>
-            </div>
-            <div class="navbar1 green">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 sky">
-                <div><a href="#">About us</a></div>
-            </div>
-            <div id="for_padd" class="navbar1 light">
-                <div><a id="callin" href="#">Contact us</a></div>
-            </div>
-            <div class="navbar1 violet ">
-                <div><a href="#"><img src="../assets/image/main_img.jpg"></a></div>
-            </div>
-        </div>
+           </div>
    </header>
-   <main>
+   
     <!-- This is the exercise for inversions -->
-    <div class="threenotes">
-        <div class="threenotes1">
-    <h2>Inversions</h2>
+    <div style="margin-left:660px;" class="inversion_head">
+<h1>Inversions</h1>
+</div>
+    <div class="main_div" id="main_div"></div>
+    <!-- <div class="threenotes">
+       <div class="first_quest">
+   
     <h2>1.What is this inversion?</h2>
-    <img src="../assets/image/Fsharp.png" alt="F#"> 
-    <div>
-        a).<button id="special">1st inversion</button>
-        b).<button id="special1">2nd inversion</button>
-        C).<button id="special1">3rd inversion</button>
-       
+    <img id="chord_img" src="../assets/image/Fsharp.png" alt="F#"> 
+    <div><p id="mcq">
+        a).<button class="special">1st inversion</button>
+        b).<button class="special1">2nd inversion</button>
+        C).<button class="special1">3rd inversion</button>
+    </p>
       </div>  
     </div>
-    <div class="threenotes1">
+    <div class="second_quest hide">
        <h2>2.What is this inversion?</h2>
-        <img src="../assets/image/b_d_sharp.png" alt="B chord"> 
-        <div>
-            a).<button id="special1">1st inversion</button>
-            b).<button id="special">2nd inversion</button>
-            C).<button id="special1">3rd inversion</button>
+        <img id="chord_img" src="../assets/image/b_d_sharp.png" alt="B chord"> 
+        <div><p id="mcq">
+            a).<button class="special1">1st inversion</button>
+            b).<button class="special">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
           </div>  
         </div>
-    <div class="threenotes1">
+    <div class="third_quest hide">
             <h2>3.What is this inversion?</h2>
-            <img src="../assets/image/em inversion.png" alt="em chord"> 
-            <div>
-                a).<button id="special1">1st inversion</button>
-                b).<button id="special">2nd inversion</button>
-                C).<button id="special1">3rd inversion</button>
-               
+            <img id="chord_img" src="../assets/image/em inversion.png" alt="em chord"> 
+            <div><p id="mcq">
+                a).<button class="special1">1st inversion</button>
+                b).<button class="special">2nd inversion</button>
+                C).<button class="special1">3rd inversion</button>
+            </p>
               </div>  
     </div>
-    <div class="threenotes1">
+    <div class="fourth_quest hide">
         <h2>4.What is this inversion?</h2>
-        <img src="../assets/image/gminor.png" alt="Gm"> 
-        <div>
-            a).<button id="special">1st inversion</button>
-            b).<button id="special1">2nd inversion</button>
-            C).<button id="special1">3rd inversion</button>
-         
+        <img id="chord_img" src="../assets/image/gminor.png" alt="Gm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
           </div>  
     </div>
-    <div class="threenotes1">
+    <div class="fifth_quest fifth hide">
         <h2>5.What is this inversion?</h2>
-        <img src="../assets/image/Fm.png" alt="Fm"> 
-        <div>
-            a).<button id="special">ist inversion</button>
-            b).<button id="special1">2nd inversion</button>
-            C).<button id="special1">3rd inversion</button>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
           </div>  
     </div>
-</div>
-    
-
-   </main>
+    <p id="nxt_btn" class="pointer"> Next >></p> -->
+    <div>
+        <canvas id="myChart" style="width:100%; max-width:600px"></canvas>
+    </div>
+    <div class="instructions" style="display: none;">
+        <h2 style="color:green">Instructions</h2>
+        <h4>You should first hear the audio and find the answers</h4>
+        <button id="ok_btn">OK</button>
+      </div>
+  
 </body>
 </html>
+
+<script>
+const questions = {
+    1:` <div class="first_quest">
+   
+   <h2>1.What is this inversion?</h2>
+   <img  id="chord_img" src="../assets/image/Fsharp.png" alt="F#"> 
+   <div><p id="mcq">
+       a).<button class="special">1st inversion</button>
+       b).<button class="special1">2nd inversion</button>
+       C).<button class="special1">3rd inversion</button>
+   </p>
+     </div>  
+   </div>
+   <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    2:` <div class="second_quest hide">
+       <h2>2.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/b_d_sharp.png" alt="B chord"> 
+        <div><p id="mcq">
+            a).<button class="special1">1st inversion</button>
+            b).<button onclick="myFunction()" class="special">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+        </div>
+        <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    3:` <div class="third_quest hide">
+            <h2>3.What is this inversion?</h2>
+            <img id="chord_img" src="../assets/image/em inversion.png" alt="em chord"> 
+            <div><p id="mcq">
+                a).<button class="special1">1st inversion</button>
+                b).<button onclick="myFunction()" class="special">2nd inversion</button>
+                C).<button class="special1">3rd inversion</button>
+            </p>
+              </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    4:` <div class="fourth_quest hide">
+        <h2>4.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/gminor.png" alt="Gm"> 
+        <div><p id="mcq">
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+    5:` <div class="fifth_quest fifth hide">
+        <h2>5.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            6:` <div class="sixth_quest sixth hide">
+        <h2>6.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            7:` <div class="seventh_quest seventh hide">
+        <h2>7.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            8:` <div class="eight_quest eigth hide">
+        <h2>8.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+            9:` <div class="nineth_quest nineth hide">
+        <h2>9.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`,
+           10:` <div class="tenth_quest tenth hide">
+        <h2>10.What is this inversion?</h2>
+        <img id="chord_img" src="../assets/image/Fm.png" alt="Fm"> 
+        <div><p id="mcq">
+            a).<button onclick="myFunction()" class="special">1st inversion</button>
+            b).<button class="special1">2nd inversion</button>
+            C).<button class="special1">3rd inversion</button>
+        </p>
+          </div>  
+    </div>
+    <a id="a_btn">
+                <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+            </a>`
+    }
+
+const url = window.location.search
+        const url_params =new URLSearchParams(url)
+        const params_data_id= url_params.get("data_id") 
+        
+        const main_div = document.getElementById("main_div")
+        const div_create = questions[params_data_id]
+        main_div.innerHTML=div_create
+       
+        const anchor_button = document.getElementById("a_btn")    
+        const next = document.querySelectorAll(".nxt_btn");
+
+const green = document.querySelectorAll(".special")
+const threenotes = document.getElementsByClassName("threenotes");
+const tenth= document.getElementsByClassName("tenth")
+const red = document.querySelectorAll(".special1")
+const mychart = document.getElementById("mychart")
+
+red.forEach((e, index) => {
+ 
+e.addEventListener('click', el => {
+   
+   e.style.backgroundColor = 'red';
+})
+e.addEventListener('click', el => {
+   if (e.value == '') {
+       // green.disabled = true
+       green.forEach(e => {
+           e.disabled = true
+       })
+       red.forEach((r, ind) => {
+           if (index != ind) {
+               r.disabled = true
+           }
+       })
+   }
+})
+})
+green.forEach((e, index) => {
+e.addEventListener('click', e => {
+
+   green.forEach(e => {
+       e.style.backgroundColor = 'green';
+   })
+   red.forEach((r, ind) => {
+       r.disabled = true
+
+   })
+})
+})
+
+next.forEach((el,ind)=>{
+    // el.preventDefault
+    
+    el.addEventListener('click', e => {
+        e.preventDefault();
+        if (red[0].disabled == true || green[0].disabled == true) {
+        window.location.href =`./exercise6.html?data_id=${Number(params_data_id)+1}`
+        } 
+        } )
+     })
+
+const logo = document.getElementsByClassName("website_name");
+        logo[0].addEventListener("click",e=>{
+            window.location.href="../index.html"
+           
+        })
+
+        const instruction = document.getElementsByClassName("instructions");
+        const okay = document.getElementById("ok_btn")
+        const body =document.querySelector("main")
+        const header = document.querySelector("header")
+        function setupEvents(){
+             main_div.style.filter= "blur(2px)";
+             header.style.filter= "blur(2px)";
+             instruction[0].style.filter="none"
+             instruction[0].style.display="block";
+             
+        }
+        okay.addEventListener('click',e=>{
+                main_div.style.filter= "none";
+                header.style.filter= "none";
+                main_div.style.display="block";
+                header.style.display="block";
+               instruction[0].style.display="none";
+        })
+
+        function myFunction() {
+            let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    user_data = e
+                    let value = e["inversions_practice"]
+                    value += 10;
+                    e["inversions_practice"] = value
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+            )}  
+
+        const correct = 0;
+        // const pieChart =  parseInt(localStorage.getItem("correct"));
+
+        if(params_data_id==1){
+        window.onload =function(){
+            setupEvents();
+         }}
+
+         if (params_data_id==10) {
+       
+       anchor_button.style.display = "none";
+       const submit_btn = document.createElement("button");
+       submit_btn.setAttribute("id", "result_btn")
+       submit_btn.innerHTML = "SUBMIT";
+      
+       tenth[0].appendChild(submit_btn)
+      
+       document.querySelector("#result_btn").addEventListener('click', e => {
+        let logged = localStorage.getItem("logged_in")
+            let user_data;
+            let value 
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    value = e["inversions_practice"]
+                   
+                }
+            })
+           tenth[0].style.display = "none";
+           submit_btn.style.display = "none";
+           const xValues = ["correct","wrong"];
+            const yValues = [value,value-100];
+      const barColors = [
+             "#00aba9", "#b91d47",
+            ];
+
+            new Chart("myChart", {
+               type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                  }]
+              },
+                options: {
+                   title: {
+                       display: true,
+                        text: "Results for the hearing test"
+                    }
+                } })
+         })}
+
+// let i = 0;
+// next.addEventListener('click', e => {
+// e.preventDefault();
+// if (red[0].disabled == true || green[0].disabled == true) {
+   
+//    threenotes[0].children[i].style.display = "none";
+//    threenotes[0].children[i+1].style.display = "block";
+  
+// i++;
+//    // storing the correct answers
+ 
+//    if (i == 4) {
+//        next.style.display = "none";
+       
+//        let submit_btn = document.createElement("button");
+      
+//        submit_btn.setAttribute("id", "result_btn")
+//        submit_btn.innerHTML = "SUBMIT";
+//        seventhTest[0].append(submit_btn);
+   
+//        document.querySelector("#result_btn").addEventListener('click', e => {
+//            fifth[0].style.display = "none";
+//            submit_btn.style.display = "none";
+//            // let savedData = JSON.parse(localStorage.getItem(forResults));
+//            // let options = document.querySelectorAll(".options");
+//            // options.addEventListener('click',e=>{
+//            //    let value= e.target.value
+//            // })
+          
+//            let xValues = ["correct","wrong"];
+//            let yValues = [20,30];
+//            let barColors = [
+//               "#00aba9", "#b91d47",
+//            ];
+
+//            new Chart("myChart", {
+//                type: "pie",
+//                data: {
+//                    labels: xValues,
+//                    datasets: [{
+//                        backgroundColor: barColors,
+//                        data: yValues
+//                    }]
+//                },
+//                options: {
+//                    title: {
+//                        display: true,
+//                        text: "Results for the ear training test"
+//                    }
+//                }
+//            })
+//        })}
+//    red.forEach(e => {
+//        e.disabled = false
+//    })
+//    green.forEach(e => {
+//        e.disabled = false
+//        e.style.backgroundColor = '#F0F0F0';
+//        e.style.border = ".5px solid black"
+
+//    }) }})
+</script>
+<script src="../assets/js/common.js"></script>

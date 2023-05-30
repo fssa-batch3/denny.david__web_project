@@ -1,117 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../assets/css/exercise/exercise.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
+
 <body>
     <!-- This is my header section -->
     <header>
-        <div class="nav">
-            <div id="for_padd" class="navbar1 pinkcolor">
-                <div><a href="index.html">Hardenz </a></div>
-            </div>
-            <div class="navbar1 bluecolor">
-                <div><a href="#"></a></div>
-            </div>
-            <div class="navbar1 green">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 sky">
-                <div><a id="callin" href="#">About us</a></div>
-            </div>
-            <div id="for_padd" class="navbar1 light">
-                <div><a id="callin" href="#">Contact us</a></div>
-            </div>
-            <div class="navbar1 violet ">
-                <div><a href="#"><img src="../assets/image/main_img.jpg"> </a></div>
+        <div class="header">
+            <div class="website_name">Hardenz</div>
+            <div class="others">
+                <div class="exercises">Exercises</div>
+                <div class="courses">Courses</div>
+                <div class="about">About </div>
+                <div class="contact">Contact</div>
+                <div>
+                    <img class="profile_img" src="../assets/image/main_img.jpg">
+                </div>
             </div>
         </div>
     </header>
     <main>
+        <h2> Hearing test</h2>
+
         <!-- This is full of giving audio for user to identify the notes  -->
-        <h2> Ear training</h2>
-        <div class="earlesson">
-          <div class="earlesson1">  
-            <h3>1.Reference note: C</h3>
-            <audio controls>
-                <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-            </audio>
-            <h3>Question note</h2>
+        <div class="main_div" id="main_div">
+
+        </div>
+
+        <div>
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+
+    </main>
+    <!-- <img class="hint" src="../assets/image/hint_icon.png"> -->
+    <div style="visibility:hidden;" class="piano">
+        <section id="wrap">
+            <section id="main">
+                <div class="keys">
+                    <div data-key="65" class="key" data-note="C">
+                    </div>
+                    <div data-key="87" class="key sharp" data-note="C#">
+                    </div>
+                    <div data-key="83" class="key" data-note="D">
+                    </div>
+                    <div data-key="69" class="key sharp" data-note="D#">
+                    </div>
+                    <div data-key="68" class="key" data-note="E">
+                    </div>
+                    <div data-key="70" class="key" data-note="F">
+                    </div>
+                    <div data-key="84" class="key sharp" data-note="F#">
+                    </div>
+                    <div data-key="71" class="key" data-note="G">
+                    </div>
+                    <div data-key="89" class="key sharp" data-note="G#">
+                    </div>
+                    <div data-key="72" class="key" data-note="A">
+                    </div>
+                    <div data-key="85" class="key sharp" data-note="A#">
+                    </div>
+                    <div data-key="74" class="key" data-note="B">
+                    </div>
+                    <div data-key="75" class="key" data-note="C">
+                    </div>
+                    <div data-key="79" class="key sharp" data-note="C#">
+                    </div>
+                    <div data-key="76" class="key" data-note="D">
+                    </div>
+                    <div data-key="80" class="key sharp" data-note="D#">
+                    </div>
+                    <div data-key="186" class="key" data-note="E">
+                    </div>
+                </div>
+
+                <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+                <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+                <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+                <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+                <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+                <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+                <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+                <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+                <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+                <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+                <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+                <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+                <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+                <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+                <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+                <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+                <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
+            </section>
+        </section>
+    </div>
+    <div class="instructions" style="display:none;">
+        <h2 style="color:green">Instructions</h2>
+        <h4>You should first hear the audio and find the answers</h4>
+        <button id="ok_btn">OK</button>
+    </div>
+
+    <script>
+        const questions = {
+            1: `    <div data-id="1" class="first_one block">
+        <h3>1.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h2>
             <audio controls>
                 <source src="../assets/audio/Y2Mate.is - Piano Middle D-dwtfCQ25qTU-480p-1654247328252.mp4">
             </audio>
-         </div>
-            <div class="quest">
-               <h3> What is this note?<h3>
-              <p>(a)<button id="special">D</button>
-              (b)<button id="special1" >C#</button>
-              (c)<button id="special1">A</button>
-              (d)<button id="special1">Bflat</button></p>
-            </div>
-        </div><hr>
-        <div class="earlesson">
-        <div class="earlesson1">
-             <h3>2.Reference note: C</h3>
-            <audio controls>
-                <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-            </audio>
-            <h3>Question note</h3>
-            <audio controls>
-                <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid G Sharp or A Flat-2o1T6oV9YIQ-128k-1654544383428 (1).mp3">
-            </audio>
-        </div>
-        <div class="quest">
             <h3> What is this note?<h3>
-           <p>(a)<button id="special1">F</button>
-           (b)<button id="special" >G#</button>
-           (c)<button id="special1">G</button>
-           (d)<button id="special1">B</button></p>
-         </div>
-        </div><hr>
-        <div class="earlesson">
-         <div class="earlesson1">
-            <h3>3.Reference note: C</h3>
-           <audio controls>
-               <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-           </audio>
-           <h3>Question note</h3>
-           <audio controls>
-               <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid C Sharp or D Flat-Fjie6s5OU9g-128k-1656822827405.mp3">
-           </audio>
-       </div>
-       <div class="quest">
-           <h3> What is this note?<h3>
-          <p>(a)<button id="special1">Eflat</button>
-          (b)<button id="special1" >E</button>
-          (c)<button id="special1">D</button>
-          (d)<button id="special">C#</button></p>
-        </div>
-        </div><hr>
-        <div class="earlesson">
-            <div class="earlesson1">
-            <h3>4.Reference note: C</h3>
-           <audio controls>
-               <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
-           </audio>
-           <h3>Question note</h3>
-           <audio controls>
-               <source src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
-           </audio>
-       </div>
-       <div class="quest">
-           <h3> What is this note?<h3>
-          <p>(a)<button id="special1">E</button>
-          (b)<button id="special">F</button>
-          (c)<button id="special1">F#</button>
-          (d)<button id="special1">D</button></p>
-        </div>
-        </div>
-        
-    </main>
+                    <p id="mcq">
+                        (a)<button id="d" onclick="mgityFunction()" class="special" class="options">D</button>
+                        (b)<button id="c" class="special1" class="options">C#</button>
+                        (c)<button id="a" class="special1" class="options">A</button>
+                        (d)<button id="b" class="special1" class="options">Bflat</button></p>
+
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
     
+    <a id="a_btn" >
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            2: `
+    <div data-id="2"  class="second_one block hide">
+        <h3>2.Reference note:C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source
+                src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid G Sharp or A Flat-2o1T6oV9YIQ-128k-1654544383428 (1).mp3">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button class="special1" id="f" class="options">F</button>
+                    (b)<button onclick="myFunction()" class="special" id="gsharp" class="options">G#</button>
+                    (c)<button class="special1" class="options">G</button>
+                    (d)<button id="b" class="special1" class="options">B</button></p>
+  
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            3: `<div data-id="3" class="third_one block hide">
+        <h3>3.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source
+                src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid C Sharp or D Flat-Fjie6s5OU9g-128k-1656822827405.mp3">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button class="special1" id="eflat" class="options">Eflat</button>
+                    (b)<button id="e" class="special1" class="options">E</button>
+                    (c)<button id="d" class="special1" class="options">D</button>
+                    (d)<button onclick="myFunction()" id="csharp" class="special" class="options">C#</button></p>
+                <!-- <p id="nxt_btn" class="pointer"> Next >></p> -->
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+
+    <a id="a_btn" >
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            4: ` <div data-id="4" class="fourth_one block hide">
+        <h3>4.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source
+                src="../assets/audio/Y2Mate.is - Hear Piano Note - Mid F-npF9rPdU_VA-128k-1654545568281.mp3">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button class="special1" class="options">E</button>
+                    (b)<button id="f" onclick="myFunction()" class="special" class="options">F</button>
+                    (c)<button id="fsharp" class="special1" class="options">F#</button>
+                    (d)<button id="d " class="special1" class="options">D</button></p>
+
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            5: ` <div data-id="5" class="fifth_one block hide">
+        <h3>5.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="a" class="special1" class="options">A</button>
+                    (b)<button id="c" class="special1" class="options">C</button>
+                    (c)<button id="asharp" class="special1" class="options">Bflat</button>
+                    (d)<button id="b" onclick="myFunction()" class="special" class="options">B</button></p>
+
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            6: `
+    <div data-id="6" class="sixth_one block hide">
+        <h3>6.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav">
+        </audio>
+
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="dsharp" class="special1" class="options">Eflat</button>
+                    (b)<button id="fsharp" class="special1" class="options">F#</button>
+                    (c)<button id="e" onclick="myFunction()" class="special" class="options">E</button>
+                    (d)<button id="d" class="special1" class="options">D</button></p>
+
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            7: `  <div data-id="7" class="seventh_one block hide">
+        <h3>7.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav">
+        </audio>
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="g" onclick="myFunction()" class="special" class="options">G</button>
+                    (b)<button id="gsharp" class="special1" class="options">G#</button>
+                    (c)<button id="fsharp" class="special1" class="options">F#</button>
+                    (d)<button id="f" class="special1" class="options">F</button></p>
+
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+
+    <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            8: ` <div data-id="8" class="eigth_one block hide">
+        <h3>8.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav">
+        </audio>
+
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="gharp" class="special1" class="options">G#</button>
+                    (b)<button id="asharp" onclick="myFunction()" class="special" class="options">Bflat</button>
+                    (c)<button id="b" class="special1" class="options">B</button>
+                    (d)<button id="c" class="special1" class="options">C</button></p>
+
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+     <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            9: ` <div data-id="9" class="nineth_one block hide">
+        <h3>9.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav">
+        </audio>
+
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="dsharp" class="special1" class="options">D#</button>
+                    (b)<button id="d" onclick="myFunction()" class="special" class="options">D</button>
+                    (c)<button id="c" class="special1" class="options">C</button>
+                    (d)<button id="e" class="special1" class="options">E</button></p>
+
+    </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+     <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`,
+            10: ` <div data-id="10" class="tenth_one block hide">
+        <h3>10.Reference note: C</h3>
+        <audio controls>
+            <source src="../assets/audio/Y2Mate.is - Piano Middle C-bo0iOpNa-Kw-480p-1654209597007.mp4">
+        </audio>
+        <h3>Question note</h3>
+        <audio controls>
+            <source src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav">
+        </audio>
+
+        <h3> What is this note?<h3>
+                <p id="mcq">(a)<button id="e" class="special1" class="options">E</button>
+                    (b)<button id="f" onclick="myFunction()" class="special" class="options">F</button>
+                    (c)<button id="csharp" class="special1" class="options">C#</button>
+                    (d)<button id="d" class="special1" class="options">D</button></p>
+
+     </div>
+   <img id="hints" class="hint" src="../assets/image/hint_icon.png">
+      <a id="a_btn">
+        <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+    </a>`
+        }
+
+        const url = window.location.search
+        const url_params = new URLSearchParams(url)
+        const params_data_id = url_params.get("data_id")
+
+        const main_div = document.getElementById("main_div")
+        const div_create = questions[params_data_id]
+        main_div.innerHTML = div_create
+
+        const anchor_button = document.getElementById("a_btn")
+        const next = document.querySelectorAll(".nxt_btn");
+        const main = document.getElementsByClassName("main_div");
+        const firstOne = document.getElementsByClassName("first_one")
+        const secondOne = document.getElementsByClassName("second_one");
+        const buttons = document.querySelectorAll("#special1")
+        const green = document.querySelectorAll(".special")
+        const red = document.querySelectorAll(".special1")
+        const tenth = document.getElementsByClassName("tenth_one")
+        const C = document.querySelectorAll("d")
+        const Csharp = document.querySelectorAll("csharp")
+        const D = document.querySelectorAll("d")
+        const Dsharp = document.querySelectorAll("dsharp")
+        const E = document.querySelectorAll("e")
+        const F = document.querySelectorAll("f")
+        const Fsharp = document.querySelectorAll("fsharp")
+        const G = document.querySelectorAll("g")
+        const Gsharp = document.querySelectorAll("gsharp")
+        const A = document.querySelectorAll("a")
+        const Asharp = document.querySelectorAll("asharp")
+        const B = document.querySelectorAll("b")
+        const div_ids = document.querySelectorAll(".block")
+        //dataset.id
+
+        let id;
+        div_ids.forEach((e) => {
+            const ids = e.dataset.id
+
+            next.forEach((el, ind) => {
+                el.addEventListener("click", () => {
+                    id = e.dataset.id
+                })
+            })
+        })
+
+        //[0,1,2,3,4,5,]
+        // const correct = 0;
+        // const pieChart = parseInt(localStorage.getItem("correct"));
+
+        const logo = document.getElementsByClassName("website_name");
+        logo[0].addEventListener("click", e => {
+            window.location.href = "../index.html"
+
+        })
+
+        const instruction = document.getElementsByClassName("instructions");
+        const okay = document.getElementById("ok_btn")
+        const body = document.querySelector("main")
+        const header = document.querySelector("header")
+        function setupEvents() {
+            body.style.filter = "blur(2px)";
+            header.style.filter = "blur(2px)";
+
+            instruction[0].style.filter = "none"
+            instruction[0].style.display = "block";
+
+        }
+        okay.addEventListener('click', e => {
+            body.style.filter = "none";
+            header.style.filter = "none";
+            body.style.display = "block";
+            header.style.display = "block";
+            hint.style.display = "block"
+            instruction[0].style.display = "none";
+        })
+        if (params_data_id == 1) {
+            window.onload = function () {
+                setupEvents();
+            }
+        }
+        function myFunction() {
+            let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    user_data = e
+                    let value = e["ear_training"]
+                    value += 10;
+                    e["ear_training"] = value
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+            )}
+
+
+        const forResults = [
+            {
+                "firstAns": "D",
+                "firstwrong": "[C, A, B]"
+            },
+            {
+                "secondAns": "Gsharp",
+                "secondwrong": "[F, G, B]"
+            },
+            {
+                "thirdAns": "Csharp",
+                "thirdwrong": "[Dsharp, E, D]"
+            },
+            {
+                "fourAns": "F",
+                "fourwrong": "[E, Fsharp, D]"
+            },
+            {
+                "fiveAns": "E",
+                "fivewrong": "[Dsharp, E, D]"
+            },
+            {
+                "sixAns": "E",
+                "sixwrong": "[Dsharp, Fsharp, d]"
+            },
+            {
+                "sevenAns": "G",
+                "sevenwrong": "[Gsharp, Fsharp, F]"
+            },
+            {
+                "eightAns": "Asharp",
+                "eightwrong": "[Gsharp, B, C]"
+            },
+            {
+                "nineAns": "D",
+                "ninewrong": "[Dsharp, C, D]"
+            },
+            {
+                "tenAns": "F",
+                "tenthwrong": "[E, Csharp, D]"
+            }
+        ]
+
+        red.forEach((e, index) => {
+
+            e.addEventListener('click', el => {
+                e.style.backgroundColor = 'red';
+            })
+            e.addEventListener('click', el => {
+                if (e.value == '') {
+                    // green.disabled = true
+                    green.forEach(e => {
+                        e.disabled = true
+                    })
+                    red.forEach((r, ind) => {
+                        if (index != ind) {
+                            r.disabled = true
+                        }
+                    })
+                }
+            })
+        })
+        green.forEach((e, index) => {
+            e.addEventListener('click', e => {
+
+                green.forEach(e => {
+                    e.style.backgroundColor = 'green';
+                })
+                red.forEach((r, ind) => {
+                    r.disabled = true
+
+                })
+            })
+        })
+
+        const i = 1;
+        next.forEach((el, ind) => {
+            el.preventDefault
+
+            el.addEventListener('click', e => {
+                e.preventDefault();
+                if (red[0].disabled == true || green[0].disabled == true) {
+                    window.location.href = `./exercise.html?data_id=${Number(params_data_id) + 1}`
+                }
+            })
+        })
+
+        if (params_data_id == 10) {
+
+            anchor_button.style.display = "none";
+            const submit_btn = document.createElement("button");
+            submit_btn.setAttribute("id", "result_btn")
+            submit_btn.innerHTML = "SUBMIT";
+
+            main[0].appendChild(submit_btn)
+
+            document.querySelector("#result_btn").addEventListener('click', e => {
+                let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            let value 
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    value = e["ear_training"]
+                   
+                }
+            })
+                tenth[0].style.display = "none";
+                submit_btn.style.display = "none";
+                const xValues = ["correct", "wrong"];
+                const yValues = [value,100-value];
+                const barColors = [
+                    "#00aba9", "#b91d47",
+                ];
+
+                new Chart("myChart", {
+                    type: "pie",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        title: {
+                            display: true,
+                            text: "Results for the Ear training exercise"
+                        }
+                    }
+                })
+            })
+        }
+
+        let piano = document.getElementsByClassName("piano")
+      
+        let hint = document.getElementById("hints")
+        //         hints.forEach((e)=>{
+        //             e.addEventListener("click",ell=>{
+        //             hint.style.display="block"
+        //             body.style.filter= "blur(2px)";
+        //              header.style.filter= "blur(2px)";
+        //              piano[0].style.display="block"
+        //                 console.log("isac");
+
+        //              if(piano[0].style.display=="block"){
+        //             hints.forEach((el)=>{
+        //                 el.style.display="block"
+        //                 el.addEventListener('click',e=>{
+        //                 piano[0].style.display="none"
+        //                 body.style.filter= "none";
+        //                 header.style.filter= "none";
+        //             console.log("if");
+        //             })
+        //         }
+        //         )}
+        //     })
+        // })
+        let check = 0
+        hint.addEventListener("click", e => {
+            if (check == 0) {
+                body.style.filter = "blur(2px)";
+                header.style.filter = "blur(2px)";
+                hint.style.filter = "none"
+                piano[0].style.visibility = "visible"
+                check = 1
+            }
+            else {
+                piano[0].style.visibility = "hidden"
+                body.style.filter = "none";
+                header.style.filter = "none";
+                check = 0
+            }
+        })
+
+
+
+
+
+        // script for piano
+
+        const keys = document.querySelectorAll(".key")
+
+        keys.forEach(e => {
+            e.addEventListener("click", (el) => {
+                playNote(el)
+
+            });
+        });
+
+        keys.forEach((e) => {
+            e.addEventListener("transitionend", (ev) => {
+                removeTransition(ev);
+            });
+        })
+
+        function playNote(e) {
+
+            const audio = document.querySelector(`audio[data-key="${e.target.dataset.key}"]`);
+
+            const key = document.querySelector(`.key[data-key="${e.target.dataset.key}"]`);
+
+
+            const keyNote = key.getAttribute("data-note");
+            key.classList.add("playing");
+            audio.play();
+        }
+        function removeTransition(e) {
+            e.target.classList.remove("playing");
+        }
+
+
+
+
+
+    </script>
+
 </body>
+<script src="../assets/js/common.js"></script>
+
 </html>

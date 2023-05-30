@@ -10,47 +10,100 @@
 <body>
     <!-- This is my header section -->
    <header>
-        <div  class="nav">
-            <div id="for_padd" class="navbar1 pinkcolor">
-                <div><a href="index.html">Hardenz </a></div>
-            </div>
-            <div class="navbar1 bluecolor">
-                <div><a href="#"></a></div>
-            </div>
-            <div class="navbar1 green">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 sky">
-                <div><a href="#">About us</a></div>
-            </div>
-            <div id="for_padd" class="navbar1 light">
-                <div><a id="callin" href="#">Contact us</a></div>
-            </div>
-            <div class="navbar1 violet ">
-                <div><a href="#"><img src="../assets/image/main_img.jpg"></a></div>
-            </div>
+    <div class="header">
+        <div class="website_name">Hardenz</div>
+        <div class="others">
+            <div class="exercises">Exercises</div>
+           <div class="courses">Courses</div>
+           <div class="about">About  </div>
+           <div class="contact">Contact </div>
+           <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
         </div>
+       </div>
    </header>
    <!-- These are full of diminished chords  -->
    <div class="diminished">
-    <div class="halfnote">
-     <h1>Diminshed</h1>
-     <h3>A diminished chord is a type of chord that contains a minor 3rd (three half steps above the root) coupled with a diminished 5th (six half steps above the root).
-         It has a distinctive timbre: tense, dark, and unstable sounding.
-          And without context, diminished chords may sound off-putting</h3>
-          <h2>Samples</h2>
-        <h3>Intervals: 1, 2, b3, 4, b5, b6, 6, 7<br>
-            Semi-notes: 2 - 1 - 2 - 1 - 2 - 1 - 2 - 1<br>
-            Formula: Whole, Half, Whole, Half, Whole, Half, Whole, Half</h3> 
-        </div> 
-  
-  
-     <div><video controls src="../assets/video/Y2Mate.is - How To Use Diminished Chords  Keyboard Tutorials  Tamil  Allegro Keyz-KmFbAR4Nc6s-720p-1654295208555.mp4"></video>  </div>
+    <h2>Diminshed chords</h2>
+    <div class="diminshed_lessons">
+        A diminished chord is a chord consisting of a root note, 
+        a minor third, and a diminished fifth. It's often denoted with a small circle (°) 
+        or the abbreviation "dim." For example, a C diminished chord would 
+        be notated as C° or Cdim.<br>
+<br>
+
+       To construct a diminished chord, you take the root note, and then count up three half-steps 
+       (or one-and-a-half whole steps) to find the minor third. Then, you count up another three 
+       half-steps (or one-and-a-half whole steps) from the minor third 
+       to find the diminished fifth.<br>
+<br>
+
+        Here are a few examples of diminished chords:<br>
+
+       C° (C, E♭, G♭)<br>
+       D° (D, F, A♭)<br>
+       F#° (F#, A, C)<br>
+       Diminished chords are often used in chord progressions as a passing chord, or as a substitute for dominant 7th chords.
+        They can also be used to create tension
+         and dissonance in music.<br>
+<br>
+
+       Diminished chords have a symmetrical structure. A diminished chord is made up of two stacked minor thirds. 
+       This means that you can invert the chord every minor third and still get the same notes. For example, a C°
+        chord can also be thought of as E♭° or G♭°.<br>
+<br>
+
+       Diminished chords have multiple uses in music.
+        In addition to being used as a passing chord and a substitute for dominant 7th chords, 
+        diminished chords can also be used to modulate to a new key, as a pivot chord, or to add
+         color to a melody.<br>
+<br>
+
+       Diminished chords can be used to create tension and dissonance. 
+       Since the notes in a diminished chord are all a minor third apart, they create a sense of instability and tension.
+        This can be useful for adding drama and intensity
+         to a piece of music.<br>
+<br>
+
+       Diminished chords are often found in minor keys. 
+       In a minor key, the seventh chord is a diminished chord. For example, in the key of C minor,
+        the seventh chord is B° (B, D, F). This is because the seventh scale degree is a half step below the tonic,
+         and the diminished chord helps to create a sense of 
+         tension and pull towards the tonic.<br>
+<br>
+
+      Diminished chords can be used to create chord progressions with chromatic movement. 
+      By using diminished chords to connect chords that are a half step apart, you can create a progression with lots of chromatic movement. 
+      For example, a progression like C - B° - B♭ - A° - A♭ - G - G♭ - F can create a sense of tension and release
+       through the use of diminished chords.<br>
+<br>
+    </div>
+     <div>
+<video controls src="../assets/video/Y2Mate is  How To Use Diminished Chords  Keyboard Tutorials  Tamil  Allegro Keyz.mp4"></video>  
+</div>
      </div> 
      <!-- Exercise for diminished chords -->
-     <div><a href="exercise4.html"><button>Exercise</button></a></div>
-   
-  
+     <div>
+<!-- <a href="exercise4.html?data_id=1">
+<button>Exercise</button> -->
+</a>
+</div>
   
 </body>
+<script>
+    // localStorage.setItem("correct",0)
+    let exercises = document.getElementsByClassName("exercises")
+exercises[0].addEventListener("click",e=>{
+    if(localStorage.getItem("store_data").length == 0){
+      window.location.href="signup.html"
+    }
+    else{
+        window.location.href="exercise_list.html"
+  }
+}
+   )
+</script>
+<script src="../assets/js/common.js"></script>
+
 </html>

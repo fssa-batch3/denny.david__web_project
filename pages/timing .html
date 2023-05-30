@@ -10,70 +10,87 @@
 <body>
     <!-- This is the header section -->
     <header>
-        <div class="nav">
-            <div id="for_padd" class="navbar1 pinkcolor">
-                <div><a href="index.html">Hardenz </a></div>
+        <div class="header">
+            <div class="website_name">Hardenz</div>
+            <div class="others">
+                <div class="exercises">Exercises</div>
+               <div class="courses">Courses</div>
+               <div class="about">About  </div>
+               <div class="contact">Contact </div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
-            <div class="navbar1 bluecolor none">
-                <div><a href="#"></a></div>
-            </div>
-            <div class="navbar1 green none">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 sky none">
-                <div><a href="#">About us</a></div>
-            </div>
-            <div id="for_padd" class="navbar1 light none">
-                <div><a id="callin" href="#">Contact us</a></div>
-            </div>
-            <div class="navbar1 violet none ">
-                <div><a href="#"><img src="../assets/image/main_img.jpg"></a></div>
-            </div>
-        </div>
+           </div>
     </header>
     <!-- This content is about 7 types of timings -->
     <main>
-    <h2>Timing</h2>
-    <div class="practice-timings">
-
-        <div class="practice-timing1">
+    
+    <div class="timing_lessons">
+        <h2>Timings</h2>
+    <div class="about_timing">
+        <p>
+            Timing in music refers to the rhythm or the duration of the notes played or sung in a particular piece of 
+            music. In piano, timing is crucial to create a cohesive and harmonious sound.
+             Some important concepts related to timing in piano music include:
+        </p>
+<br>
+</div>
+    <div class ="timing_signatures">
+       <p> 1.Tempo: This refers to the speed of the music. It is indicated by a specific term or a metronome marking, which represents the number of beats per minute (BPM). A slow tempo will have a lower BPM, while a faster tempo will have a higher BPM.</p>
+<br>
+        <p>2.Beat: This is the basic unit of rhythm in music. It is a regular, recurring pulse that divides the music into equal parts. In piano music, each beat is usually indicated by a vertical line called a barline.</p>
+<br>
         
-        <h2>7 Common Time Signatures</h2>
-        <ul>
-         <li>2/4: Two quarter-note beats per measure.</li>
-         <li>3/4: Three quarter-note beats per measure.</li>
-         <li>4/4: Four quarter-note beats per measure. ...</li>
-         <li>2/2: Two half-note beats per measure. ...</li>
-         <li>6/8: Six eighth-note beats per measure.</li>
-         <li>9/8: Nine eighth-note beats per measure.</li>
-         <li>12/8: Twelve eighth-note beats per measure.</li>
-        </ul>
-    </div>
+        <p>3.Time Signature: This is a symbol at the beginning of a piece of music that indicates the number of beats in each bar and the type of note that represents one beat. For example, a time signature of 4/4 means that there are four beats in each bar
+             and a quarter note represents one beat.</p>
+<br>
+        
+        <p>4.Syncopation: This refers to an emphasis on a weak beat or a subdivision of a beat, creating a rhythmic 
+            contrast with the underlying pulse. It can add interest and complexity to the music.</p>
+<br>
+        
+        <p>5.Rubato: This is a technique where the performer plays with the timing of the music, slowing down or 
+            speeding up certain parts to create a more expressive or emotional performance.</p>
+<br>
+    
+        <p>
+            2/4 time: This time signature consists of two quarter notes per bar and is often used in marches and other upbeat music.<br>
+            3/4 time: This time signature consists of three quarter notes per bar and is often used in waltzes and other dance music.<br>
+            4/4 time: This time signature consists of four quarter notes per bar and is the most common time signature in popular music, rock, and many other genres.<br>
+            6/8 time: This time signature consists of six eighth notes per bar and is often used in Celtic and Latin American music.<br>
+            9/8 time: This time signature consists of nine eighth notes per bar and is often used in Irish and other folk music.<br>
+            12/8 time: This time signature consists of twelve eighth notes per bar and is often used in blues and jazz music.<br>
+        </p>
 
         <div class="practice-timing2">
-            <video controls src="../assets/video/Y2Mate.is - Time Signatures Explained-wtgo_SFuCJw-720p-1657383852557.mp4 "></video>
+            <video controls src="../assets/video/Y2Mateis   Time Signatures Explained.mp4"></video>
         </div>
         <!-- This content is for practice timings -->
-        
 
     </div>
+</div>
 
-    <div><a href="exercise5.html"><button>Exercise</button></a></div>
+    <div>
+<!-- <a href="exercise5.html">
+<button>Exercise</button> -->
+</a>
+</div>
    </main>
 </body>
+<script>
+    let exercises = document.getElementsByClassName("exercises")
+exercises[0].addEventListener("click",e=>{
+    if(localStorage.getItem("store_data").length == 0){
+      window.location.href="signup.html"
+    }
+    else{
+        window.location.href="exercise_list.html"
+  }
+}
+   )
+</script>
+<script src="../assets/js/common.js"></script>
+
 </html>
 
-<!-- const object={ 
-
-"img"{"photo":"link",
-"src":"apple_image",
-"alt":greenapple_image},
-
-"name":"Apple_green",
-
-"img2"{
-"photo":"link",
-"src":"farmer",
-"alt":"namalvar_photo"}
-            
-              ] -->

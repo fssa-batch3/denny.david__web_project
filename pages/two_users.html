@@ -9,41 +9,33 @@
 </head>
 <body>
     <header>
-        <div class="content">
-            <div id="for_padd" class="navbar1 pinkcolor">
-                <div><a href="index.html">Hardenz </a></div>
+        <div class="header">
+            <div class="website_name">Hardenz</div>
+            <div class="others">
+            
+               <div class="courses">Courses</div>
+               <div class="about">About  </div>
+               <div class="contact">Contact</div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
-            <div class="navbar1 bluecolor">
-                <div><a href="#"></a></div>
-            </div>
-            <div class="navbar1 green">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 sky">
-                <div><a href="#about">About us</a></div>
-            </div>
-            <div id="for_padd" class="navbar1 light">
-                <div><a href="#contact">Contact us</a></div>
-            </div>
-            <div class="navbar1 violet ">
-                <div><a href=""><img src ="../assets/image/main_img.jpg"></a></div>
-            </div>
-        </div>
+           </div>
     </header>
     <main>
         <div class="two_users">
         <div id="page_into" class="beginners">
             <div class="beginners_img">
-            <img src="../assets/image/logopiano.jpg">
+            <img src="../assets/image/logopiano.jpg" alt="piano_logo">
             </div>
         <div class="beginners_content">
             <h2>Beginners</h2>
             <p>This is for those who learn at the first time</p>
         </div>
         </div>
-        <div class="intermediate">
+        <div id="page_into_inter" class="intermediate">
             <div class="intermediate_img">
-            <img src="../assets/image/logopiano.jpg">
+            <img src="../assets/image/logopiano.jpg" alt="piano_logo">
             </div>
         <div class="intermediate_content">
             <h2>Intermediates</h2>
@@ -53,11 +45,28 @@
     </div>
     </main>
     <script>
-        let beginners = document.getElementById('page_into')
+        const beginners = document.getElementById('page_into')
         beginners.addEventListener('click',e=>{
-            window.location.href="..assests."
+            window.location.href="basics.html"
         })
+        const intermediate = document.getElementById('page_into_inter')
+        intermediate.addEventListener('click',e=>{
+            window.location.href="lessons.html"
+        })
+
+        let profile_page = document.getElementsByClassName("profile_img")
+        profile_page[0].addEventListener("click",e=>{
+            window.location.href="profile.html"
+        })
+
+        const courses = document.getElementsByClassName("courses")
+    courses[0].addEventListener('click',e=>{
+      window.location.href="two_users.html"
+    })
+
     </script>
     
 </body>
+<script src="../assets/js/common.js"></script>
+
 </html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/exercise_list.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <div class="header">
+        <div class="website_name">Hardenz</div>
+        <div class="others">
+           <div class="exercises">Exercises</div>
+           <div class="courses">Courses</div>
+           <div class="about">About  </div>
+           <div class="contact">Contact </div>
+           <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
+        </div>
+       </div>
+    </header>
+    <main>
+        <h1 style="margin-left:680px;">Exercises</h1>
+        <div id="ear_training" class="training">
+            <div class="training_img">
+            <img src="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png">
+        </div>
+        <div class="training_para">
+           <h3>Ear training</h3>
+           <p style="color:grey">Hear the sound and choose the right answer</p>
+        </div>
+        </div>
+        <div class="training">
+            <div class="training_img">
+            <img src="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png">
+        </div>
+        <div id="finding_chords" class="training_para">
+           <h3>Finding chords</h3>
+           <p style="color:grey">Hear the sound and choose the right answer</p>
+        </div>
+        </div>
+        <div class="training">
+            <div class="training_img">
+            <img src="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png">
+        </div>
+        <div id="diminished_chords" class="training_para">
+           <h3>Diminished chords</h3>
+           <p style="color:grey">Hear the sound and choose the right answer</p>
+        </div>
+        </div>
+        <div class="training">
+            <div class="training_img">
+            <img src="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png">
+        </div>
+        <div id="seventh_chords" class="training_para">
+           <h3>Seventh chords</h3>
+           <p style="color:grey">Hear the sound and choose the right answer</p>
+        </div>
+        </div>
+        <div class="training">
+            <div class="training_img">
+            <img src="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png">
+        </div>
+        <div id="timing_practice" class="training_para">
+           <h3>Timing practice</h3>
+           <p style="color:grey">Hear the sound and choose the right answer</p>
+        </div>
+        </div>
+        <div class="training">
+            <div class="training_img">
+            <img src="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png">
+        </div>
+        <div id="inversion_practice" class="training_para">
+           <h3>Inversions practice</h3>
+           <p style="color:grey">Hear the sound and choose the right answer</p>
+        </div>
+        </div>
+        <div disabled class="training">
+            <div class="training_img">
+            <img src="https://www.freepnglogos.com/uploads/apple-music-logo-circle-png-28.png">
+        </div>
+        <div class="training_para">
+           <h3>Ear training</h3>
+           <p style="color:grey">Hear the sound and choose the right answer</p>
+        </div>
+        </div>
+    </main>
+</body>
+<script>
+     
+    let ear_training =document.getElementById("ear_training");
+    let finding_chords=document.getElementById("finding_chords");
+    let diminished_chords = document.getElementById("diminished_chords");
+    let seventh_chords = document.getElementById("seventh_chords");
+    let timing_practice = document.getElementById("timing_practice")
+    let inversion_practice = document.getElementById("inversion_practice")
+    let exercises = document.getElementsByClassName("exercises")
+
+    // localStorage.setItem("correct",0)
+    // localStorage.setItem
+    ear_training.addEventListener("click",e=>{
+      window.location.href="exercise.html?data_id=1"
+     })
+    finding_chords.addEventListener("click",e=>{
+        window.location.href="exercise2.html?data_id=1"
+    })
+    diminished_chords.addEventListener("click",e=>{
+        window.location.href="exercise4.html?data_id=1"
+    })
+    seventh_chords.addEventListener("click",e=>{
+        window.location.href="exercise3.html?data_id=1"
+    })
+    timing_practice.addEventListener("click",e=>{
+        window.location.href="exercise5.html?data_id=1"
+    })
+    inversion_practice.addEventListener("click",e=>{
+        window.location.href="exercise6.html?data_id=1"
+    })
+
+    exercises[0].addEventListener("click",e=>{
+        window.location.href = "exercise_list.html"
+    })
+    let courses = document.getElementsByClassName("courses")
+    courses[0].addEventListener("click",e=>{
+        window.location.href = "lessons.html"
+    })
+    let website_name = document.getElementsByClassName("website_name")
+    website_name[0].addEventListener("click",e=>{
+        window.location.href = "../index.html"
+    })
+</script>
+<script src="../assets/js/common.js"></script>
+
+</html>

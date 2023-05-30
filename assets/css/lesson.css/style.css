@@ -1,13 +1,54 @@
 /* This css is for lessons page */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 body {
     background-color: white;
     margin:0px;
+    font-family: 'Rubik';
 }
 .nav {
     display: flex;
   
     width: 1485px;
     height:100px;
+}
+.header {
+    display:flex;
+    justify-content: space-around;
+    font-size: 25px;
+    height:60px;
+    color:black;
+    padding-top:20px;
+    background-color: white;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+div .website_name{
+    width:250px;
+    font-weight: bold;
+    font-family: 'Rubik';
+    color: #f67600;
+    cursor: pointer;
+    margin-left:-10px;
+}
+.others {
+    margin-left: 300px;
+    display:flex;
+    justify-content: space-between;
+    width:550px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top:5px;
+    font-size:20px;
+}
+
+.profile_img{
+    width:36px;
+    height:auto;
+    margin-left:15px;
+   margin-top:-8px;
 }
 #for_padd {
     padding-top: 20px;
@@ -68,7 +109,7 @@ body {
     width:250px;
     height:auto;
     border-radius:10px;
-    box-shadow: 2px 2px 50px#d0d1d2 ;
+    box-shadow: 2px 2px 50px #d0d1d2 ;
 }
 .lesson2 button {
     position:absolute;
@@ -83,7 +124,7 @@ body {
     font-size:30px;
     border:0px solid black;
     /* margin-left:50px; */
-    box-shadow: 2px 2px 20px#d0d1d2;
+    box-shadow: 2px 2px 20px #d0d1d2;
     font-family:Arial, Helvetica, sans-serif;
 }
 .lesson1 {
@@ -112,7 +153,7 @@ body {
     color: black;
     font-size: 30px;
     border: 0px solid black;
-    box-shadow: 2px 2px 20px#d0d1d2;
+    box-shadow: 2px 2px 20px #d0d1d2;
     margin-left:5px;
     padding-left:69px;
     padding-right:79px;

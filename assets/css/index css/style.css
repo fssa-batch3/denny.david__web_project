@@ -1,8 +1,84 @@
 /* This is the css for the home page */
+
+  @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 body {
     margin: 0px;
+    padding:0px;
+    font-family: 'Rubik';
+}
+.header {
+    display:flex;
+    justify-content: space-around;
+    font-size: 25px;
+    height:70px;
+    color:black;
+    padding-top:20px;
+    background-color:white;
+
+}
+div .website_name{
+    width:250px;
+    color:#f67600;
+    font-weight: bold;
+    font-family: 'Rubik';
+    margin-left:-10px;
+    cursor: pointer;
+}
+.profile_img{
+    width:36px;
+    height:auto;
+    margin-left:15px;
+   margin-top:-8px;
+}
+.others {
+    margin-left:300px;
+    display:flex;
+    justify-content: space-between;
+    width:550px;
+    cursor: pointer;
+    font-family: 'Rubik';
+    padding-top:5px;
+    font-size:20px;
+}
+/* .spans{
+    width:100px;
+} */
+.content1{
+    display:flex;
+    justify-content: space-evenly;
+    background-color:rgba(184,221,227,255) ;
+    height:500px;
+    font-family: 'Rubik';
+    padding-top:100px;
+   margin-top:-15px;
+ padding-left:60px;
+
+ 
+}
+#hardenz {
+    width:500px;
+}
+.spans{
+    width:500px;
 }
 
+.signup{
+    border: 1px solid blue;
+    width:90px;
+    text-align: center;
+    height:40px;
+    background-color:rgba(43,78,255,255);
+    color:white;
+    padding-top:10.5px;
+   border-radius:5px;
+    padding-right:10px;
+    padding-left:10px;
+   margin-top:-12.5px;
+}
+.main {
+    background-color: #E8EBF0;
+    
+}
 .navbar1 {
     display: flex;
     width: 250px;
@@ -101,6 +177,7 @@ body {
 .violet {
     background-color: #9445fd;
     text-align: center;
+    /* width:20px; */
     /* height:600px; */
 }
 
@@ -161,33 +238,75 @@ body {
     z-index: 1;
 }
 
-.content1 {
-    top: 23%;
-    font-size: 85px;
+
+div .side_text{
+    font-size: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    color: #fff;
-    position: absolute;
-    margin-left: 70px;
+    color: black;
+  
+    width:850px;
+    
+    margin-left:-100px;
+   
 }
 
-.content1 a {
-    margin-top: 20px;
-    width: 150px;
-    padding: 20px;
+.haikei{
+    position: absolute;
+    left: 850px;
+    top:150px;
+    width:500px;
+    z-index: -10;
+
+}
+/* .piano_img{
+    z-index: -100;
+} */
+.index_image{
+    width:1487px;
+    opacity:0.6;
+    height:auto;
+    position:absolute;
+    top:0%;
+    z-index:-2;
+    /* -webkit-transform:rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); */
+   
+    
+    
+}
+.spans {
+    width:750px;
+}
+.who_we_are {
+    font-size:20px;
+    color:gray;
+    margin-left:-100px;
+   
+}
+#get_started {
+   margin-left:-100px;
+   /* margin-top:-30px; */
+    width: 120px;
+    font-weight:bold;
     text-decoration: none;
     border: 0px solid black;
-    font-size: 25px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top:15px;
+    padding-bottom:15px;
     display: flex;
     justify-content: flex-start;
-    background-color: #9445fd;
-    border: 0px solid;
-    color: white;
-    box-shadow: 2px 2px 20px #6937aa;
+    background-color:rgba(43,78,255,255) ;
+    border: 0px;
+    color:white;
+    box-shadow: 2px 2px 20px rgba(43,78,255,255) ;
 }
 
 #in1 {
@@ -280,7 +399,7 @@ body {
 .content3 {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 200px;
     width: 1200px;
     margin-left: 150px;
 }
@@ -340,7 +459,7 @@ body {
     /* margin-top: 200px; */
     display: flex;
     justify-content: space-around;
-    background-color: #3f1a70;
+    background-color: rgb(47, 47, 47);
     /* padding-left:150px; */
     padding-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -348,7 +467,7 @@ body {
 
 footer {
     padding-bottom: 20px;
-    background-color: #3f1a70;
+    background-color: rgb(47, 47, 47);
 
 }
 
@@ -387,9 +506,140 @@ hr {
     padding: 15px;
     text-align: center;
 }
+.test_head h1 {
+    font-size:35px;
+    margin-left:650px;
+   margin-top:100px;
+}
 .testimonials{
     display: flex;
+    margin-left: 340px;
+    margin-top:30px;
 }
+.testimonials1 img {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+}
+section #main{
+    width:1200px;
+    margin-left:150px;
+    margin-top:200px;
+}
+
+/*   
+  h1 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+  }
+  
+  h2 {
+  color: #fff;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 30px;
+  } */
+  
+  .nowplaying {
+  font-size: 120px;
+  line-height: 1;
+  color: #eee;
+  text-shadow: 0 0 5rem #028ae9;
+  transition: all .07s ease;
+  min-height: 120px;
+  }
+  
+  .keys {
+  display: block;
+  width: 100%;
+  height: 350px;
+  max-width: 880px;
+  position: relative;
+  margin: 40px auto 0;
+  cursor: pointer;
+  }
+  
+  .key {
+  position: relative;
+  border: 2.5px solid grey;
+  border-radius: .5rem;
+  transition: all .07s ease;
+  display: block;
+  box-sizing: border-box;
+  z-index: 2;
+  }
+  
+  .key:not(.sharp) {
+  float: left;
+  width: 10%;
+  height: 100%;
+  /* background: rgba(255, 255, 255, .8);    */
+  background-color: white;
+  }
+  
+  .key.sharp {
+  position: absolute;
+  width: 6%;
+  height: 60%;
+  background: #000;
+  color: #eee;
+  top: 0;
+  z-index: 3;
+  }
+  
+  .key[data-key="87"] {
+  left: 7%;
+  }
+  
+  .key[data-key="69"] {
+  left: 17%;
+  }
+  
+  .key[data-key="84"]  {
+  left: 37%;
+  }
+  
+  .key[data-key="89"] {
+  left: 47%;
+  }
+  
+  .key[data-key="85"] {
+  left: 57%;    
+  }
+  
+  .key[data-key="79"] {
+  left: 77%;    
+  }
+  
+  .key[data-key="80"] {
+  left: 87%;    
+  }
+  
+  .playing {
+  transform: scale(.95);
+  border-color: #028ae9;
+  box-shadow: 0 0 1rem #028ae9;
+  }
+  
+  .hints {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: 7px;
+  transition: opacity .3s ease-out;
+  font-size: 20px;
+  }
+  
+  .keys:hover .hints {
+  opacity: 1;
+  }
+
 @media only screen and (max-width:900px) {
     body {
         width: 400px;
@@ -455,7 +705,7 @@ hr {
     .content1 a {
         font-size: 10px;
         padding-left: 10px;
-        padding: 10px;
+        
         width: 100px;
         padding-right: 5px;
     }

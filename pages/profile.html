@@ -13,88 +13,100 @@
 
 <body id="hidebtn">
     <!-- Profile form -->
-    <div id="back-image"></div>
-    <div id="back-image2"></div>
+    <!-- <div id="back-image"></div>
+    <div id="back-image2"></div> -->
 
     <form id="form">
 
-        <div class="users_page">
+        
 
-            <div class="profile1">
-                <div class="grey-img"></div>
-                <div class="inside-img"></div>
-                <div class="inside1-img"></div>
-                <fieldset disabled>
-                    <h1>My Profile</h1>
-                    <h4>First Name</h4>
-                    <input type="text" id="fname" placeholder="First Name" /><br><br>
-                    <h4>Last Name</h4>
-                    <input type="text" id="lname" placeholder="Last Name" /><br><br>
-                    <h4>Phone no</h4>
-                    <input type="tel" id="telephone" placeholder="Phone no" /><br><br>
+           
+                <!-- <div class="grey-img"></div> -->
+                <!-- <div class="inside-img"></div> -->
+                <!-- <div class="inside1-img"></div> -->
+                <fieldset>
+                    <div class="profile1">
+                    <h1 style="margin-left:125px;">My Profile</h1>
+                    <img  style="width:140px; height:140px; margin-left:125px;" src="../assets/image/profile.icon">
+                   
+                <div class="firstname">    <h4>First Name:</h4>
+                    <input type="text" id="fname" placeholder="First Name" disabled>
+                </div>
+<br>
+                <div class="secondname">  
+                    <h4>Last Name:</h4>
+                    <input type="text" id="lname" placeholder="Last Name" disabled>
+                    </div>
+<br>
+                <div class="phoneno">                    <h4>Phone no:</h4>
+                    <input type="tel" id="telephone" placeholder="Phone no" disabled>
+                </div>
+<br>
+<div class="emailid">                    
+<h4>emailid:</h4>
+<input style="margin-left:92px;" id="email" type="email" id="email" placeholder="email" disabled>
+<br>                 
+<br></div> 
+<br><button style="margin-left:100px;" id="edit_btn">Edit</button>
+
+<button id="save-btn"> Save</button>
+ <button id="erase">LOG OUT</button>
+
+</div>
                 </fieldset>
                 <!-- <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
                 <!-- <button onclick="process()" class="submit action-button" target="_top">Submit</button> -->
-                <button id="erase">LOG OUT</button>
-                <div class="grey1-img"></div>
+                <!-- <button id="erase">LOG OUT</button> -->
+                <!-- <div class="grey1-img"></div> -->
+                
             </div>
-
-            <div class="profile">
-                <!-- <img id="profile2_gif" src="../assets/image/profile.gif" alt="gif-image">
-                    <img id="profile_gif" src="../assets/image/profile2.gif" alt="gif image">
-                    <img id="anime_image" src="../assets/image/anime_image1.gif" alt="anime image">  -->
-                <!-- <button>Save</button> -->
-                <button id="getDetails">Edit</button>
-                <div class="profile_photo">
-
-                    <img src="../assets/image/profile.icon">
-                </div>
             </div>
-        </div>
+        </form>
+        <div  id="progress"> 
+        <h2 class="h2">Progress</h2>     
+  <div class ="progress_result">
+    <h3>Ear training </h3>
+    <p id="score">Your Score <span id="ear_training_result">0/100</span> <button id="ear_training_redo">Take challenge</button></p>
+  </div></div>
+  <div class ="progress_result">
+    <h3>Finding chords </h3>
+    <p id="score">Your score<span id="finding_result">0/100</span> <button id="finding_redo">Take challenge</button></p>
+  </div>
+  
+  <div class ="progress_result">
+    <h3>Seventh chords </h3>
+    <p id="score">Your score<span id="seventh_result">0/100</span> <button id="seventh_redo">Take challenge</button></p>
+  </div>
+  <div class ="progress_result">
+    <h3>Diminished chords </h3>
+    <p id="score">Your score<span id="dim_result">0/100</span> <button id="dim_redo">Take challenge</button></p>
+  </div>
+  <!-- <div class ="seventh_progress">
+    <h3>Seventh chords exercise</h3>
+    <p id="score">You got <button id="redo">Redo</button></p>
+  </div> -->
+    <div class = "progress_result">
+        <h3>Inversion chords</h3>
+        <p id="score">You score<span id="inversion_result">0/100</span> <button id="inversion_redo">Take challenge</button></p>  
+    </div>       
 
-        <!-- <img id="changing_photo" src="../assets/image/changing-photo-icon.png"> -->
-        <div class="popup">
-            <div class="popup_form">
-                <h3>First Name</h3>
-                <input type="text" id="fname1" placeholder="First Name" required /><br><br>
-                <h3>Last Name</h3>
-                <input type="text" id="lname1" placeholder="Last Name" /><br><br>
-                <h3>Phone no</h3>
-                <input type="tel" id="telephone1" placeholder="Phone no" /><br><br>
-                <button id="save-btn"> Save</button>
-                <button id="save-btn2">Cancel</button>
+       
+             
 
-
-            </div>
-            <div class="popup_images">
-                <img src="../assets/image/popup-image9.png" alt="profile_photo">
-                <img id="beard_image" src="../assets/image/popup-image8.png" alt="profile_photo">
-                <img id="longer_image" src="../assets/image/pop-image2.png" alt="profile_photo">
-                <img id="longer_image2" src="../assets/image/pop-image3.png" alt="profile_photo">
-                <img id="longer_image3" src="../assets/image/pop-image4.png" alt="profile_photo">
-                <img id="without_beard" src="../assets/image/popup-image6.png" alt="profile_photo">
-                <img src="../assets/image/popup-image7.png" alt="profile_photo">
-                <img id="beard_and_spec" src="../assets/image/popup-image10.png" alt="profile_photo">
-            </div>
-        </div>
-        <br>
-
-
-
-    </form>`
+   `
 </body>
-<script>
-
-    // Storing the data from the signup page 
-    let users = JSON.parse(localStorage.getItem('store_data'));
-    let data = JSON.parse(localStorage.getItem('profile_details'));
-    let fname = document.getElementById("fname");
-    let lname = document.getElementById("lname");
-    let phone = document.getElementById("telephone");
-    let fname1 = document.getElementById("fname1");
-    let lname1 = document.getElementById("lname1");
-    let phone1 = document.getElementById("telephone1");
-    let submit_btn = document.getElementById("save-btn");
+<script>    // Storing the data from the signup page 
+    const users = JSON.parse(localStorage.getItem('store_data'));
+    const data = JSON.parse(localStorage.getItem('profile_details'));
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const phone = document.getElementById("telephone");
+    const email=document.getElementById("email")
+    const fname1 = document.getElementById("fname1");
+    const lname1 = document.getElementById("lname1");
+    const phone1 = document.getElementById("telephone1");
+    const submit_btn = document.getElementById("save-btn");
+  
     // let edit=document.getElementById("getDetails");
     let result;
 
@@ -111,7 +123,6 @@
     //     document.getElementById("telephone1").value = users[i]["phone_no"];
     // }
 
-
     // let firstName = document.getElementById("fname");
     // document.getElementById("save-btn").addEventListener('click', e => {
     //     // document.getElementById("fname1").value  =firstName.value;
@@ -121,74 +132,186 @@
     // })
 
     users.find(e => {
-        if (e["mail_id"] == data["username"]) {
+        if (e.mail_id == data.username) {
             return result = e;
+           
         }   
     })       
-    console.log(result)    
-    fname.value = result["user_name"]   
-    lname.value = result["last_name"]   
-    phone.value = result["phone_no"]  
-    fname1.value = result["user_name"]
-    lname1.value = result["last_name"]   
-    phone1.value = result["phone_no"]   
+    
+    fname.value  = result.user_name   
+    lname.value  = result.last_name   
+    phone.value  = result.phone_no  
+    email.value=result.mail_id
     submit_btn.addEventListener("click", e => {
         // e.preventDefault();
-        result["user_name"] = fname1.value
-        result["last_name"] = lname1.value
-        result["phone_on"] = phone1.value
-        console.log(result)
-
+        result.user_name = fname.value
+        result.last_name = lname.value
+        result.phone_no = phone.value
         localStorage.setItem('store_data', JSON.stringify(users))
     
     })
 
-    // // This function is for when the user click the log out button
-    // // all the data should erase and it will go back to the home page.
-    // // function go_out() {
-
-    // document.getElementById("erase").addEventListener('submit', e => {
-    //     document.getElementById("fname").value = "";
-    //     document.getElementById("lname").value = "";
-    //     document.getElementById("telephone").value = "";
-    //     // localStorage.removeItem("store_data");
-    //     // window.location.href = "..//index.html";
-    // })
-    // // }
 
     // This code is for popup 
-    let image = document.getElementById("getDetails");
-    let pop = document.querySelector(".popup");
-    image.addEventListener("click", e => {
-        e.preventDefault();
-        pop.classList.add("change");
+    const edit = document.getElementById("edit_btn");
+    edit.addEventListener("click", e => {
+        e.preventDefault()
+       fname.removeAttribute("disabled")
+       lname.removeAttribute("disabled")
+       phone.removeAttribute("disabled")
+       email.removeAttribute("disabled")
     })
-    let dis = document.getElementsByClassName(".users_page");
-    dis.addEventListener("click", e=>{
-        e.preventDefault();
-        dis.classList.add("none");
-    })     
+        
+    
+    let results = localStorage.getItem("correct")
+        
+        let save=document.getElementById("save-btn")
 
-    // let body = document.getElementById("hidebtn")
-    // body.addEventListener("click", e => {
-    //     e.preventDefault();
-    //     document.getElementByClassName(".popup")
-    //     body.classList.toggle("hide-it");
-    // })
+        save.addEventListener("click",e=>{
+            // save.preventDefault();
+     let reusult2= JSON.parse(localStorage.getItem("store_data"))
+     reusult2.find(e=>{
+        if(email.value===e.mail_id){
+            e.user_name  =    fname.value
+            e.last_name  =   lname.value
+            e.phone_no   =phone.value
+            e.email   =  email.value
 
-    // let body_toggle=document.getElementsByClassName("users_page")[0];
-    // body_toggle.addEventListener("click",e=>{
-    //     pop.classList.remove("change");
-    //     console.log("clicked")
-    // })
-        //    let wholeBody =document.querySelector("body");
-        //     wholeBody.addEventListener("click", e => {
-        //     pop.classList.remove("change");
-        //     console.log(wholeBody)
-        //     })
+            localStorage.setItem("store_data",JSON.stringify(users))
+         fname.setAttribute("disabled","")
+         lname.setAttribute("disabled","")
+         phone.setAttribute("disabled","")
+         email.setAttribute("disabled","")
+        //  window.location.href="./index.html"
+        }
+     })
+    })
+   
+     
+     let ear_redo = document.getElementById("ear_training_redo")
+     ear_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["ear_training"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise.html?data_id=1"
+        }
+    )
+    let seventh_redo = document.getElementById("seventh_redo")
+    seventh_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["seventh_chords"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise3.html?data_id=1"
+        }
+    )
+    let dim_redo = document.getElementById("dim_redo")
+     dim_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["diminished_chords"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise4.html?data_id=1"
+        }
+    )
+
+    let inversion_redo = document.getElementById("inversion_redo")
+     inversion_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["inversions_practice"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise6.html?data_id=1"
+        }
+    )
+
+    let find_redo = document.getElementById("finding_redo")
+     find_redo.addEventListener("click",e=>{
+        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                   
+                    e["finding_chords"] = 0
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+           )
+           window.location.href="exercise2.html?data_id=1"
+        }
+    )
+
+    let ear_training_score;
+    let finding_chords_score;
+    let seventh_score;
+    let dim_score;
+    let inversions_score;
+
+
+    let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    ear_training_score=e["ear_training"]
+                    
+                    finding_chords_score =e["finding_chords"]
+                    
+                    seventh_score = e
+                    ["seventh_chords"]
+                   
+                    dim_score = e 
+                    ["diminished_chords"]
+                  
+                    inversion_score = e
+                    ["inversions_practice"]
+                
+                }
+            })
+    let ear_training_result= document.getElementById("ear_training_result")
+    ear_training_result.innerHTML= `${ear_training_score}/100`
+   
+    let finding_result = document.getElementById("finding_result")
+    finding_result.innerHTML = `${finding_chords_score}/100`
+    
+    let seventh_result = document.getElementById("seventh_result")
+    seventh_result.innerHTML = `${seventh_score}/100`
+
+    let dim_result = document.getElementById("dim_result")
+    dim_result.innerHTML = `${dim_score}/100`
+
+    let inverion_result = document.getElementById("inversion_result")
+    inverion_result.innerHTML = `${inversion_score}/100` 
+
 </script>
-
-
-
-
 </html>

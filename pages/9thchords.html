@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../assets/css/nine.css/style.css" >
+    <link rel="stylesheet" href="../assets/css/nine.css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,41 +10,89 @@
 <body>
     <!-- This is header section -->
     <header>
-        <div class="nav">
-            <div id="for_padd" class="navbar1 pinkcolor">
-                <div><a href="index.html">Hardenz </a></div>
+        <div class="header">
+            <div class="website_name">Hardenz</div>
+            <div class="others">
+                <div class="exercises">Exercises</div>
+               <div class="courses">Courses</div>
+               <div class="about">About </div>
+               <div class="contact">Contact </div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
-            <div id="for_padd" class="navbar1 bluecolor none">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 green none">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 sky none">
-                <div><a href="#">About us</a></div>
-            </div>
-            <div class="navbar1 light none">
-                <div><a id="callin" href="#">Contact us</a></div>
-            </div>
-            <div class="navbar1 violet none ">
-                <div><a href="#"><img src="../assets/image/main_img.jpg"></a></div>
-            </div>
-        </div>
+           </div>
     </header>
     <!-- These are added nineth chords and video for reference -->
     <div class="nineth">
-        <div class="nineth1">
-            <h1>
-                9th Chords
-            </h1>
-        <h3>In music theory, a ninth chord is a chord that encompasses the interval of a ninth 
-            when arranged in close position with the root in the bass.
-            The ninth chord and its inversions exist today, or at least they can exist.Theoretically ninth chords are built with 5 notes called root (1),
-            major third (3), perfect fifth (5), minor seventh (b7) and ninth (9)</h3>
-        </div>
-        <div class="nineth2">
-            <video controls src="../assets/video/Y2Mate.is - How To Use Added 9th & Augmented Chords Keyboard Tutorial Tamil Allegro Keyz-SwbPokxaS8g-720p-1654691900050 (online-video-cutter.com).mp4"></video>
-        </div>
+        <h2>Nineth Chords</h2>
+    <div class="nineth1">
+        <p>Ninth chords are a type of chord that is commonly used in jazz, blues, and other genres of music. They are chords that include the root, third, fifth, seventh, and ninth notes of the scale. To play a ninth chord on the piano, 
+        you would typically play the root note, skip the second note and play the third note, skip the fourth and fifth notes and play the sixth note, then play the seventh note, and finally add the ninth note. For example, to play a C9 chord, you would
+         play C, E, G, Bb, and D.<br>
+<br>
+
+        To learn how to play ninth chords on the 
+        piano, it is important to have a solid foundation in basic music theory, including scales, intervals,
+         and chord construction. Once you have a good understanding of these concepts,
+          you can begin to explore different ninth chord voicings and inversions, which can add variety and interest
+           to your playing.<br>
+<br>
+        
+        One common voicing for a ninth chord is to play the root note in the left hand and the third, fifth, seventh, and ninth notes in the right hand. Another voicing 
+        is to play the root, seventh, and ninth notes in the left hand and the third and fifth notes in the right hand. Experimenting with different voicings and inversions
+         can help you find the sound and style that you 
+         are looking for in your playing.<br>
+<br>
+        
+        It is also important to practice playing
+         ninth chords in the context of a musical piece or progression.
+          This will help you develop your ear for the sound of the chord and learn how to use it effectively in your playing.
+           With practice and dedication, you can master playing ninth chords on the piano and incorporate them into
+            your musical repertoire.<br>
+<br>
+        
+            Dominant 9th chords: One of the most common types of ninth chords is the dominant 9th chord. This chord is built on the fifth degree of the major scale and is often used in blues, jazz, and funk music. To play a dominant 9th chord, you would take a dominant 7th chord (root, third, fifth, and flat seventh) and add the ninth note. For example, 
+            a G dominant 9th chord would include the notes 
+            G, B, D, F, and A.<br>
+<br>
+
+Minor 9th chords: Another type of ninth chord is the minor 9th chord, which is a
+ minor chord with an added ninth note. This chord can be used to add a sense of tension and dissonance to a musical piece.
+  To play a minor 9th chord, you would take a minor 7th chord (root, flat third, fifth, and flat seventh) and add the ninth note. 
+  For example, an A minor 9th chord would include the notes A, C, E, G, and B.<br>
+<br>
+
+Two-handed voicings: While it is possible to play ninth chords with one hand, using two hands can give you more
+ options for voicings and inversions. One way to play ninth chords with both hands is to use a rootless voicing, 
+ where you play the third, fifth, seventh, and ninth notes in the right hand and the root note in the left hand. 
+ For example, to play a C9 chord, you would play E, G, Bb, and D in the right hand and C in the left hand.<br>
+<br>
+
+Practice exercises: To improve your proficiency with ninth chords, you can practice playing them in different keys and in different contexts,
+ such as chord progressions or song arrangements. You can also practice playing ninth chords with a metronome to improve your timing and accuracy.
+  Finally, you can practice playing different voicings and inversions of ninth chords to develop your ability to move smoothly between chords and 
+  create interesting harmonies.<br>
+<br>
+        </p>
+    </div>
+    <div class="nineth2">
+    <video controls src="../assets/video/Y2Mate is  How To Use Added 9th   Augmented Chords Keyboard Tutorial Tamil Allegro Keyz.mp4"></video>
+    </div>
     </div>
 </body>
+<script>
+    //   localStorage.setItem("correct",0)
+    let exercises = document.getElementsByClassName("exercises")
+exercises[0].addEventListener("click",e=>{
+    if(localStorage.getItem("store_data") == 0){
+      window.location.href="signup.html"
+    }
+    else{
+        window.location.href="exercise_list.html"
+  }
+})
+</script>
+<script src="../assets/js/common.js"></script>
+
 </html>

@@ -5,79 +5,489 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>Document</title>
 </head>
 <body>
     <!-- This is my header section -->
     <header>
-        <div class="nav">
-            <div id="for_padd" class="navbar1 pinkcolor">
-                <div><a href="#">Hardenz </a></div>
+        <div class="header">
+            <div class="website_name">Hardenz</div>
+            <div class="others">
+                <div class="exercises">Exercises</div>
+               <div class="courses">Courses</div>
+               <div class="about">About</div>
+               <div class="contact">Contact</div>
+               <div>
+<img class="profile_img" src="../assets/image/main_img.jpg">
+</div>
             </div>
-            <div class="navbar1 bluecolor">
-                <div><a href="#"></a></div>
-            </div>
-            <div class="navbar1 green">
-                <div><a href="#"></a></div>
-            </div>
-            <div id="for_padd" class="navbar1 sky">
-                <div><a href="#">About us</a></div>
-            </div>
-            <div id="for_padd" class="navbar1 light">
-                <div><a id="callin" href="#">Contact us</a></div>
-            </div>
-            <div class="navbar1 violet ">
-                <div><a href="#"><img src="../assets/image/main_img.jpg"></a></div>
-            </div>
+           </div>
         </div>
     </header>
     <!-- Practicing exercises to finding chords -->
-    <div class="listening">
-    <div class="listening1">
-        <h1>Practice for finding chords</h1>
+    <main>
+    <div class="heading">
+<h2 style="margin-left: 600px;"> Practice for finding chords</h2>
+</div>
+   <div class="main_div" id="main_div">
+   
+    <!-- <div class="first_quest">
         
-          <h2> 1.Which chord is this?</h2> 
-          <img src="../assets/image/a chord.png" alt="error"><br>
-           <div>
-            a).<button id="special1">C E G</button>
-            b).<button id="special">A C# D</button>
-            c).<button id="special1">A# C D# </button>
+          <h3> 1.What is this chord?</h3> 
+          <img id="chord_img" src="../assets/image/a chord.png" alt="error"><br>
+           <div><p id="mcq">
+            a).<button class="special1">C E G</button>
+            b).<button class="special">A C# D</button>
+            c).<button class="special1">A# C D# </button>
+        </p>
+          </div></div>
+    <div class="second_quest hide">
+        <h3>2.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/b flat.png" alt="bflat image">
+        <div><p id="mcq"> 
+            a).<button class="special1">B D# F# </button>
+            b).<button class="special">Bflat D F</button>
+            c).<button class="special1">Bflat Eflat G</button>
+        </p>
+        </div>
     </div>
-    <div class="listening1">
-        <h2>2.Which chord is this?</h2>
-        <img src="../assets/image/b flat.png" alt="bflat image">
-        <div> a).<button id="special">B D# F# </button>
-            b).<button id="special1">Bflat D F</button>
-            c).<button id="special">Bflat Eflat G</button></div>
-    </div>
-    <div class="listening1">
-        <h2>3.Which chord is this?</h2>
-        <img src="../assets/image/g_flat.png" alt="g-flat">
-       <div>
-        a).<button id="special">F# A# C#</button>
-        b).<button id="special1">F# B D#</button>
-        c).<button id="special">F A C</button>
+    <div class="third_quest hide">
+        <h3>3.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/g_flat.png" alt="g-flat">
+       <div><p id="mcq">
+        a).<button class="special1">F# A# C#</button>
+        b).<button class="special">F# B D#</button>
+        c).<button class="special1">F A C</button>
+    </p>
        </div>
     
     </div>
-    <div class="listening1">
-        <h2>4.Which chord is this?</h2>
-        <img src="../assets/image/e_flat_m.png" alt="eflat minor">
-       <div>
-        a).<button id="special">D# F# Bflat </button>
-        b).<button id="special1">D# G# C</button>
-        c).<button id="special">D# G# B</button>
+    <div class="fourth_quest hide">
+        <h3>4.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/e_flat_m.png" alt="eflat minor">
+       <div><p id="mcq">
+        a).<button class="special">D# F# Bflat </button>
+        b).<button class="special1">D# G# C</button>
+        c).<button class="special1">D# G# B</button>
+    </p>
        </div>
     </div>
-    <div class="listening1">
-        <h2>5.Which chord is this?</h2>
-        <img src="../assets/image/d_flat_m.png" alt="dflat minor">
-       <div>
-        a).<button id="special">C# E G#</button>
-        b).<button id="special1">C# F G#</button>
-        c).<button id="special">Aflat C Eflat</button>
+    <div class="fifth_quest fifth hide">
+        <h3>5.What is this chord?</h3>
+        <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
+       <div><p id="mcq">
+        a).<button class="special">C# E G#</button>
+        b).<button class="special1">C# F G#</button>
+        c).<button class="special1">Aflat C Eflat</button>
+        </p>
        </div>
     </div>
-    </div>
+    <p id="nxt_btn" class="pointer"> Next >></p>
+   
+    </div> --> 
+    
+</main>
+<div  class="hint_para"><p>
+    A major chord contains the 
+    1st, 3rd, and 5th notes of the major scale.
+</p></div>
+<div>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+</div>
+<div class="instructions" style="display: none;">
+    <h2 style="color:green">Instructions</h2>
+    <h4>You should find the question is in which chord and you find the answers</h4>
+    <button id="ok_btn">OK</button>
+  </div>
 </body>
+<script>    const questions= {
+     1 : `<div data-id="1" class="first_quest block">
+    <h3> 1.What is this chord?</h3> 
+    <img id="chord_img" src="../assets/image/a chord.png" alt="error"><br>
+     <div><p id="mcq">
+      a).<button  class="special1">C E G</button>
+      b).<button onclick="myFunction()" class="special">A C# E</button>
+      c).<button class="special1">A# C D# </button>
+  </p>
+    </div></div>
+    <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+    <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+    2:` <div data-id="2" class="second_quest block hide">
+     <h3>2.What is this chord?</h3>
+     <img id="chord_img" src="../assets/image/b flat.png" alt="bflat image">
+     <div><p id="mcq"> 
+         a).<button class="special1">B D# F# </button>
+         b).<button onclick="myFunction()" class="special">Bflat D F</button>
+         c).<button class="special1">Bflat Eflat G</button>
+     
+     </p>
+     </div>
+ </div>
+ <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 3:`<div data-id="3" class="third_quest block hide">
+     <h3>3.What is this chord?</h3>
+     <img id="chord_img" src="../assets/image/g_flat.png" alt="g-flat">
+    <div><p id="mcq">
+     a).<button class="special1">F# A# C#</button>
+     b).<button onclick="myFunction()" class="special">F# B D#</button>
+     c).<button class="special1">F A C</button>
+ </p>
+    </div>
+ 
+ </div>
+ <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 4:` <div data-id="4" class="fifth_quest block fifth hide">
+     <h3>4.What is this chord?</h3>
+     <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
+    <div><p id="mcq">
+     a).<button onclick="myFunction()" class="special">C# E G#</button>
+     b).<button class="special1">C# F G#</button>
+     c).<button class="special1">Aflat C Eflat</button>
+     </p>
+    </div>
+ </div>
+ <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+ 5:`<div data-id="5" class="fifth_quest fifth hide">
+     <h3>5.What is this chord?</h3>
+     <img id="chord_img" src="../assets/image/d_flat_m.png" alt="dflat minor">
+    <div><p id="mcq">
+     a).<button onclick="myFunction()" class="special">C# E G#</button>
+     b).<button class="special1">C# F G#</button>
+     c).<button class="special1">Aflat C Eflat</button>
+     </p>
+    </div>
+ </div>
+ <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         6:`<div data-id="5" class="sixth_quest sixth hide">
+     <h3>6.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/f.png" alt="f chord">
+    <div><p id="mcq">
+     a).<button class="special1">D F A</button>
+     b).<button class="special1">A C# E</button>
+     c).<button onclick="myFunction()" class="special">F A C</button>
+     </p>
+    </div>
+ </div>
+ <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         7:`<div data-id="5" class="seventh_quest seventh hide">
+     <h3>7.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/b.png" alt="b chord">
+    <div><p id="mcq">
+     a).<button class="special1">D# G Aflat</button>
+     b).<button onclick="myFunction()" class="special">B D# F#</button>
+     c).<button class="special1">B D F#</button>
+     </p>
+    </div>
+ </div>
+ <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         8:`<div data-id="5" class="eigth_quest eigth hide">
+     <h3>8.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/d_flat.png" alt="dflat chord">
+    <div><p id="mcq">
+     a).<button onclick="myFunction()" class="special">C# F G#</button>
+     b).<button class="special1">C F A</button>
+     c).<button class="special1">C D F</button>
+     </p>
+    </div>
+ </div>
+ <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         9:`<div data-id="5" class="nineth_quest nineth hide">
+     <h3>9.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/a_flat.png" alt="Aflat chord">
+    <div><p id="mcq">
+     a).<button onclick="myFunction()" class="special">A C# D</button>
+     b).<button class="special1">Aflat C Dflat</button>
+     c).<button class="special1">A C E</button>
+     </p>
+    </div>
+ </div>
+ <img class="bulb_img" src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`,
+         10:`<div data-id="5" class="tenth_quest tenth hide">
+     <h3>10.What is this chord?</h3>
+     <img id="chord_img" src="https://www.pianochord.org/images/e.png" alt="E chord">
+    <div><p id="mcq">
+     a).<button onclick="myFunction()" class="special">E G B</button>
+     b).<button class="special1">F A C</button>
+     c).<button class="special1">E G# B</button>
+     </p>
+    </div>
+ </div>
+ <img class="bulb_img"  src="https://media.istockphoto.com/id/960813498/vector/light-bulb-idea-lamp-outline-icon-vector.jpg?s=612x612&w=0&k=20&c=jISHQ-lwMpWw7PC56Pll4XFjXrwAvKXCAnYPYMHutJg="
+ <a id="a_btn">
+             <p style="cursor:pointer" class="nxt_btn" class="pointer"> Next >></p>
+         </a>`
+ }
+    const url = window.location.search
+    const url_params =new URLSearchParams(url)
+    const params_data_id= url_params.get("data_id") 
+        
+    const main_div = document.getElementById("main_div")
+    const div_create = questions[params_data_id]
+    main_div.innerHTML=div_create
+
+    const anchor_button = document.getElementById("a_btn")    
+    const next = document.querySelectorAll(".nxt_btn");
+    const green = document.querySelectorAll(".special")
+    const red = document.querySelectorAll(".special1")
+    const main = document.getElementsByClassName("main_div");
+    const tenth = document.getElementsByClassName("tenth")
+   
+    const mychart = document.getElementById("mychart")
+    const div_ids=document.querySelectorAll(".block")
+
+        let id;
+        div_ids.forEach((e)=>{
+            const ids = e.dataset.id
+          
+            next.forEach((el,ind)=>{
+                el.addEventListener("click", () =>{
+                id = e.dataset.id
+            })
+            })
+        }) 
+
+        red.forEach((e, index) => {
+        e.addEventListener('click', el => {
+        e.style.backgroundColor = 'red';
+        })
+  e.addEventListener('click', el => {
+      if (e.value == '') {
+          // green.disabled = true
+          green.forEach(e => {
+              e.disabled = true
+          })
+          red.forEach((r, ind) => {
+              if (index != ind) {
+                  r.disabled = true
+              }
+          })
+      }
+  })
+  })
+
+  green.forEach((e, index) => {
+  e.addEventListener('click', e => {
+ 
+      green.forEach(e => {
+          e.style.backgroundColor = 'green';
+      })
+      red.forEach((r, ind) => {
+          r.disabled = true
+  
+      })
+  })
+  })
+
+        const correct = 0;
+        const pieChart =  parseInt(localStorage.getItem("correct"));
+
+        const logo = document.getElementsByClassName("website_name");
+        logo[0].addEventListener("click",e=>{
+            window.location.href="../index.html"
+           
+        })
+
+        const instruction = document.getElementsByClassName("instructions");
+        const okay = document.getElementById("ok_btn")
+        const body =document.querySelector("main")
+        const header = document.querySelector("header")
+        function setupEvents(){
+             body.style.filter= "blur(2px)";
+             header.style.filter= "blur(2px)";
+             instruction[0].style.filter="none"
+             instruction[0].style.display="block";
+             
+        }
+        okay.addEventListener('click',e=>{
+                body.style.filter= "none";
+             header.style.filter= "none";
+                body.style.display="block";
+             header.style.display="block";
+               instruction[0].style.display="none";
+        })
+        if(params_data_id==1){
+        window.onload = function(){
+            setupEvents();
+         }}
+
+         function myFunction() {
+            let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    user_data = e
+                    let value = e["finding_chords"]
+                    value += 10;
+                    e["finding_chords"] = value
+                }
+            })
+            localStorage.setItem("store_data", JSON.stringify(store_data)
+            )}               
+     
+    const i = 1;
+    next.forEach((el,ind)=>{
+    el.preventDefault
+    
+    el.addEventListener('click', e => {
+        e.preventDefault();
+
+        if (red[0].disabled == true || green[0].disabled == true) {
+        window.location.href =`./exercise2.html?data_id=${Number(params_data_id)+1}`
+        } 
+    })} )
+
+     if (params_data_id==10) {
+       
+                    anchor_button.style.display = "none";
+                    const submit_btn = document.createElement("button");
+                    submit_btn.setAttribute("id", "result_btn")
+                    submit_btn.innerHTML = "SUBMIT";
+                   
+                    main[0].appendChild(submit_btn)
+                   
+                    document.querySelector("#result_btn").addEventListener('click', e => {
+                        let store_data = JSON.parse(localStorage.getItem("store_data"))
+            let logged = localStorage.getItem("logged_in")
+            let user_data;
+            let value 
+            store_data.forEach(e => {
+                if (e.mail_id == logged) {
+                    value = e["finding_chords"]
+                   
+                }
+            })
+                        tenth[0].style.display = "none";
+                        submit_btn.style.display = "none";
+                        const xValues = ["correct","wrong"];
+                         const yValues = [value,value-100];
+                   const barColors = [
+                       "#00aba9", "#b91d47",
+                      ];
+
+                         new Chart("myChart", {
+                            type: "pie",
+                             data: {
+                                 labels: xValues,
+                                 datasets: [{
+                                     backgroundColor: barColors,
+                                     data: yValues
+                               }]
+                           },
+                             options: {
+                                title: {
+                                    display: true,
+                                     text: "Results for the ear training test"
+                                 }
+                             } })
+                      })}
+
+                      let bulb_img = document.querySelector(".bulb_img")
+                      let hint_para = document.querySelector(".hint_para")
+                      bulb_img.addEventListener("click",e=>{
+                        hint_para.classList.toggle("view")
+                      })
+
+
+  
+                     
+//     let i = 0;
+//    next.addEventListener('click', e => {
+//     e.preventDefault();
+//     if (red[0].disabled == true || green[0].disabled == true) {
+        
+//         main[0].children[i].style.display = "none";
+//         main[0].children[i+1].style.display = "block";
+       
+//      i++;
+//         // storing the correct answers
+      
+//         if (i == 4) {
+//             next.style.display = "none";
+            
+//             let submit_btn = document.createElement("button");
+           
+//             submit_btn.setAttribute("id", "result_btn")
+//             submit_btn.innerHTML = "SUBMIT";
+//             main[0].append(submit_btn);
+        
+//             document.querySelector("#result_btn").addEventListener('click', e => {
+//                 fifth[0].style.display = "none";
+//                 submit_btn.style.display = "none";
+//                 // let savedData = JSON.parse(localStorage.getItem(forResults));
+//                 // let options = document.querySelectorAll(".options");
+//                 // options.addEventListener('click',e=>{
+//                 //    let value= e.target.value
+//                 // })
+               
+//                 let xValues = ["correct","wrong"];
+//                 let yValues = [20,30];
+//                 let barColors = [
+//                    "#00aba9", "#b91d47",
+//                 ];
+
+//                 new Chart("myChart", {
+//                     type: "pie",
+//                     data: {
+//                         labels: xValues,
+//                         datasets: [{
+//                             backgroundColor: barColors,
+//                             data: yValues
+//                         }]
+//                     },
+//                     options: {
+//                         title: {
+//                             display: true,
+//                             text: "Results for the ear training test"
+//                         }
+//                     }
+//                 })
+//             })}
+//         red.forEach(e => {
+//             e.disabled = false
+//         })
+//         green.forEach(e => {
+//             e.disabled = false
+//             e.style.backgroundColor = '#F0F0F0';
+//             e.style.border = ".5px solid black"
+
+//         }) }})
+    </script>
+<script src="../assets/js/common.js"></script>
+
 </html>
